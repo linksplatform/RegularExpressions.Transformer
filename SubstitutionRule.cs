@@ -7,7 +7,7 @@ namespace Platform.RegexTransformer
 {
     public class SubstitutionRule : ISubstitutionRule
     {
-        public static TimeSpan DefaultMatchTimeout;
+        public static readonly TimeSpan DefaultMatchTimeout = TimeSpan.FromMinutes(5);
         public static readonly RegexOptions DefaultMatchPatternRegexOptions = RegexOptions.Compiled | RegexOptions.Multiline;
         public static readonly RegexOptions DefaultPathPatternRegexOptions = RegexOptions.Compiled | RegexOptions.Singleline;
 
