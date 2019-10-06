@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/linksplatform/RegexTransformer.svg?branch=master)](https://travis-ci.com/linksplatform/RegexTransformer)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/857c63e5f7fd434a89b7cd305b023315)](https://www.codacy.com/app/drakonard/RegexTransformer?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=linksplatform/RegexTransformer&amp;utm_campaign=Badge_Grade)
-[![CodeFactor](https://www.codefactor.io/repository/github/linksplatform/setters/badge)](https://www.codefactor.io/repository/github/linksplatform/setters)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7bcd272efb834b7993f0cf3ea1e9bb69)](https://www.codacy.com/manual/drakonard/RegexTransformer?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=linksplatform/RegexTransformer&amp;utm_campaign=Badge_Grade)
+[![CodeFactor](https://www.codefactor.io/repository/github/linksplatform/regextransformer/badge)](https://www.codefactor.io/repository/github/linksplatform/regextransformer)
 
 # [RegexTransformer](https://github.com/linksplatform/RegexTransformer)
 
