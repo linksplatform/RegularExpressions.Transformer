@@ -1,0 +1,212 @@
+{
+  "homepages": [],
+  "source_base_path": "/home/travis/build/linksplatform/RegexTransformer",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html",
+          "hash": "ejzGRaQv9SugeG8fjgnPyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.RegexTransformer.Context.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.RegexTransformer.Context.html",
+          "hash": "Qc5gajt3pn6FtjSmSK7CQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.RegexTransformer.IContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.RegexTransformer.IContext.html",
+          "hash": "n3z+eKVMkgNtgAtIkBnsUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.RegexTransformer.ISubstitutionRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.RegexTransformer.ISubstitutionRule.html",
+          "hash": "j+k9W0EKjPosJiAZUtVcXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.RegexTransformer.ITransformer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.RegexTransformer.ITransformer.html",
+          "hash": "Z8/OFH0pCkOEN/uJifxCUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.RegexTransformer.RegexExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.RegexTransformer.RegexExtensions.html",
+          "hash": "++npAcVJiz4nXK+nFJGdZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.RegexTransformer.SubstitutionRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.RegexTransformer.SubstitutionRule.html",
+          "hash": "BVqAqg72JJbAyCv3EK9MBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.RegexTransformer.Transformer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.RegexTransformer.Transformer.html",
+          "hash": "1/pq7jKoz/06scA4ztZ/PA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.RegexTransformer.TransformerCLI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.RegexTransformer.TransformerCLI.html",
+          "hash": "ucSP4sAooTIr3sNWJ3Y3VQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.RegexTransformer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.RegexTransformer.html",
+          "hash": "p7/s2TTdSGDku8mqd+F0Tw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "hjJ8iKFqsJyh4NYY7FUscQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "gXFjf13QASOALQQg8LWT6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 9,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 1,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
