@@ -12,3 +12,4 @@ script:
 after_success:
   - bash ./generate-pdf.sh
   - bash ./publish-docs.sh
+  - bash ./push-nuget.sh
