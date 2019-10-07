@@ -7,6 +7,13 @@ namespace Platform.RegularExpressions.Transformer
 {
     public static class RegexExtensions
     {
-        public static Regex OverrideOptions(this Regex regex, RegexOptions options, TimeSpan matchTimeout) => new Regex(regex.ToString(), options, matchTimeout);
+        public static Regex OverrideOptions(this Regex regex, RegexOptions options, TimeSpan matchTimeout)
+        {
+            if (regex == null)
+            {
+                return null;
+            }
+            return new Regex(regex.ToString(), options, matchTimeout);
+        }
     }
 }

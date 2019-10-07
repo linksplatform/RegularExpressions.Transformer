@@ -26,7 +26,7 @@ namespace Platform.RegularExpressions.Transformer
             PathPattern = pathPattern;
             MaximumRepeatCount = maximumRepeatCount;
             OverrideMatchPatternOptions(matchPatternOptions ?? matchPattern.Options, matchTimeout ?? matchPattern.MatchTimeout);
-            OverrideMatchPatternOptions(pathPatternOptions ?? pathPattern.Options, matchTimeout ?? pathPattern.MatchTimeout);
+            OverridePathPatternOptions(pathPatternOptions ?? pathPattern.Options, matchTimeout ?? pathPattern.MatchTimeout);
         }
 
         public SubstitutionRule(Regex matchPattern, string substitutionPattern, Regex pathPattern, int maximumRepeatCount, bool useDefaultOptions) : this(matchPattern, substitutionPattern, pathPattern, maximumRepeatCount, useDefaultOptions ? DefaultMatchPatternRegexOptions : (RegexOptions?)null, useDefaultOptions ? DefaultPathPatternRegexOptions : (RegexOptions?)null, useDefaultOptions ? DefaultMatchTimeout : (TimeSpan?)null) { }

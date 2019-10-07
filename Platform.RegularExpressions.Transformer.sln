@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.RegularExpressions.Transformer", "Platform.RegularExpressions.Transformer\Platform.RegularExpressions.Transformer.csproj", "{4CC673F5-B97D-441D-8D74-6F40A93F1454}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.RegularExpressions.Transformer.Tests", "Platform.RegularExpressions.Transformer.Tests\Platform.RegularExpressions.Transformer.Tests.csproj", "{03D93E29-4D6F-44DD-AFCC-F220154C1CF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4CC673F5-B97D-441D-8D74-6F40A93F1454}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CC673F5-B97D-441D-8D74-6F40A93F1454}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CC673F5-B97D-441D-8D74-6F40A93F1454}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03D93E29-4D6F-44DD-AFCC-F220154C1CF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03D93E29-4D6F-44DD-AFCC-F220154C1CF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03D93E29-4D6F-44DD-AFCC-F220154C1CF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03D93E29-4D6F-44DD-AFCC-F220154C1CF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
