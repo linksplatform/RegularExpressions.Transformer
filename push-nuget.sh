@@ -11,7 +11,7 @@ fi
 dotnet pack -c Release
 
 # Get version string
-PackageFileNamePrefix="bin/Release/Platform.${TRAVIS_REPO_NAME}."
+PackageFileNamePrefix="Platform.${TRAVIS_REPO_NAME}/bin/Release/Platform.${TRAVIS_REPO_NAME}."
 PackageFileNameSuffix=".nupkg"
 PackageFileName=$(echo ${PackageFileNamePrefix}*${PackageFileNameSuffix})
 Version="${PackageFileName#$PackageFileNamePrefix}"
