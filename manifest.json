@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "ejzGRaQv9SugeG8fjgnPyQ=="
+          "hash": "Y1b/MEzAZaht+FsTItY6cg=="
         }
       },
       "is_incremental": false,
@@ -26,11 +26,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegexTransformer.Context.yml",
+      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.Context.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Platform.RegexTransformer.Context.html",
-          "hash": "Qc5gajt3pn6FtjSmSK7CQQ=="
+          "relative_path": "api/Platform.RegularExpressions.Transformer.Context.html",
+          "hash": "cft1giEDd2iGHBUs/UuzBg=="
         }
       },
       "is_incremental": false,
@@ -38,11 +38,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegexTransformer.IContext.yml",
+      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.IContext.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Platform.RegexTransformer.IContext.html",
-          "hash": "n3z+eKVMkgNtgAtIkBnsUg=="
+          "relative_path": "api/Platform.RegularExpressions.Transformer.IContext.html",
+          "hash": "fOm0bQn2k7NF9vY9OWOvlQ=="
         }
       },
       "is_incremental": false,
@@ -50,11 +50,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegexTransformer.ISubstitutionRule.yml",
+      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.ISubstitutionRule.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Platform.RegexTransformer.ISubstitutionRule.html",
-          "hash": "j+k9W0EKjPosJiAZUtVcXQ=="
+          "relative_path": "api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html",
+          "hash": "QHC5cquJKN+N+JFjAf4ACA=="
         }
       },
       "is_incremental": false,
@@ -62,11 +62,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegexTransformer.ITransformer.yml",
+      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.ITransformer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Platform.RegexTransformer.ITransformer.html",
-          "hash": "Z8/OFH0pCkOEN/uJifxCUg=="
+          "relative_path": "api/Platform.RegularExpressions.Transformer.ITransformer.html",
+          "hash": "XnUBtdnzPriPTvv212bL8g=="
         }
       },
       "is_incremental": false,
@@ -74,11 +74,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegexTransformer.RegexExtensions.yml",
+      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.RegexExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Platform.RegexTransformer.RegexExtensions.html",
-          "hash": "++npAcVJiz4nXK+nFJGdZg=="
+          "relative_path": "api/Platform.RegularExpressions.Transformer.RegexExtensions.html",
+          "hash": "cA3UAPc/w14Sp7cgrVSrlw=="
         }
       },
       "is_incremental": false,
@@ -86,11 +86,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegexTransformer.SubstitutionRule.yml",
+      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.SubstitutionRule.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Platform.RegexTransformer.SubstitutionRule.html",
-          "hash": "BVqAqg72JJbAyCv3EK9MBA=="
+          "relative_path": "api/Platform.RegularExpressions.Transformer.SubstitutionRule.html",
+          "hash": "M5zb1al2Sd0qzH3lZA7eMw=="
         }
       },
       "is_incremental": false,
@@ -98,11 +98,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegexTransformer.Transformer.yml",
+      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.Transformer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Platform.RegexTransformer.Transformer.html",
-          "hash": "1/pq7jKoz/06scA4ztZ/PA=="
+          "relative_path": "api/Platform.RegularExpressions.Transformer.Transformer.html",
+          "hash": "ZtI4dSHZycG7Pjx7zYi12Q=="
         }
       },
       "is_incremental": false,
@@ -110,11 +110,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegexTransformer.TransformerCLI.yml",
+      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.TransformerCLI.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Platform.RegexTransformer.TransformerCLI.html",
-          "hash": "ucSP4sAooTIr3sNWJ3Y3VQ=="
+          "relative_path": "api/Platform.RegularExpressions.Transformer.TransformerCLI.html",
+          "hash": "GJ3DK6ysZ9P0wIuReiYiEA=="
         }
       },
       "is_incremental": false,
@@ -122,11 +122,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegexTransformer.yml",
+      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Platform.RegexTransformer.html",
-          "hash": "p7/s2TTdSGDku8mqd+F0Tw=="
+          "relative_path": "api/Platform.RegularExpressions.Transformer.html",
+          "hash": "hZRNbs/vKMqaAgPWtLbT1w=="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "hjJ8iKFqsJyh4NYY7FUscQ=="
+          "hash": "jsB7nce0LvtKm8zlI4OtPw=="
         }
       },
       "is_incremental": false,
@@ -171,6 +171,13 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
@@ -181,13 +188,6 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 1,
-          "skipped_file_count": 0
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }
