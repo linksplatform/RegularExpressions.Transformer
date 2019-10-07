@@ -1,21 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Description>LinksPlatform's Platform.Regex.Transformer Class Library</Description>
+    <Description>LinksPlatform's Platform.RegularExpressions.Transformer Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
-    <AssemblyTitle>Platform.Regex.Transformer</AssemblyTitle>
+    <AssemblyTitle>Platform.RegularExpressions.Transformer</AssemblyTitle>
     <VersionPrefix>0.0.1</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <AssemblyName>Platform.Regex.Transformer</AssemblyName>
-    <PackageId>Platform.Regex.Transformer</PackageId>
-    <PackageTags>LinksPlatform;Regex.Transformer;IContext;ISubstitutionRule;ITransformer;Context;RegexExtensions;SubstitutionRule;Transformer;TransformerCLI</PackageTags>
+    <AssemblyName>Platform.RegularExpressions.Transformer</AssemblyName>
+    <PackageId>Platform.RegularExpressions.Transformer</PackageId>
+    <PackageTags>LinksPlatform;RegularExpressions.Transformer;IContext;ISubstitutionRule;ITransformer;Context;RegexExtensions;SubstitutionRule;Transformer;TransformerCLI</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/linksplatform/Documentation/18469f4d033ee9a5b7b84caab9c585acab2ac519/doc/Avatar-rainbow-icon-64x64.png</PackageIconUrl>
-    <PackageProjectUrl>https://linksplatform.github.io/Regex.Transformer</PackageProjectUrl>
+    <PackageProjectUrl>https://linksplatform.github.io/RegularExpressions.Transformer</PackageProjectUrl>
     <PackageLicenseExpression>LGPL-3.0-only</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>git://github.com/linksplatform/Regex.Transformer</RepositoryUrl>
+    <RepositoryUrl>git://github.com/linksplatform/RegularExpressions.Transformer</RepositoryUrl>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
