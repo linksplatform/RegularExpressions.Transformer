@@ -2,7 +2,7 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-namespace Platform.RegexTransformer
+namespace Platform.Regex.Transformer
 {
     public class Transformer : ITransformer
     {

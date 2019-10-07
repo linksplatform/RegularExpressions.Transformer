@@ -1,21 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Description>LinksPlatform's Platform.RegexTransformer Class Library</Description>
+    <Description>LinksPlatform's Platform.Regex.Transformer Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
-    <AssemblyTitle>Platform.RegexTransformer</AssemblyTitle>
+    <AssemblyTitle>Platform.Regex.Transformer</AssemblyTitle>
     <VersionPrefix>0.0.1</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <AssemblyName>Platform.RegexTransformer</AssemblyName>
-    <PackageId>Platform.RegexTransformer</PackageId>
-    <PackageTags>LinksPlatform;RegexTransformer;IContext;ISubstitutionRule;ITransformer;Context;RegexExtensions;SubstitutionRule;Transformer;TransformerCLI</PackageTags>
+    <AssemblyName>Platform.Regex.Transformer</AssemblyName>
+    <PackageId>Platform.Regex.Transformer</PackageId>
+    <PackageTags>LinksPlatform;Regex.Transformer;IContext;ISubstitutionRule;ITransformer;Context;RegexExtensions;SubstitutionRule;Transformer;TransformerCLI</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/linksplatform/Documentation/18469f4d033ee9a5b7b84caab9c585acab2ac519/doc/Avatar-rainbow-icon-64x64.png</PackageIconUrl>
-    <PackageProjectUrl>https://linksplatform.github.io/RegexTransformer</PackageProjectUrl>
+    <PackageProjectUrl>https://linksplatform.github.io/Regex.Transformer</PackageProjectUrl>
     <PackageLicenseExpression>LGPL-3.0-only</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>git://github.com/linksplatform/RegexTransformer</RepositoryUrl>
+    <RepositoryUrl>git://github.com/linksplatform/Regex.Transformer</RepositoryUrl>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
