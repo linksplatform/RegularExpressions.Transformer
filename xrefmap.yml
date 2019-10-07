@@ -333,6 +333,31 @@ references:
   isSpec: "True"
   fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.SubstitutionPattern
   nameWithType: SubstitutionRule.SubstitutionPattern
+- uid: Platform.RegularExpressions.Transformer.Tests
+  name: Platform.RegularExpressions.Transformer.Tests
+  href: api/Platform.RegularExpressions.Transformer.Tests.html
+  commentId: N:Platform.RegularExpressions.Transformer.Tests
+  fullName: Platform.RegularExpressions.Transformer.Tests
+  nameWithType: Platform.RegularExpressions.Transformer.Tests
+- uid: Platform.RegularExpressions.Transformer.Tests.SubstitutionRuleTests
+  name: SubstitutionRuleTests
+  href: api/Platform.RegularExpressions.Transformer.Tests.SubstitutionRuleTests.html
+  commentId: T:Platform.RegularExpressions.Transformer.Tests.SubstitutionRuleTests
+  fullName: Platform.RegularExpressions.Transformer.Tests.SubstitutionRuleTests
+  nameWithType: SubstitutionRuleTests
+- uid: Platform.RegularExpressions.Transformer.Tests.SubstitutionRuleTests.OptionsOverrideTest
+  name: OptionsOverrideTest()
+  href: api/Platform.RegularExpressions.Transformer.Tests.SubstitutionRuleTests.html#Platform_RegularExpressions_Transformer_Tests_SubstitutionRuleTests_OptionsOverrideTest
+  commentId: M:Platform.RegularExpressions.Transformer.Tests.SubstitutionRuleTests.OptionsOverrideTest
+  fullName: Platform.RegularExpressions.Transformer.Tests.SubstitutionRuleTests.OptionsOverrideTest()
+  nameWithType: SubstitutionRuleTests.OptionsOverrideTest()
+- uid: Platform.RegularExpressions.Transformer.Tests.SubstitutionRuleTests.OptionsOverrideTest*
+  name: OptionsOverrideTest
+  href: api/Platform.RegularExpressions.Transformer.Tests.SubstitutionRuleTests.html#Platform_RegularExpressions_Transformer_Tests_SubstitutionRuleTests_OptionsOverrideTest_
+  commentId: Overload:Platform.RegularExpressions.Transformer.Tests.SubstitutionRuleTests.OptionsOverrideTest
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.Tests.SubstitutionRuleTests.OptionsOverrideTest
+  nameWithType: SubstitutionRuleTests.OptionsOverrideTest
 - uid: Platform.RegularExpressions.Transformer.Transformer
   name: Transformer
   href: api/Platform.RegularExpressions.Transformer.Transformer.html
