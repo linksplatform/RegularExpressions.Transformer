@@ -15,9 +15,6 @@ NuGet package: [Platform.RegularExpressions.Transformer](https://www.nuget.org/p
 ## [Documentation](https://linksplatform.github.io/RegularExpressions.Transformer)
 [PDF file](https://linksplatform.github.io/RegularExpressions.Transformer/Platform.RegularExpressions.Transformer.pdf) with code for e-readers.
 
-## Dependent libraries
-*   [Platform.Data](https://github.com/linksplatform/Data)
-
 ## Mystery files
 *   [.travis.yml](https://github.com/linksplatform/RegularExpressions.Transformer/blob/master/.travis.yml) - [Travis CI](https://travis-ci.com) build configuration.
 *   [docfx.json](https://github.com/linksplatform/RegularExpressions.Transformer/blob/master/docfx.json) and [toc.yml](https://github.com/linksplatform/RegularExpressions.Transformer/blob/master/toc.yml) - [DocFX](https://dotnet.github.io/docfx) build configuration.
