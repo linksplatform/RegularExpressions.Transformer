@@ -4,10 +4,45 @@
     "title": "RegularExpressions.Transformer | LinksPlatform's Platform.RegularExpressions.Transformer Library",
     "keywords": "RegularExpressions.Transformer LinksPlatform's Platform.RegularExpressions.Transformer Class Library. Namespace: Platform.RegularExpressions.Transformer Forked from: LinksPlatform/Collections.Methods/CSharpToCppTranslator NuGet package: Platform.RegularExpressions.Transformer Documentation PDF file with code for e-readers. Dependent libraries Platform.RegularExpressions.Transformer.CSharpToCpp Mystery files .travis.yml - Travis CI build configuration. docfx.json and toc.yml - DocFX build configuration. format-document.sh - script for formatting tex file for generating PDF from it. format-csharp-files.py - script for formatting .cs files as a part of tex file. generate-pdf.sh - script that generates PDF with code for e-readers. publish-docs.sh - script that publishes generated documentation and PDF with code for e-readers to gh-pages branch. push-nuget.sh - script for publishing current version of NuGet package."
   },
+  "api/Platform.RegularExpressions.Transformer.Context.html": {
+    "href": "api/Platform.RegularExpressions.Transformer.Context.html",
+    "title": "Class Context | LinksPlatform's Platform.RegularExpressions.Transformer Library",
+    "keywords": "Class Context Inheritance Object Context Implements IContext Inherited Members Object.Equals(Object) Object.Equals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Object.ReferenceEquals(Object, Object) Object.ToString() Namespace : Platform.RegularExpressions.Transformer Assembly : Platform.RegularExpressions.Transformer.dll Syntax public class Context : IContext Constructors | Improve this Doc View Source Context(String) Declaration public Context(string path) Parameters Type Name Description String path Properties | Improve this Doc View Source Path Declaration public string Path { get; } Property Value Type Description String Implements IContext"
+  },
+  "api/Platform.RegularExpressions.Transformer.Tests.SubstitutionRuleTests.html": {
+    "href": "api/Platform.RegularExpressions.Transformer.Tests.SubstitutionRuleTests.html",
+    "title": "Class SubstitutionRuleTests | LinksPlatform's Platform.RegularExpressions.Transformer Library",
+    "keywords": "Class SubstitutionRuleTests Inheritance Object SubstitutionRuleTests Namespace : Platform.RegularExpressions.Transformer.Tests Assembly : Platform.RegularExpressions.Transformer.Tests.dll Syntax public class SubstitutionRuleTests : object Methods | Improve this Doc View Source OptionsOverrideTest() Declaration public void OptionsOverrideTest()"
+  },
+  "api/Platform.RegularExpressions.Transformer.RegexExtensions.html": {
+    "href": "api/Platform.RegularExpressions.Transformer.RegexExtensions.html",
+    "title": "Class RegexExtensions | LinksPlatform's Platform.RegularExpressions.Transformer Library",
+    "keywords": "Class RegexExtensions Inheritance Object RegexExtensions Inherited Members Object.Equals(Object) Object.Equals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Object.ReferenceEquals(Object, Object) Object.ToString() Namespace : Platform.RegularExpressions.Transformer Assembly : Platform.RegularExpressions.Transformer.dll Syntax public static class RegexExtensions Methods | Improve this Doc View Source OverrideOptions(Regex, RegexOptions, TimeSpan) Declaration public static Regex OverrideOptions(this Regex regex, RegexOptions options, TimeSpan matchTimeout) Parameters Type Name Description Regex regex RegexOptions options TimeSpan matchTimeout Returns Type Description Regex"
+  },
+  "api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html": {
+    "href": "api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html",
+    "title": "Interface ISubstitutionRule | LinksPlatform's Platform.RegularExpressions.Transformer Library",
+    "keywords": "Interface ISubstitutionRule Namespace : Platform.RegularExpressions.Transformer Assembly : Platform.RegularExpressions.Transformer.dll Syntax public interface ISubstitutionRule Properties | Improve this Doc View Source MatchPattern Declaration Regex MatchPattern { get; } Property Value Type Description Regex | Improve this Doc View Source MaximumRepeatCount Declaration int MaximumRepeatCount { get; } Property Value Type Description Int32 | Improve this Doc View Source PathPattern Declaration Regex PathPattern { get; } Property Value Type Description Regex | Improve this Doc View Source SubstitutionPattern Declaration string SubstitutionPattern { get; } Property Value Type Description String"
+  },
+  "api/Platform.RegularExpressions.Transformer.Transformer.html": {
+    "href": "api/Platform.RegularExpressions.Transformer.Transformer.html",
+    "title": "Class Transformer | LinksPlatform's Platform.RegularExpressions.Transformer Library",
+    "keywords": "Class Transformer Inheritance Object Transformer Implements ITransformer Inherited Members Object.Equals(Object) Object.Equals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Object.ReferenceEquals(Object, Object) Object.ToString() Namespace : Platform.RegularExpressions.Transformer Assembly : Platform.RegularExpressions.Transformer.dll Syntax public class Transformer : ITransformer Constructors | Improve this Doc View Source Transformer(IList<ISubstitutionRule>) Declaration public Transformer(IList<ISubstitutionRule> substitutionRules) Parameters Type Name Description IList < ISubstitutionRule > substitutionRules Methods | Improve this Doc View Source Transform(String, IContext) Declaration public string Transform(string source, IContext context) Parameters Type Name Description String source IContext context Returns Type Description String Implements ITransformer"
+  },
   "api/Platform.RegularExpressions.Transformer.IContext.html": {
     "href": "api/Platform.RegularExpressions.Transformer.IContext.html",
     "title": "Interface IContext | LinksPlatform's Platform.RegularExpressions.Transformer Library",
     "keywords": "Interface IContext Namespace : Platform.RegularExpressions.Transformer Assembly : Platform.RegularExpressions.Transformer.dll Syntax public interface IContext Properties | Improve this Doc View Source Path Declaration string Path { get; } Property Value Type Description String"
+  },
+  "api/Platform.RegularExpressions.Transformer.TransformerCLI.html": {
+    "href": "api/Platform.RegularExpressions.Transformer.TransformerCLI.html",
+    "title": "Class TransformerCLI | LinksPlatform's Platform.RegularExpressions.Transformer Library",
+    "keywords": "Class TransformerCLI Inheritance Object TransformerCLI Inherited Members Object.Equals(Object) Object.Equals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Object.ReferenceEquals(Object, Object) Object.ToString() Namespace : Platform.RegularExpressions.Transformer Assembly : Platform.RegularExpressions.Transformer.dll Syntax public class TransformerCLI Constructors | Improve this Doc View Source TransformerCLI(ITransformer) Declaration public TransformerCLI(ITransformer transformer) Parameters Type Name Description ITransformer transformer Methods | Improve this Doc View Source Run(String[], out String) Declaration public bool Run(string[] args, out string message) Parameters Type Name Description String [] args String message Returns Type Description Boolean"
+  },
+  "api/Platform.RegularExpressions.Transformer.Tests.html": {
+    "href": "api/Platform.RegularExpressions.Transformer.Tests.html",
+    "title": "Namespace Platform.RegularExpressions.Transformer.Tests | LinksPlatform's Platform.RegularExpressions.Transformer Library",
+    "keywords": "Namespace Platform.RegularExpressions.Transformer.Tests Classes SubstitutionRuleTests"
   },
   "api/Platform.RegularExpressions.Transformer.SubstitutionRule.html": {
     "href": "api/Platform.RegularExpressions.Transformer.SubstitutionRule.html",
@@ -19,44 +54,9 @@
     "title": "Interface ITransformer | LinksPlatform's Platform.RegularExpressions.Transformer Library",
     "keywords": "Interface ITransformer Namespace : Platform.RegularExpressions.Transformer Assembly : Platform.RegularExpressions.Transformer.dll Syntax public interface ITransformer Methods | Improve this Doc View Source Transform(String, IContext) Declaration string Transform(string source, IContext context) Parameters Type Name Description String source IContext context Returns Type Description String"
   },
-  "api/Platform.RegularExpressions.Transformer.Transformer.html": {
-    "href": "api/Platform.RegularExpressions.Transformer.Transformer.html",
-    "title": "Class Transformer | LinksPlatform's Platform.RegularExpressions.Transformer Library",
-    "keywords": "Class Transformer Inheritance Object Transformer Implements ITransformer Inherited Members Object.Equals(Object) Object.Equals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Object.ReferenceEquals(Object, Object) Object.ToString() Namespace : Platform.RegularExpressions.Transformer Assembly : Platform.RegularExpressions.Transformer.dll Syntax public class Transformer : ITransformer Constructors | Improve this Doc View Source Transformer(IList<ISubstitutionRule>) Declaration public Transformer(IList<ISubstitutionRule> substitutionRules) Parameters Type Name Description IList < ISubstitutionRule > substitutionRules Methods | Improve this Doc View Source Transform(String, IContext) Declaration public string Transform(string source, IContext context) Parameters Type Name Description String source IContext context Returns Type Description String Implements ITransformer"
-  },
-  "api/Platform.RegularExpressions.Transformer.RegexExtensions.html": {
-    "href": "api/Platform.RegularExpressions.Transformer.RegexExtensions.html",
-    "title": "Class RegexExtensions | LinksPlatform's Platform.RegularExpressions.Transformer Library",
-    "keywords": "Class RegexExtensions Inheritance Object RegexExtensions Inherited Members Object.Equals(Object) Object.Equals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Object.ReferenceEquals(Object, Object) Object.ToString() Namespace : Platform.RegularExpressions.Transformer Assembly : Platform.RegularExpressions.Transformer.dll Syntax public static class RegexExtensions Methods | Improve this Doc View Source OverrideOptions(Regex, RegexOptions, TimeSpan) Declaration public static Regex OverrideOptions(this Regex regex, RegexOptions options, TimeSpan matchTimeout) Parameters Type Name Description Regex regex RegexOptions options TimeSpan matchTimeout Returns Type Description Regex"
-  },
-  "api/Platform.RegularExpressions.Transformer.Tests.html": {
-    "href": "api/Platform.RegularExpressions.Transformer.Tests.html",
-    "title": "Namespace Platform.RegularExpressions.Transformer.Tests | LinksPlatform's Platform.RegularExpressions.Transformer Library",
-    "keywords": "Namespace Platform.RegularExpressions.Transformer.Tests Classes SubstitutionRuleTests"
-  },
-  "api/Platform.RegularExpressions.Transformer.TransformerCLI.html": {
-    "href": "api/Platform.RegularExpressions.Transformer.TransformerCLI.html",
-    "title": "Class TransformerCLI | LinksPlatform's Platform.RegularExpressions.Transformer Library",
-    "keywords": "Class TransformerCLI Inheritance Object TransformerCLI Inherited Members Object.Equals(Object) Object.Equals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Object.ReferenceEquals(Object, Object) Object.ToString() Namespace : Platform.RegularExpressions.Transformer Assembly : Platform.RegularExpressions.Transformer.dll Syntax public class TransformerCLI Constructors | Improve this Doc View Source TransformerCLI(ITransformer) Declaration public TransformerCLI(ITransformer transformer) Parameters Type Name Description ITransformer transformer Methods | Improve this Doc View Source Run(String[], out String) Declaration public bool Run(string[] args, out string message) Parameters Type Name Description String [] args String message Returns Type Description Boolean"
-  },
   "api/Platform.RegularExpressions.Transformer.html": {
     "href": "api/Platform.RegularExpressions.Transformer.html",
     "title": "Namespace Platform.RegularExpressions.Transformer | LinksPlatform's Platform.RegularExpressions.Transformer Library",
     "keywords": "Namespace Platform.RegularExpressions.Transformer Classes Context RegexExtensions SubstitutionRule Transformer TransformerCLI Interfaces IContext ISubstitutionRule ITransformer"
-  },
-  "api/Platform.RegularExpressions.Transformer.Context.html": {
-    "href": "api/Platform.RegularExpressions.Transformer.Context.html",
-    "title": "Class Context | LinksPlatform's Platform.RegularExpressions.Transformer Library",
-    "keywords": "Class Context Inheritance Object Context Implements IContext Inherited Members Object.Equals(Object) Object.Equals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Object.ReferenceEquals(Object, Object) Object.ToString() Namespace : Platform.RegularExpressions.Transformer Assembly : Platform.RegularExpressions.Transformer.dll Syntax public class Context : IContext Constructors | Improve this Doc View Source Context(String) Declaration public Context(string path) Parameters Type Name Description String path Properties | Improve this Doc View Source Path Declaration public string Path { get; } Property Value Type Description String Implements IContext"
-  },
-  "api/Platform.RegularExpressions.Transformer.Tests.SubstitutionRuleTests.html": {
-    "href": "api/Platform.RegularExpressions.Transformer.Tests.SubstitutionRuleTests.html",
-    "title": "Class SubstitutionRuleTests | LinksPlatform's Platform.RegularExpressions.Transformer Library",
-    "keywords": "Class SubstitutionRuleTests Inheritance Object SubstitutionRuleTests Namespace : Platform.RegularExpressions.Transformer.Tests Assembly : Platform.RegularExpressions.Transformer.Tests.dll Syntax public class SubstitutionRuleTests : object Methods | Improve this Doc View Source OptionsOverrideTest() Declaration public void OptionsOverrideTest()"
-  },
-  "api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html": {
-    "href": "api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html",
-    "title": "Interface ISubstitutionRule | LinksPlatform's Platform.RegularExpressions.Transformer Library",
-    "keywords": "Interface ISubstitutionRule Namespace : Platform.RegularExpressions.Transformer Assembly : Platform.RegularExpressions.Transformer.dll Syntax public interface ISubstitutionRule Properties | Improve this Doc View Source MatchPattern Declaration Regex MatchPattern { get; } Property Value Type Description Regex | Improve this Doc View Source MaximumRepeatCount Declaration int MaximumRepeatCount { get; } Property Value Type Description Int32 | Improve this Doc View Source PathPattern Declaration Regex PathPattern { get; } Property Value Type Description Regex | Improve this Doc View Source SubstitutionPattern Declaration string SubstitutionPattern { get; } Property Value Type Description String"
   }
 }
