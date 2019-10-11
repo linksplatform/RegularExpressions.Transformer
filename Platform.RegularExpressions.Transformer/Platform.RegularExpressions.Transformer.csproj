@@ -4,7 +4,7 @@
     <Description>LinksPlatform's Platform.RegularExpressions.Transformer Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.RegularExpressions.Transformer</AssemblyTitle>
-    <VersionPrefix>0.0.2</VersionPrefix>
+    <VersionPrefix>0.0.3</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>Platform.RegularExpressions.Transformer</AssemblyName>
@@ -21,7 +21,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PackageReleaseNotes>Fixed bug at SubstitutionRule initialization.</PackageReleaseNotes>
+    <PackageReleaseNotes>TargetPath argument of CLI now supports automatic creation of directories. Refactoring, issues and bug fix.</PackageReleaseNotes>
   </PropertyGroup>
 
 </Project>
