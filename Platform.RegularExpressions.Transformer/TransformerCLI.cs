@@ -24,11 +24,16 @@ namespace Platform.RegularExpressions.Transformer
             var targetPath = GetArgOrDefault(args, 1);
             if (string.IsNullOrWhiteSpace(targetPath))
             {
-                targetPath = Path.ChangeExtension(sourcePath, ".cpp");
+                targetPath = ChangeToTargetExtension(sourcePath);
             }
-            else if ((Directory.Exists(targetPath) && File.GetAttributes(targetPath).HasFlag(FileAttributes.Directory)) || LooksLikeDirectoryPath(targetPath))
+            else if (Directory.Exists(targetPath) && File.GetAttributes(targetPath).HasFlag(FileAttributes.Directory))
             {
-                targetPath = Path.Combine(targetPath, Path.ChangeExtension(Path.GetFileName(sourcePath), ".cpp"));
+                targetPath = Path.Combine(targetPath, GetTargetFileName(sourcePath));
+            }
+            else if (LooksLikeDirectoryPath(targetPath))
+            {
+                Directory.CreateDirectory(targetPath);
+                targetPath = Path.Combine(targetPath, GetTargetFileName(sourcePath));
             }
             if (File.Exists(targetPath))
             {
@@ -43,6 +48,10 @@ namespace Platform.RegularExpressions.Transformer
             message = $"{targetPath} file written.";
             return true;
         }
+
+        private static string GetTargetFileName(string sourcePath) => ChangeToTargetExtension(Path.GetFileName(sourcePath));
+
+        private static string ChangeToTargetExtension(string path) => Path.ChangeExtension(path, ".cpp");
 
         private static bool LooksLikeDirectoryPath(string targetPath) => targetPath.EndsWith(Path.DirectorySeparatorChar) || targetPath.EndsWith(Path.AltDirectorySeparatorChar);
 
