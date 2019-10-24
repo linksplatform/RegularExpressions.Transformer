@@ -1,5 +1,5 @@
 [![NuGet Version and Downloads count](https://buildstats.info/nuget/Platform.RegularExpressions.Transformer)](https://www.nuget.org/packages/Platform.RegularExpressions.Transformer)
-[![Build Status](https://travis-ci.com/linksplatform/RegularExpressions.Transformer.svg?branch=master)](https://travis-ci.com/linksplatform/RegularExpressions.Transformer)
+[![Actions Status](https://github.com/linksplatform/RegularExpressions.Transformer/workflows/CD/badge.svg)](https://github.com/linksplatform/RegularExpressions.Transformer/actions?workflow=CD)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7bcd272efb834b7993f0cf3ea1e9bb69)](https://www.codacy.com/manual/drakonard/RegularExpressions.Transformer?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=linksplatform/RegularExpressions.Transformer&amp;utm_campaign=Badge_Grade)
 [![CodeFactor](https://www.codefactor.io/repository/github/linksplatform/regularexpressions.transformer/badge)](https://www.codefactor.io/repository/github/linksplatform/regularexpressions.transformer)
 
