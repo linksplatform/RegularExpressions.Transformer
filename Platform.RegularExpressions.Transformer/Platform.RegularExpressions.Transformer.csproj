@@ -23,6 +23,7 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <LangVersion>latest</LangVersion>
     <PackageReleaseNotes>TargetPath argument of CLI now supports automatic creation of directories. Refactoring, issues and bug fix.</PackageReleaseNotes>
   </PropertyGroup>
 
