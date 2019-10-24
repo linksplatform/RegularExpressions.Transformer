@@ -53,7 +53,7 @@ namespace Platform.RegularExpressions.Transformer
 
         private static string ChangeToTargetExtension(string path) => Path.ChangeExtension(path, ".cpp");
 
-        private static bool LooksLikeDirectoryPath(string targetPath) => targetPath.EndsWith(Path.DirectorySeparatorChar) || targetPath.EndsWith(Path.AltDirectorySeparatorChar);
+        private static bool LooksLikeDirectoryPath(string targetPath) => targetPath.EndsWith(Path.DirectorySeparatorChar.ToString()) || targetPath.EndsWith(Path.AltDirectorySeparatorChar.ToString());
 
         private static string GetArgOrDefault(string[] args, int index) => args.Length > index ? args[index] : null;
     }
