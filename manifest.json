@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.Context.html",
-          "hash": "YoPVx2k+RU8nidnJYTx5uQ=="
+          "hash": "xZDXSFakyd2pc70zgaDe3g=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.IContext.html",
-          "hash": "fOJHzGZm1qTKVTAehy+crQ=="
+          "hash": "HFZV9D7kEUcW5q4A2sRASw=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html",
-          "hash": "fr+5Y6Z8RX+w1sLI/Y4OgA=="
+          "hash": "1dl+z0VwMBGPMC1x+NgOPA=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.ITransformer.html",
-          "hash": "yb3geS0Lnlu0MwL7asKO5Q=="
+          "hash": "vyxZ5ScpQ/1C9Tq0zIEAUw=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.RegexExtensions.html",
-          "hash": "rfj1HHteqHWTPl+fl01pRQ=="
+          "hash": "A4lKqIjAGcUPGRY/5DeyeQ=="
         }
       },
       "is_incremental": false,
@@ -90,31 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.SubstitutionRule.html",
-          "hash": "Ae3huEFe0AcAV32jFxbXbw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.Tests.SubstitutionRuleTests.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.RegularExpressions.Transformer.Tests.SubstitutionRuleTests.html",
-          "hash": "a/JE2QkBVgWYupFsZKEmXQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.Tests.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.RegularExpressions.Transformer.Tests.html",
-          "hash": "sFVMgnvxLA92T+8Q/CW23Q=="
+          "hash": "gkPDPt/EAPKdezQCdfF3OA=="
         }
       },
       "is_incremental": false,
@@ -126,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.Transformer.html",
-          "hash": "lP9EG1dpM4Y/2nPeA+WWpg=="
+          "hash": "T0WIBT2bgKMDdUVe+3A4pw=="
         }
       },
       "is_incremental": false,
@@ -138,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.TransformerCLI.html",
-          "hash": "xSKUMLqr+WfqbU7VybT+Bw=="
+          "hash": "77IMALO2WKNKnPnOKC02IQ=="
         }
       },
       "is_incremental": false,
@@ -162,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "47TdSK/Qc6ioULkJM1/azg=="
+          "hash": "jsB7nce0LvtKm8zlI4OtPw=="
         }
       },
       "is_incremental": false,
@@ -195,16 +171,16 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 9,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 1,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 11,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
