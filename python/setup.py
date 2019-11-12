@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="retranslator",
-    version="0.0.3",
+    version="0.0.6",
     author="Ethosa",
     author_email="social.ethosa@gmail.com",
     description="retranslator",
@@ -30,5 +30,5 @@ setuptools.setup(
         "Documentation" : "https://github.com/linksplatform/RegularExpressions.Transformer/tree/master/python",
     },
     python_requires=">=3",
-    install_requires=[]
+    install_requires=["regex"]
 )
