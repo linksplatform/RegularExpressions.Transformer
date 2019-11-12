@@ -20,6 +20,11 @@ class TranslatorCLI:
         self.run()
     
     def run(self):
+        """read source file and write translated code in other file.
+        
+        Raises:
+            ValueError -- Wrong path
+        """
         if len(self.args) == 1:
             src = self.args[0]
             if not os.path.exists(src):

@@ -32,21 +32,15 @@ class Translator:
         for i in self.rules:
             matchPattern = i[0]
             substitutionPattern = i[1]
-            if len(i) < 3:
-                pathPattern = None
-                maximumRepeatCount = 0
-            elif len(i) < 4:
-                pathPattern = i[2]
-                maximumRepeatCount = 0
-            else:
-                pathPattern = i[2]
-                maximumRepeatCount = i[3]
+            pathPattern = i[2]
+            maximumRepeatCount = i[3]
             if pathPattern == None: # or pathPattern.IsMatch(context.Path)
                 replaceCount = 0
                 current = re.sub(matchPattern, substitutionPattern, current)
-                while re.match(matchPattern, current):
+                while re.search(matchPattern, current):
                     if replaceCount+1 > maximumRepeatCount:
                         break
+                    replaceCount += 1
                     current = re.sub(matchPattern, substitutionPattern, current)
         return current
 
