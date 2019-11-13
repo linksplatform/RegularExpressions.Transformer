@@ -10,5 +10,5 @@ Usage with CSharpToCppTranslator:
 ```python
 import retranslator
 import cs2cpp
- tcli = retranslator.TranslatorCLI(args=["test.cs"], translator=cs2cpp.CSharpToCppTranslator, extension=".cpp")
+ tcli = retranslator.TranslatorCLI(args=["test.cs"], translator=cs2cpp.CSharpToCpp, extension=".cpp")
 ```
