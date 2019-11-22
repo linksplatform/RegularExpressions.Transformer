@@ -4,7 +4,7 @@
 import os
 
 class TranslatorCLI:
-    def __init__(self, args=[], translator=None, extension=".cpp"):
+    def __init__(self, args=[], translator=None, extension=".cpp", extra=[], useRegex=False):
         """Translator command line interface
         
         Keyword Arguments:
@@ -17,9 +17,9 @@ class TranslatorCLI:
         self.translator = translator
         if not self.extension.startswith("."):
             self.extension = ".%s" % self.extension
-        self.run()
+        self.run(extra, useRegex)
     
-    def run(self):
+    def run(self, extra=[], useRegex=False):
         """read source file and write translated code in other file.
         
         Raises:
@@ -60,7 +60,7 @@ class TranslatorCLI:
         with open(src, "r", encoding="utf-8") as f:
             source = f.read()
 
-        self.translator = self.translator(source)
+        self.translator = self.translator(source, extra, useRegex)
 
         with open(dst, "w") as f:
             f.write(self.translator.compile())
