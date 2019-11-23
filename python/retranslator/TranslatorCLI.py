@@ -1,10 +1,12 @@
 # -*- coding:utf-8 -*-
 # authors: Ethosa, Konrad
 
+import shutil
 import os
 
 class TranslatorCLI:
-    def __init__(self, args=[], translator=None, extension=".cpp", extra=[], useRegex=False):
+    def __init__(self, args=[], translator=None, original_extension=".cs", extension=".cpp",
+            extra=[], useRegex=False, exludeExtra=False):
         """Translator command line interface
         
         Keyword Arguments:
@@ -13,10 +15,14 @@ class TranslatorCLI:
             extension {str} -- file extension (default: {".cpp"})
         """
         self.extension = extension
+        self.oextension = original_extension
         self.args = args
         self.translator = translator
+        self.exluding = exludeExtra
         if not self.extension.startswith("."):
             self.extension = ".%s" % self.extension
+        if not self.oextension.startswith("."):
+            self.oextension = ".%s" % self.oextension
         self.run(extra, useRegex)
     
     def run(self, extra=[], useRegex=False):
@@ -51,16 +57,34 @@ class TranslatorCLI:
                         break
                 if not finded:
                     raise ValueError("Path " + src + " is not correct!")
-            if os.path.exists(dst) and os.path.isdir(dst):
-                dst += "/%s" % (dst)
-            print(src, dst)
         else:
             raise ValueError("You must give one ore more strings in args list.")
 
-        with open(src, "r", encoding="utf-8") as f:
-            source = f.read()
+        if os.path.isfile(src):
+            with open(src, "r", encoding="utf-8") as f:
+                source = f.read()
 
-        self.translator = self.translator(source, extra, useRegex)
+            translator = self.translator(source, extra, useRegex)
 
-        with open(dst, "w") as f:
-            f.write(self.translator.compile())
+            if dst.endswith("/"):
+                if not os.path.exists(dst[1:]):
+                    os.mkdir(os.getcwd()+"/"+dst)
+                    filename = src.split(".", -1)[0]
+                    dst = dst + filename + self.extension
+
+            with open(dst, "w") as f:
+                f.write(translator.translate(source))
+        else:
+            shutil.copytree(src, dst)
+            def iter(dst):
+                for i in os.listdir(dst):
+                    if os.path.isfile(dst+"/"+i) and i.endswith(self.oextension):
+                        self.args = [dst+"/"+i]
+                        print(self.args)
+                        self.run(extra, useRegex)
+                        os.remove(dst+"/"+i)
+                    elif os.path.isdir(dst+"/"+i):
+                        iter(dst+"/"+i)
+                    elif not i.endswith(self.oextension) and self.exluding:
+                        os.remove(dst+"/"+i)
+            iter(dst)
