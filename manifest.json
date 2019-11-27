@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.Context.html",
-          "hash": "O72mop3ypm+7k8xVxAeYNg=="
+          "hash": "XSeh9oxEeC6O+Nh3V9qa0Q=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.IContext.html",
-          "hash": "QdDNpACwjtFlaAOukd2Zyg=="
+          "hash": "xC5kpNpmsQqwmfKjKnTxzA=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html",
-          "hash": "+vgAs1O+8+jHGwYTrPYTvA=="
+          "hash": "shC5K6/Azh6M2htFIZ4i9Q=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.ITransformer.html",
-          "hash": "4SLSF2YYubz4M22G0BEJgw=="
+          "hash": "ntBNWBXClp8zQmRocayLdQ=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.RegexExtensions.html",
-          "hash": "rVvJZw987EtYJNGKZ0G0Bw=="
+          "hash": "aO/Zr5MniwzYKyeeCZRDwQ=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.SubstitutionRule.html",
-          "hash": "QWpIiAKP2nnfcZH/QOIz5A=="
+          "hash": "1R55G0ciAWP5x0d2i7pThg=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.Transformer.html",
-          "hash": "9MVv58v6iikVJ6Joxrmu3Q=="
+          "hash": "uDpIgHoNXPcX4gw/AOJ3JQ=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.TransformerCLI.html",
-          "hash": "znR9SFHD4thyNgQT5K1SpA=="
+          "hash": "sgDwiGHSfP0V3wrJqKW5VQ=="
         }
       },
       "is_incremental": false,
