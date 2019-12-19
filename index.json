@@ -4,6 +4,11 @@
     "title": "RegularExpressions.Transformer | LinksPlatform's Platform.RegularExpressions.Transformer Library",
     "keywords": "C# Python RegularExpressions.Transformer LinksPlatform's Platform.RegularExpressions.Transformer Class Library. Namespace: Platform.RegularExpressions.Transformer Forked from: LinksPlatform/Collections.Methods/CSharpToCppTranslator NuGet package: Platform.RegularExpressions.Transformer Python version: retranslator Documentation PDF file with code for e-readers. Dependent libraries Platform.RegularExpressions.Transformer.CSharpToCpp"
   },
+  "api/Platform.RegularExpressions.Transformer.RegexExtensions.html": {
+    "href": "api/Platform.RegularExpressions.Transformer.RegexExtensions.html",
+    "title": "Class RegexExtensions | LinksPlatform's Platform.RegularExpressions.Transformer Library",
+    "keywords": "Class RegexExtensions Inheritance Object RegexExtensions Inherited Members Object.Equals(Object) Object.Equals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Object.ReferenceEquals(Object, Object) Object.ToString() Namespace : Platform.RegularExpressions.Transformer Assembly : Platform.RegularExpressions.Transformer.dll Syntax public static class RegexExtensions Methods | Improve this Doc View Source OverrideOptions(Regex, RegexOptions, TimeSpan) Declaration public static Regex OverrideOptions(this Regex regex, RegexOptions options, TimeSpan matchTimeout) Parameters Type Name Description Regex regex RegexOptions options TimeSpan matchTimeout Returns Type Description Regex"
+  },
   "api/Platform.RegularExpressions.Transformer.SubstitutionRule.html": {
     "href": "api/Platform.RegularExpressions.Transformer.SubstitutionRule.html",
     "title": "Class SubstitutionRule | LinksPlatform's Platform.RegularExpressions.Transformer Library",
@@ -18,11 +23,6 @@
     "href": "api/Platform.RegularExpressions.Transformer.ITransformer.html",
     "title": "Interface ITransformer | LinksPlatform's Platform.RegularExpressions.Transformer Library",
     "keywords": "Interface ITransformer Namespace : Platform.RegularExpressions.Transformer Assembly : Platform.RegularExpressions.Transformer.dll Syntax public interface ITransformer Methods | Improve this Doc View Source Transform(String, IContext) Declaration string Transform(string source, IContext context) Parameters Type Name Description String source IContext context Returns Type Description String"
-  },
-  "api/Platform.RegularExpressions.Transformer.RegexExtensions.html": {
-    "href": "api/Platform.RegularExpressions.Transformer.RegexExtensions.html",
-    "title": "Class RegexExtensions | LinksPlatform's Platform.RegularExpressions.Transformer Library",
-    "keywords": "Class RegexExtensions Inheritance Object RegexExtensions Inherited Members Object.Equals(Object) Object.Equals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Object.ReferenceEquals(Object, Object) Object.ToString() Namespace : Platform.RegularExpressions.Transformer Assembly : Platform.RegularExpressions.Transformer.dll Syntax public static class RegexExtensions Methods | Improve this Doc View Source OverrideOptions(Regex, RegexOptions, TimeSpan) Declaration public static Regex OverrideOptions(this Regex regex, RegexOptions options, TimeSpan matchTimeout) Parameters Type Name Description Regex regex RegexOptions options TimeSpan matchTimeout Returns Type Description Regex"
   },
   "api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html": {
     "href": "api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html",
