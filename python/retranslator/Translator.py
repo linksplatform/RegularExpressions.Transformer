@@ -4,10 +4,11 @@
 import re
 import regex
 
+
 class Translator:
     def __init__(self, codeString="", rules=[], useRegex=False):
         """initialize class
-        
+
         Keyword Arguments:
             codeString {str} -- source code on C# (default: {""})
             rules {list} -- include your own rules (default: {[]})
@@ -19,19 +20,19 @@ class Translator:
             self.r = regex
         else:
             self.r = re
-        self.Transform = self.compile = self.translate # callable objects
+        self.Transform = self.compile = self.translate  # callable objects
 
     def translate(self, src=None):
         """translate source code on C# to C++
-        
+
         Keyword Arguments:
             src {str} -- [source code on C#] (default: {None})
-        
+
         Returns:
             str -- Translated code on C++
         """
-        if src: # check src argument
-            current = src[:] # copy string
+        if src:  # check src argument
+            current = src[:]  # copy string
         else:
             current = self.codeString[:]
 
@@ -40,7 +41,7 @@ class Translator:
             substitutionPattern = i[1]
             pathPattern = i[2]
             maximumRepeatCount = i[3]
-            if pathPattern == None: # or pathPattern.IsMatch(context.Path)
+            if pathPattern is None:  # or pathPattern.IsMatch(context.Path)
                 replaceCount = 0
                 current = self.r.sub(matchPattern, substitutionPattern, current)
                 while self.r.search(matchPattern, current):
@@ -52,7 +53,7 @@ class Translator:
 
     def addLine(self, string=""):
         """add a new line in codeString variable
-        
+
         Keyword Arguments:
             string {str} -- line without "\n" (default: {""})
         """

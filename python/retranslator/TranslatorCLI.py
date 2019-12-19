@@ -4,11 +4,12 @@
 import shutil
 import os
 
+
 class TranslatorCLI:
     def __init__(self, args=[], translator=None, original_extension=".cs", extension=".cpp",
-            extra=[], useRegex=False, exludeExtra=False):
+                 extra=[], useRegex=False, exludeExtra=False):
         """Translator command line interface
-        
+
         Keyword Arguments:
             translator {Translator} -- Translator class (default: {None})
             args {list} -- list of strings (default: {[]})
@@ -24,10 +25,10 @@ class TranslatorCLI:
         if not self.oextension.startswith("."):
             self.oextension = ".%s" % self.oextension
         self.run(extra, useRegex)
-    
+
     def run(self, extra=[], useRegex=False):
         """read source file and write translated code in other file.
-        
+
         Raises:
             ValueError -- Wrong path
         """
@@ -76,6 +77,7 @@ class TranslatorCLI:
                 f.write(translator.translate(source))
         else:
             shutil.copytree(src, dst)
+
             def iter(dst):
                 for i in os.listdir(dst):
                     if os.path.isfile(dst+"/"+i) and i.endswith(self.oextension):
