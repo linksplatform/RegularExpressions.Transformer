@@ -78,7 +78,7 @@ class TranslatorCLI:
         else:
             shutil.copytree(src, dst)
 
-            def iter(dst):
+            def iter_dir(dst):
                 for i in os.listdir(dst):
                     if os.path.isfile(dst+"/"+i) and i.endswith(self.oextension):
                         self.args = [dst+"/"+i]
@@ -86,7 +86,7 @@ class TranslatorCLI:
                         self.run(extra, useRegex)
                         os.remove(dst+"/"+i)
                     elif os.path.isdir(dst+"/"+i):
-                        iter(dst+"/"+i)
+                        iter_dir(dst+"/"+i)
                     elif not i.endswith(self.oextension) and self.exluding:
                         os.remove(dst+"/"+i)
-            iter(dst)
+            iter_dir(dst)
