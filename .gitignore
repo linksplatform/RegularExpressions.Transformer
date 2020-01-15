@@ -331,3 +331,6 @@ ASALocalRun/
 
 # GitHub refuses chages to .github folder at the moment
 .github/
+
+# Nimble compiled
+*.exe
