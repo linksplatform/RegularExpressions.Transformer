@@ -42,7 +42,7 @@ class TranslatorCLI:
                         finded = 1
                         break
                 if not finded:
-                    raise ValueError("Path " + src + " is not correct!")
+                    raise ValueError("Path %s is not correct!" % (src))
             filename = src.split(".", -1)[0]
             dst = filename + self.extension
         elif len(self.args) == 2:
@@ -57,7 +57,7 @@ class TranslatorCLI:
                         finded = 1
                         break
                 if not finded:
-                    raise ValueError("Path " + src + " is not correct!")
+                    raise ValueError("Path %s is not correct!" % (src))
         else:
             raise ValueError("You must give one ore more strings in args list.")
 

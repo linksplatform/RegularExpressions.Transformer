@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="retranslator",
-    version="0.0.9",
+    version="0.1.0",
     author="Ethosa",
     author_email="social.ethosa@gmail.com",
     description="retranslator",
@@ -16,7 +16,7 @@ setuptools.setup(
     license="LGPLv3",
     keywords="csharp cpp cs2cpp platform ethosa konard retranslator",
     classifiers=[
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 4 - Beta",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.4",
         "Programming Language :: Python :: 3.5",
