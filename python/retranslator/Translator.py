@@ -1,6 +1,5 @@
 # -*- coding utf-8 -*-
 # authors: Ethosa, Konard
-
 import re
 import logging
 
@@ -19,8 +18,7 @@ class Translator:
             debug {bool} -- debug output. (default: {False})
         """
         self.originalText = codeString
-        self.rules = rules
-        self.Transform = self.compile = self.translate  # callable objects
+        self.rules = rules  # callable objects
 
         # Regex settings
         if useRegex:
@@ -72,6 +70,8 @@ class Translator:
                     replaceCount += 1
                     current = self.r.sub(matchPattern, substitutionPattern, current)
         return current
+
+    Transform = translate
 
     def addLine(self, string=""):
         """Adds a new line in originalText variable.
