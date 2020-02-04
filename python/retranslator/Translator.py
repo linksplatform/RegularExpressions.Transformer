@@ -36,6 +36,12 @@ class Translator:
         # Initialize logging
         logging.basicConfig(level=self.debug)
 
+    async def atranslate(self, src=None):
+        """
+        Async variant of translate method.
+        """
+        return self.translate(src)
+
     def translate(self, src=None):
         """Transforms original text, using specific rules.
 
