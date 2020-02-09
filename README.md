@@ -5,6 +5,7 @@
 | [![NuGet Version and Downloads count](https://buildstats.info/nuget/Platform.RegularExpressions.Transformer)](https://www.nuget.org/packages/Platform.RegularExpressions.Transformer) | C# |
 |-|-|
 | [![PyPI version](https://badge.fury.io/py/retranslator.svg)](https://badge.fury.io/py/retranslator)  | __Python__  |
+| ...  | __Nim__  |
 
 # [RegularExpressions.Transformer](https://github.com/linksplatform/RegularExpressions.Transformer)
 
