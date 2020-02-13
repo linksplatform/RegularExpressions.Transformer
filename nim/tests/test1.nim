@@ -3,6 +3,6 @@
 import retranslator
 
 var rule: Rule = newRule()
-echo(rule)
+echo rule
 # Output:
 # ("", "", "nil", 0)
