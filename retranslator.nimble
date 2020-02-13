@@ -1,11 +1,11 @@
 [Package]
 name = "retranslator"
 author = "Ethosa, Konard"
-version = "0.0.1"
+version = "0.0.2"
 description = "Transformer"
 license = "LGPLv3"
 srcDir = "nim/src"
 
 [Deps]
-Requires: "nim >= 0.20.0"
+Requires: "nim >= 1.0.0"
 Requires: "nre"
