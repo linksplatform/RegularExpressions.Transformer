@@ -1,0 +1,405 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Platform.RegularExpressions.Transformer
+  name: Platform.RegularExpressions.Transformer
+  href: api/Platform.RegularExpressions.Transformer.html
+  commentId: N:Platform.RegularExpressions.Transformer
+  fullName: Platform.RegularExpressions.Transformer
+  nameWithType: Platform.RegularExpressions.Transformer
+- uid: Platform.RegularExpressions.Transformer.Context
+  name: Context
+  href: api/Platform.RegularExpressions.Transformer.Context.html
+  commentId: T:Platform.RegularExpressions.Transformer.Context
+  fullName: Platform.RegularExpressions.Transformer.Context
+  nameWithType: Context
+- uid: Platform.RegularExpressions.Transformer.Context.#ctor(System.String)
+  name: Context(String)
+  href: api/Platform.RegularExpressions.Transformer.Context.html#Platform_RegularExpressions_Transformer_Context__ctor_System_String_
+  commentId: M:Platform.RegularExpressions.Transformer.Context.#ctor(System.String)
+  fullName: Platform.RegularExpressions.Transformer.Context.Context(System.String)
+  nameWithType: Context.Context(String)
+- uid: Platform.RegularExpressions.Transformer.Context.#ctor*
+  name: Context
+  href: api/Platform.RegularExpressions.Transformer.Context.html#Platform_RegularExpressions_Transformer_Context__ctor_
+  commentId: Overload:Platform.RegularExpressions.Transformer.Context.#ctor
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.Context.Context
+  nameWithType: Context.Context
+- uid: Platform.RegularExpressions.Transformer.Context.Path
+  name: Path
+  href: api/Platform.RegularExpressions.Transformer.Context.html#Platform_RegularExpressions_Transformer_Context_Path
+  commentId: P:Platform.RegularExpressions.Transformer.Context.Path
+  fullName: Platform.RegularExpressions.Transformer.Context.Path
+  nameWithType: Context.Path
+- uid: Platform.RegularExpressions.Transformer.Context.Path*
+  name: Path
+  href: api/Platform.RegularExpressions.Transformer.Context.html#Platform_RegularExpressions_Transformer_Context_Path_
+  commentId: Overload:Platform.RegularExpressions.Transformer.Context.Path
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.Context.Path
+  nameWithType: Context.Path
+- uid: Platform.RegularExpressions.Transformer.IContext
+  name: IContext
+  href: api/Platform.RegularExpressions.Transformer.IContext.html
+  commentId: T:Platform.RegularExpressions.Transformer.IContext
+  fullName: Platform.RegularExpressions.Transformer.IContext
+  nameWithType: IContext
+- uid: Platform.RegularExpressions.Transformer.IContext.Path
+  name: Path
+  href: api/Platform.RegularExpressions.Transformer.IContext.html#Platform_RegularExpressions_Transformer_IContext_Path
+  commentId: P:Platform.RegularExpressions.Transformer.IContext.Path
+  fullName: Platform.RegularExpressions.Transformer.IContext.Path
+  nameWithType: IContext.Path
+- uid: Platform.RegularExpressions.Transformer.IContext.Path*
+  name: Path
+  href: api/Platform.RegularExpressions.Transformer.IContext.html#Platform_RegularExpressions_Transformer_IContext_Path_
+  commentId: Overload:Platform.RegularExpressions.Transformer.IContext.Path
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.IContext.Path
+  nameWithType: IContext.Path
+- uid: Platform.RegularExpressions.Transformer.ISubstitutionRule
+  name: ISubstitutionRule
+  href: api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html
+  commentId: T:Platform.RegularExpressions.Transformer.ISubstitutionRule
+  fullName: Platform.RegularExpressions.Transformer.ISubstitutionRule
+  nameWithType: ISubstitutionRule
+- uid: Platform.RegularExpressions.Transformer.ISubstitutionRule.MatchPattern
+  name: MatchPattern
+  href: api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html#Platform_RegularExpressions_Transformer_ISubstitutionRule_MatchPattern
+  commentId: P:Platform.RegularExpressions.Transformer.ISubstitutionRule.MatchPattern
+  fullName: Platform.RegularExpressions.Transformer.ISubstitutionRule.MatchPattern
+  nameWithType: ISubstitutionRule.MatchPattern
+- uid: Platform.RegularExpressions.Transformer.ISubstitutionRule.MatchPattern*
+  name: MatchPattern
+  href: api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html#Platform_RegularExpressions_Transformer_ISubstitutionRule_MatchPattern_
+  commentId: Overload:Platform.RegularExpressions.Transformer.ISubstitutionRule.MatchPattern
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.ISubstitutionRule.MatchPattern
+  nameWithType: ISubstitutionRule.MatchPattern
+- uid: Platform.RegularExpressions.Transformer.ISubstitutionRule.MaximumRepeatCount
+  name: MaximumRepeatCount
+  href: api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html#Platform_RegularExpressions_Transformer_ISubstitutionRule_MaximumRepeatCount
+  commentId: P:Platform.RegularExpressions.Transformer.ISubstitutionRule.MaximumRepeatCount
+  fullName: Platform.RegularExpressions.Transformer.ISubstitutionRule.MaximumRepeatCount
+  nameWithType: ISubstitutionRule.MaximumRepeatCount
+- uid: Platform.RegularExpressions.Transformer.ISubstitutionRule.MaximumRepeatCount*
+  name: MaximumRepeatCount
+  href: api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html#Platform_RegularExpressions_Transformer_ISubstitutionRule_MaximumRepeatCount_
+  commentId: Overload:Platform.RegularExpressions.Transformer.ISubstitutionRule.MaximumRepeatCount
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.ISubstitutionRule.MaximumRepeatCount
+  nameWithType: ISubstitutionRule.MaximumRepeatCount
+- uid: Platform.RegularExpressions.Transformer.ISubstitutionRule.PathPattern
+  name: PathPattern
+  href: api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html#Platform_RegularExpressions_Transformer_ISubstitutionRule_PathPattern
+  commentId: P:Platform.RegularExpressions.Transformer.ISubstitutionRule.PathPattern
+  fullName: Platform.RegularExpressions.Transformer.ISubstitutionRule.PathPattern
+  nameWithType: ISubstitutionRule.PathPattern
+- uid: Platform.RegularExpressions.Transformer.ISubstitutionRule.PathPattern*
+  name: PathPattern
+  href: api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html#Platform_RegularExpressions_Transformer_ISubstitutionRule_PathPattern_
+  commentId: Overload:Platform.RegularExpressions.Transformer.ISubstitutionRule.PathPattern
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.ISubstitutionRule.PathPattern
+  nameWithType: ISubstitutionRule.PathPattern
+- uid: Platform.RegularExpressions.Transformer.ISubstitutionRule.SubstitutionPattern
+  name: SubstitutionPattern
+  href: api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html#Platform_RegularExpressions_Transformer_ISubstitutionRule_SubstitutionPattern
+  commentId: P:Platform.RegularExpressions.Transformer.ISubstitutionRule.SubstitutionPattern
+  fullName: Platform.RegularExpressions.Transformer.ISubstitutionRule.SubstitutionPattern
+  nameWithType: ISubstitutionRule.SubstitutionPattern
+- uid: Platform.RegularExpressions.Transformer.ISubstitutionRule.SubstitutionPattern*
+  name: SubstitutionPattern
+  href: api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html#Platform_RegularExpressions_Transformer_ISubstitutionRule_SubstitutionPattern_
+  commentId: Overload:Platform.RegularExpressions.Transformer.ISubstitutionRule.SubstitutionPattern
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.ISubstitutionRule.SubstitutionPattern
+  nameWithType: ISubstitutionRule.SubstitutionPattern
+- uid: Platform.RegularExpressions.Transformer.ITransformer
+  name: ITransformer
+  href: api/Platform.RegularExpressions.Transformer.ITransformer.html
+  commentId: T:Platform.RegularExpressions.Transformer.ITransformer
+  fullName: Platform.RegularExpressions.Transformer.ITransformer
+  nameWithType: ITransformer
+- uid: Platform.RegularExpressions.Transformer.ITransformer.Transform(System.String,Platform.RegularExpressions.Transformer.IContext)
+  name: Transform(String, IContext)
+  href: api/Platform.RegularExpressions.Transformer.ITransformer.html#Platform_RegularExpressions_Transformer_ITransformer_Transform_System_String_Platform_RegularExpressions_Transformer_IContext_
+  commentId: M:Platform.RegularExpressions.Transformer.ITransformer.Transform(System.String,Platform.RegularExpressions.Transformer.IContext)
+  fullName: Platform.RegularExpressions.Transformer.ITransformer.Transform(System.String, Platform.RegularExpressions.Transformer.IContext)
+  nameWithType: ITransformer.Transform(String, IContext)
+- uid: Platform.RegularExpressions.Transformer.ITransformer.Transform*
+  name: Transform
+  href: api/Platform.RegularExpressions.Transformer.ITransformer.html#Platform_RegularExpressions_Transformer_ITransformer_Transform_
+  commentId: Overload:Platform.RegularExpressions.Transformer.ITransformer.Transform
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.ITransformer.Transform
+  nameWithType: ITransformer.Transform
+- uid: Platform.RegularExpressions.Transformer.RegexExtensions
+  name: RegexExtensions
+  href: api/Platform.RegularExpressions.Transformer.RegexExtensions.html
+  commentId: T:Platform.RegularExpressions.Transformer.RegexExtensions
+  fullName: Platform.RegularExpressions.Transformer.RegexExtensions
+  nameWithType: RegexExtensions
+- uid: Platform.RegularExpressions.Transformer.RegexExtensions.OverrideOptions(System.Text.RegularExpressions.Regex,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)
+  name: OverrideOptions(Regex, RegexOptions, TimeSpan)
+  href: api/Platform.RegularExpressions.Transformer.RegexExtensions.html#Platform_RegularExpressions_Transformer_RegexExtensions_OverrideOptions_System_Text_RegularExpressions_Regex_System_Text_RegularExpressions_RegexOptions_System_TimeSpan_
+  commentId: M:Platform.RegularExpressions.Transformer.RegexExtensions.OverrideOptions(System.Text.RegularExpressions.Regex,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)
+  fullName: Platform.RegularExpressions.Transformer.RegexExtensions.OverrideOptions(System.Text.RegularExpressions.Regex, System.Text.RegularExpressions.RegexOptions, System.TimeSpan)
+  nameWithType: RegexExtensions.OverrideOptions(Regex, RegexOptions, TimeSpan)
+- uid: Platform.RegularExpressions.Transformer.RegexExtensions.OverrideOptions*
+  name: OverrideOptions
+  href: api/Platform.RegularExpressions.Transformer.RegexExtensions.html#Platform_RegularExpressions_Transformer_RegexExtensions_OverrideOptions_
+  commentId: Overload:Platform.RegularExpressions.Transformer.RegexExtensions.OverrideOptions
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.RegexExtensions.OverrideOptions
+  nameWithType: RegexExtensions.OverrideOptions
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule
+  name: SubstitutionRule
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html
+  commentId: T:Platform.RegularExpressions.Transformer.SubstitutionRule
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule
+  nameWithType: SubstitutionRule
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.#ctor(System.Text.RegularExpressions.Regex,System.String)
+  name: SubstitutionRule(Regex, String)
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule__ctor_System_Text_RegularExpressions_Regex_System_String_
+  commentId: M:Platform.RegularExpressions.Transformer.SubstitutionRule.#ctor(System.Text.RegularExpressions.Regex,System.String)
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.SubstitutionRule(System.Text.RegularExpressions.Regex, System.String)
+  nameWithType: SubstitutionRule.SubstitutionRule(Regex, String)
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.#ctor(System.Text.RegularExpressions.Regex,System.String,System.Int32)
+  name: SubstitutionRule(Regex, String, Int32)
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule__ctor_System_Text_RegularExpressions_Regex_System_String_System_Int32_
+  commentId: M:Platform.RegularExpressions.Transformer.SubstitutionRule.#ctor(System.Text.RegularExpressions.Regex,System.String,System.Int32)
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.SubstitutionRule(System.Text.RegularExpressions.Regex, System.String, System.Int32)
+  nameWithType: SubstitutionRule.SubstitutionRule(Regex, String, Int32)
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.#ctor(System.Text.RegularExpressions.Regex,System.String,System.Text.RegularExpressions.Regex,System.Int32)
+  name: SubstitutionRule(Regex, String, Regex, Int32)
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule__ctor_System_Text_RegularExpressions_Regex_System_String_System_Text_RegularExpressions_Regex_System_Int32_
+  commentId: M:Platform.RegularExpressions.Transformer.SubstitutionRule.#ctor(System.Text.RegularExpressions.Regex,System.String,System.Text.RegularExpressions.Regex,System.Int32)
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.SubstitutionRule(System.Text.RegularExpressions.Regex, System.String, System.Text.RegularExpressions.Regex, System.Int32)
+  nameWithType: SubstitutionRule.SubstitutionRule(Regex, String, Regex, Int32)
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.#ctor(System.Text.RegularExpressions.Regex,System.String,System.Text.RegularExpressions.Regex,System.Int32,System.Boolean)
+  name: SubstitutionRule(Regex, String, Regex, Int32, Boolean)
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule__ctor_System_Text_RegularExpressions_Regex_System_String_System_Text_RegularExpressions_Regex_System_Int32_System_Boolean_
+  commentId: M:Platform.RegularExpressions.Transformer.SubstitutionRule.#ctor(System.Text.RegularExpressions.Regex,System.String,System.Text.RegularExpressions.Regex,System.Int32,System.Boolean)
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.SubstitutionRule(System.Text.RegularExpressions.Regex, System.String, System.Text.RegularExpressions.Regex, System.Int32, System.Boolean)
+  nameWithType: SubstitutionRule.SubstitutionRule(Regex, String, Regex, Int32, Boolean)
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.#ctor(System.Text.RegularExpressions.Regex,System.String,System.Text.RegularExpressions.Regex,System.Int32,System.Nullable{System.Text.RegularExpressions.RegexOptions},System.Nullable{System.Text.RegularExpressions.RegexOptions},System.Nullable{System.TimeSpan})
+  name: SubstitutionRule(Regex, String, Regex, Int32, Nullable<RegexOptions>, Nullable<RegexOptions>, Nullable<TimeSpan>)
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule__ctor_System_Text_RegularExpressions_Regex_System_String_System_Text_RegularExpressions_Regex_System_Int32_System_Nullable_System_Text_RegularExpressions_RegexOptions__System_Nullable_System_Text_RegularExpressions_RegexOptions__System_Nullable_System_TimeSpan__
+  commentId: M:Platform.RegularExpressions.Transformer.SubstitutionRule.#ctor(System.Text.RegularExpressions.Regex,System.String,System.Text.RegularExpressions.Regex,System.Int32,System.Nullable{System.Text.RegularExpressions.RegexOptions},System.Nullable{System.Text.RegularExpressions.RegexOptions},System.Nullable{System.TimeSpan})
+  name.vb: SubstitutionRule(Regex, String, Regex, Int32, Nullable(Of RegexOptions), Nullable(Of RegexOptions), Nullable(Of TimeSpan))
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.SubstitutionRule(System.Text.RegularExpressions.Regex, System.String, System.Text.RegularExpressions.Regex, System.Int32, System.Nullable<System.Text.RegularExpressions.RegexOptions>, System.Nullable<System.Text.RegularExpressions.RegexOptions>, System.Nullable<System.TimeSpan>)
+  fullName.vb: Platform.RegularExpressions.Transformer.SubstitutionRule.SubstitutionRule(System.Text.RegularExpressions.Regex, System.String, System.Text.RegularExpressions.Regex, System.Int32, System.Nullable(Of System.Text.RegularExpressions.RegexOptions), System.Nullable(Of System.Text.RegularExpressions.RegexOptions), System.Nullable(Of System.TimeSpan))
+  nameWithType: SubstitutionRule.SubstitutionRule(Regex, String, Regex, Int32, Nullable<RegexOptions>, Nullable<RegexOptions>, Nullable<TimeSpan>)
+  nameWithType.vb: SubstitutionRule.SubstitutionRule(Regex, String, Regex, Int32, Nullable(Of RegexOptions), Nullable(Of RegexOptions), Nullable(Of TimeSpan))
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.#ctor*
+  name: SubstitutionRule
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule__ctor_
+  commentId: Overload:Platform.RegularExpressions.Transformer.SubstitutionRule.#ctor
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.SubstitutionRule
+  nameWithType: SubstitutionRule.SubstitutionRule
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.DefaultMatchPatternRegexOptions
+  name: DefaultMatchPatternRegexOptions
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_DefaultMatchPatternRegexOptions
+  commentId: F:Platform.RegularExpressions.Transformer.SubstitutionRule.DefaultMatchPatternRegexOptions
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.DefaultMatchPatternRegexOptions
+  nameWithType: SubstitutionRule.DefaultMatchPatternRegexOptions
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.DefaultMatchTimeout
+  name: DefaultMatchTimeout
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_DefaultMatchTimeout
+  commentId: F:Platform.RegularExpressions.Transformer.SubstitutionRule.DefaultMatchTimeout
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.DefaultMatchTimeout
+  nameWithType: SubstitutionRule.DefaultMatchTimeout
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.DefaultPathPatternRegexOptions
+  name: DefaultPathPatternRegexOptions
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_DefaultPathPatternRegexOptions
+  commentId: F:Platform.RegularExpressions.Transformer.SubstitutionRule.DefaultPathPatternRegexOptions
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.DefaultPathPatternRegexOptions
+  nameWithType: SubstitutionRule.DefaultPathPatternRegexOptions
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.MatchPattern
+  name: MatchPattern
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_MatchPattern
+  commentId: P:Platform.RegularExpressions.Transformer.SubstitutionRule.MatchPattern
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.MatchPattern
+  nameWithType: SubstitutionRule.MatchPattern
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.MatchPattern*
+  name: MatchPattern
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_MatchPattern_
+  commentId: Overload:Platform.RegularExpressions.Transformer.SubstitutionRule.MatchPattern
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.MatchPattern
+  nameWithType: SubstitutionRule.MatchPattern
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.MaximumRepeatCount
+  name: MaximumRepeatCount
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_MaximumRepeatCount
+  commentId: P:Platform.RegularExpressions.Transformer.SubstitutionRule.MaximumRepeatCount
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.MaximumRepeatCount
+  nameWithType: SubstitutionRule.MaximumRepeatCount
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.MaximumRepeatCount*
+  name: MaximumRepeatCount
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_MaximumRepeatCount_
+  commentId: Overload:Platform.RegularExpressions.Transformer.SubstitutionRule.MaximumRepeatCount
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.MaximumRepeatCount
+  nameWithType: SubstitutionRule.MaximumRepeatCount
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.op_Implicit(System.ValueTuple{System.Text.RegularExpressions.Regex,System.String,System.Int32})~Platform.RegularExpressions.Transformer.SubstitutionRule
+  name: Implicit((Regex, String, Int32) to SubstitutionRule)
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_op_Implicit_System_ValueTuple_System_Text_RegularExpressions_Regex_System_String_System_Int32___Platform_RegularExpressions_Transformer_SubstitutionRule
+  commentId: M:Platform.RegularExpressions.Transformer.SubstitutionRule.op_Implicit(System.ValueTuple{System.Text.RegularExpressions.Regex,System.String,System.Int32})~Platform.RegularExpressions.Transformer.SubstitutionRule
+  name.vb: Widening((Regex, String, Int32) to SubstitutionRule)
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.Implicit(System.ValueTuple<System.Text.RegularExpressions.Regex, System.String, System.Int32> to Platform.RegularExpressions.Transformer.SubstitutionRule)
+  fullName.vb: Platform.RegularExpressions.Transformer.SubstitutionRule.Widening(System.ValueTuple(Of System.Text.RegularExpressions.Regex, System.String, System.Int32) to Platform.RegularExpressions.Transformer.SubstitutionRule)
+  nameWithType: SubstitutionRule.Implicit((Regex, String, Int32) to SubstitutionRule)
+  nameWithType.vb: SubstitutionRule.Widening((Regex, String, Int32) to SubstitutionRule)
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.op_Implicit(System.ValueTuple{System.Text.RegularExpressions.Regex,System.String,System.Text.RegularExpressions.Regex,System.Int32})~Platform.RegularExpressions.Transformer.SubstitutionRule
+  name: Implicit((Regex, String, Regex, Int32) to SubstitutionRule)
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_op_Implicit_System_ValueTuple_System_Text_RegularExpressions_Regex_System_String_System_Text_RegularExpressions_Regex_System_Int32___Platform_RegularExpressions_Transformer_SubstitutionRule
+  commentId: M:Platform.RegularExpressions.Transformer.SubstitutionRule.op_Implicit(System.ValueTuple{System.Text.RegularExpressions.Regex,System.String,System.Text.RegularExpressions.Regex,System.Int32})~Platform.RegularExpressions.Transformer.SubstitutionRule
+  name.vb: Widening((Regex, String, Regex, Int32) to SubstitutionRule)
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.Implicit(System.ValueTuple<System.Text.RegularExpressions.Regex, System.String, System.Text.RegularExpressions.Regex, System.Int32> to Platform.RegularExpressions.Transformer.SubstitutionRule)
+  fullName.vb: Platform.RegularExpressions.Transformer.SubstitutionRule.Widening(System.ValueTuple(Of System.Text.RegularExpressions.Regex, System.String, System.Text.RegularExpressions.Regex, System.Int32) to Platform.RegularExpressions.Transformer.SubstitutionRule)
+  nameWithType: SubstitutionRule.Implicit((Regex, String, Regex, Int32) to SubstitutionRule)
+  nameWithType.vb: SubstitutionRule.Widening((Regex, String, Regex, Int32) to SubstitutionRule)
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.op_Implicit(System.ValueTuple{System.Text.RegularExpressions.Regex,System.String})~Platform.RegularExpressions.Transformer.SubstitutionRule
+  name: Implicit((Regex, String) to SubstitutionRule)
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_op_Implicit_System_ValueTuple_System_Text_RegularExpressions_Regex_System_String___Platform_RegularExpressions_Transformer_SubstitutionRule
+  commentId: M:Platform.RegularExpressions.Transformer.SubstitutionRule.op_Implicit(System.ValueTuple{System.Text.RegularExpressions.Regex,System.String})~Platform.RegularExpressions.Transformer.SubstitutionRule
+  name.vb: Widening((Regex, String) to SubstitutionRule)
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.Implicit(System.ValueTuple<System.Text.RegularExpressions.Regex, System.String> to Platform.RegularExpressions.Transformer.SubstitutionRule)
+  fullName.vb: Platform.RegularExpressions.Transformer.SubstitutionRule.Widening(System.ValueTuple(Of System.Text.RegularExpressions.Regex, System.String) to Platform.RegularExpressions.Transformer.SubstitutionRule)
+  nameWithType: SubstitutionRule.Implicit((Regex, String) to SubstitutionRule)
+  nameWithType.vb: SubstitutionRule.Widening((Regex, String) to SubstitutionRule)
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.op_Implicit*
+  name: Implicit
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_op_Implicit_
+  commentId: Overload:Platform.RegularExpressions.Transformer.SubstitutionRule.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.Implicit
+  fullName.vb: Platform.RegularExpressions.Transformer.SubstitutionRule.Widening
+  nameWithType: SubstitutionRule.Implicit
+  nameWithType.vb: SubstitutionRule.Widening
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.OverrideMatchPatternOptions(System.Text.RegularExpressions.RegexOptions,System.TimeSpan)
+  name: OverrideMatchPatternOptions(RegexOptions, TimeSpan)
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_OverrideMatchPatternOptions_System_Text_RegularExpressions_RegexOptions_System_TimeSpan_
+  commentId: M:Platform.RegularExpressions.Transformer.SubstitutionRule.OverrideMatchPatternOptions(System.Text.RegularExpressions.RegexOptions,System.TimeSpan)
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.OverrideMatchPatternOptions(System.Text.RegularExpressions.RegexOptions, System.TimeSpan)
+  nameWithType: SubstitutionRule.OverrideMatchPatternOptions(RegexOptions, TimeSpan)
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.OverrideMatchPatternOptions*
+  name: OverrideMatchPatternOptions
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_OverrideMatchPatternOptions_
+  commentId: Overload:Platform.RegularExpressions.Transformer.SubstitutionRule.OverrideMatchPatternOptions
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.OverrideMatchPatternOptions
+  nameWithType: SubstitutionRule.OverrideMatchPatternOptions
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.OverridePathPatternOptions(System.Text.RegularExpressions.RegexOptions,System.TimeSpan)
+  name: OverridePathPatternOptions(RegexOptions, TimeSpan)
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_OverridePathPatternOptions_System_Text_RegularExpressions_RegexOptions_System_TimeSpan_
+  commentId: M:Platform.RegularExpressions.Transformer.SubstitutionRule.OverridePathPatternOptions(System.Text.RegularExpressions.RegexOptions,System.TimeSpan)
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.OverridePathPatternOptions(System.Text.RegularExpressions.RegexOptions, System.TimeSpan)
+  nameWithType: SubstitutionRule.OverridePathPatternOptions(RegexOptions, TimeSpan)
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.OverridePathPatternOptions*
+  name: OverridePathPatternOptions
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_OverridePathPatternOptions_
+  commentId: Overload:Platform.RegularExpressions.Transformer.SubstitutionRule.OverridePathPatternOptions
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.OverridePathPatternOptions
+  nameWithType: SubstitutionRule.OverridePathPatternOptions
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.PathPattern
+  name: PathPattern
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_PathPattern
+  commentId: P:Platform.RegularExpressions.Transformer.SubstitutionRule.PathPattern
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.PathPattern
+  nameWithType: SubstitutionRule.PathPattern
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.PathPattern*
+  name: PathPattern
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_PathPattern_
+  commentId: Overload:Platform.RegularExpressions.Transformer.SubstitutionRule.PathPattern
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.PathPattern
+  nameWithType: SubstitutionRule.PathPattern
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.SubstitutionPattern
+  name: SubstitutionPattern
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_SubstitutionPattern
+  commentId: P:Platform.RegularExpressions.Transformer.SubstitutionRule.SubstitutionPattern
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.SubstitutionPattern
+  nameWithType: SubstitutionRule.SubstitutionPattern
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.SubstitutionPattern*
+  name: SubstitutionPattern
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_SubstitutionPattern_
+  commentId: Overload:Platform.RegularExpressions.Transformer.SubstitutionRule.SubstitutionPattern
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.SubstitutionPattern
+  nameWithType: SubstitutionRule.SubstitutionPattern
+- uid: Platform.RegularExpressions.Transformer.Transformer
+  name: Transformer
+  href: api/Platform.RegularExpressions.Transformer.Transformer.html
+  commentId: T:Platform.RegularExpressions.Transformer.Transformer
+  fullName: Platform.RegularExpressions.Transformer.Transformer
+  nameWithType: Transformer
+- uid: Platform.RegularExpressions.Transformer.Transformer.#ctor(System.Collections.Generic.IList{Platform.RegularExpressions.Transformer.ISubstitutionRule})
+  name: Transformer(IList<ISubstitutionRule>)
+  href: api/Platform.RegularExpressions.Transformer.Transformer.html#Platform_RegularExpressions_Transformer_Transformer__ctor_System_Collections_Generic_IList_Platform_RegularExpressions_Transformer_ISubstitutionRule__
+  commentId: M:Platform.RegularExpressions.Transformer.Transformer.#ctor(System.Collections.Generic.IList{Platform.RegularExpressions.Transformer.ISubstitutionRule})
+  name.vb: Transformer(IList(Of ISubstitutionRule))
+  fullName: Platform.RegularExpressions.Transformer.Transformer.Transformer(System.Collections.Generic.IList<Platform.RegularExpressions.Transformer.ISubstitutionRule>)
+  fullName.vb: Platform.RegularExpressions.Transformer.Transformer.Transformer(System.Collections.Generic.IList(Of Platform.RegularExpressions.Transformer.ISubstitutionRule))
+  nameWithType: Transformer.Transformer(IList<ISubstitutionRule>)
+  nameWithType.vb: Transformer.Transformer(IList(Of ISubstitutionRule))
+- uid: Platform.RegularExpressions.Transformer.Transformer.#ctor*
+  name: Transformer
+  href: api/Platform.RegularExpressions.Transformer.Transformer.html#Platform_RegularExpressions_Transformer_Transformer__ctor_
+  commentId: Overload:Platform.RegularExpressions.Transformer.Transformer.#ctor
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.Transformer.Transformer
+  nameWithType: Transformer.Transformer
+- uid: Platform.RegularExpressions.Transformer.Transformer.Transform(System.String,Platform.RegularExpressions.Transformer.IContext)
+  name: Transform(String, IContext)
+  href: api/Platform.RegularExpressions.Transformer.Transformer.html#Platform_RegularExpressions_Transformer_Transformer_Transform_System_String_Platform_RegularExpressions_Transformer_IContext_
+  commentId: M:Platform.RegularExpressions.Transformer.Transformer.Transform(System.String,Platform.RegularExpressions.Transformer.IContext)
+  fullName: Platform.RegularExpressions.Transformer.Transformer.Transform(System.String, Platform.RegularExpressions.Transformer.IContext)
+  nameWithType: Transformer.Transform(String, IContext)
+- uid: Platform.RegularExpressions.Transformer.Transformer.Transform*
+  name: Transform
+  href: api/Platform.RegularExpressions.Transformer.Transformer.html#Platform_RegularExpressions_Transformer_Transformer_Transform_
+  commentId: Overload:Platform.RegularExpressions.Transformer.Transformer.Transform
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.Transformer.Transform
+  nameWithType: Transformer.Transform
+- uid: Platform.RegularExpressions.Transformer.TransformerCLI
+  name: TransformerCLI
+  href: api/Platform.RegularExpressions.Transformer.TransformerCLI.html
+  commentId: T:Platform.RegularExpressions.Transformer.TransformerCLI
+  fullName: Platform.RegularExpressions.Transformer.TransformerCLI
+  nameWithType: TransformerCLI
+- uid: Platform.RegularExpressions.Transformer.TransformerCLI.#ctor(Platform.RegularExpressions.Transformer.ITransformer)
+  name: TransformerCLI(ITransformer)
+  href: api/Platform.RegularExpressions.Transformer.TransformerCLI.html#Platform_RegularExpressions_Transformer_TransformerCLI__ctor_Platform_RegularExpressions_Transformer_ITransformer_
+  commentId: M:Platform.RegularExpressions.Transformer.TransformerCLI.#ctor(Platform.RegularExpressions.Transformer.ITransformer)
+  fullName: Platform.RegularExpressions.Transformer.TransformerCLI.TransformerCLI(Platform.RegularExpressions.Transformer.ITransformer)
+  nameWithType: TransformerCLI.TransformerCLI(ITransformer)
+- uid: Platform.RegularExpressions.Transformer.TransformerCLI.#ctor*
+  name: TransformerCLI
+  href: api/Platform.RegularExpressions.Transformer.TransformerCLI.html#Platform_RegularExpressions_Transformer_TransformerCLI__ctor_
+  commentId: Overload:Platform.RegularExpressions.Transformer.TransformerCLI.#ctor
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.TransformerCLI.TransformerCLI
+  nameWithType: TransformerCLI.TransformerCLI
+- uid: Platform.RegularExpressions.Transformer.TransformerCLI.Run(System.String[],System.String@)
+  name: Run(String[], out String)
+  href: api/Platform.RegularExpressions.Transformer.TransformerCLI.html#Platform_RegularExpressions_Transformer_TransformerCLI_Run_System_String___System_String__
+  commentId: M:Platform.RegularExpressions.Transformer.TransformerCLI.Run(System.String[],System.String@)
+  name.vb: Run(String(), ByRef String)
+  fullName: Platform.RegularExpressions.Transformer.TransformerCLI.Run(System.String[], out System.String)
+  fullName.vb: Platform.RegularExpressions.Transformer.TransformerCLI.Run(System.String(), ByRef System.String)
+  nameWithType: TransformerCLI.Run(String[], out String)
+  nameWithType.vb: TransformerCLI.Run(String(), ByRef String)
+- uid: Platform.RegularExpressions.Transformer.TransformerCLI.Run*
+  name: Run
+  href: api/Platform.RegularExpressions.Transformer.TransformerCLI.html#Platform_RegularExpressions_Transformer_TransformerCLI_Run_
+  commentId: Overload:Platform.RegularExpressions.Transformer.TransformerCLI.Run
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.TransformerCLI.Run
+  nameWithType: TransformerCLI.Run
