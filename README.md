@@ -20,7 +20,7 @@ NuGet package: [Platform.RegularExpressions.Transformer](https://www.nuget.org/p
 Python version: [retranslator](https://github.com/linksplatform/RegularExpressions.Transformer/tree/master/python)
 
 ## [Documentation](https://linksplatform.github.io/RegularExpressions.Transformer)
-[PDF file](https://linksplatform.github.io/RegularExpressions.Transformer/Platform.RegularExpressions.Transformer.pdf) with code for e-readers.
+[PDF file](https://linksplatform.github.io/RegularExpressions.Transformer/csharp/Platform.RegularExpressions.Transformer.pdf) with code for e-readers.
 
 ## Dependent libraries
 *   [Platform.RegularExpressions.Transformer.CSharpToCpp](https://github.com/linksplatform/RegularExpressions.Transformer.CSharpToCpp)
