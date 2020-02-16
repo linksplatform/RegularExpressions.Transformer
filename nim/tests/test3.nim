@@ -3,13 +3,13 @@
 import retranslator
 
 var
-  rule1: Rule = newRule(re"\s+", " ")
+  rule1: Rule = Rule(re"\s+", " ")
   transformer: TransformerRef =
-    newTransformer(
+    Transformer(
       code = "     hello        world  \n\n\nwhat?  test",
       rules = @[rule1]
     )
 
-echo transformer.Transform()
+echo transformer.transform()
 # Output:
 #  hello world what? test

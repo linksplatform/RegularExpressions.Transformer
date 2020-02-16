@@ -3,10 +3,10 @@
 import retranslator
 
 var
-  rule1: Rule = newRule()
-  rule2: Rule = newRule(re"\s+", " ")
+  rule1: Rule = Rule()
+  rule2: Rule = Rule(re"\s+", " ")
   transformer: TransformerRef =
-    newTransformer(rules = @[rule1, rule2])
+    Transformer(rules = @[rule1, rule2])
 
 echo transformer
 # Output:

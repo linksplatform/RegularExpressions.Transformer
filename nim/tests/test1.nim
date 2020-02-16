@@ -2,7 +2,7 @@
 # test convert rule to string
 import retranslator
 
-var rule: Rule = newRule()
+var rule = Rule()
 echo rule
 # Output:
 # ("", "", "nil", 0)
