@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -35,6 +36,16 @@ namespace Platform.RegularExpressions.Transformer
                 }
             }
             return current;
+        }
+
+        public IList<ITransformer> GenerateTransformersForEachRulesStep()
+        {
+            var transformers = new List<ITransformer>();
+            for (int i = 1; i <= _substitutionRules.Count; i++)
+            {
+                transformers.Add(new Transformer(_substitutionRules.Take(i).ToList()));
+            }
+            return transformers;
         }
     }
 }
