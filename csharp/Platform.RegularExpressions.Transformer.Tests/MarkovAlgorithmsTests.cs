@@ -19,8 +19,8 @@ namespace Platform.RegularExpressions.Transformer.Tests
                 ("0", "", int.MaxValue),       // "0" -> "" repeated forever
             };
             var transformer = new Transformer(rules);
-            var input = "111";
-            var expectedOutput = "||||||";
+            var input = "101";
+            var expectedOutput = "|||||";
             var output = transformer.Transform(input, null);
             Assert.Equal(expectedOutput, output);
         }
