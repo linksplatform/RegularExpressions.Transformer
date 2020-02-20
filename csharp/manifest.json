@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.Context.html",
-          "hash": "6sqCX2TdYT58RhkT6p9J4w=="
+          "hash": "zEy4uv9C0/e6oVVDiS6AXw=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.IContext.html",
-          "hash": "FwB5ui7eAksvHcbhPyc6Hg=="
+          "hash": "JEqTc36ISB4Cy3xiLEP1eg=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html",
-          "hash": "r63vrDQOckV+nZ/TTp6Gtw=="
+          "hash": "RqJmM3udsFXjwiE1yALeaQ=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.ITransformer.html",
-          "hash": "QWT6YalslRmjG1DczUwkHw=="
+          "hash": "OuC+zBCeFiDyEs6gAd7tYg=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.RegexExtensions.html",
-          "hash": "LomRtbkAw3BJWXA9gBrx2A=="
+          "hash": "JFAsNxhkO2YWDI/XfEKzrA=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.SubstitutionRule.html",
-          "hash": "RPoq6U0DBSkmGcvK1cezpw=="
+          "hash": "uU4UBwDKZKmuBEaTtwQaGw=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.Transformer.html",
-          "hash": "efgza6zi1IgMc3pdtffFkQ=="
+          "hash": "lKwtc2+nhoLtlPQobP5sRg=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,31 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.TransformerCLI.html",
-          "hash": "p3atMi2iGxN3zxvp9xACcA=="
+          "hash": "EGisWv6N/MMSCugF/CkrsA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.TransformerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.RegularExpressions.Transformer.TransformerExtensions.html",
+          "hash": "DA8r3EdVJ7utzG+TRYe9SQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.TransformersListExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.RegularExpressions.Transformer.TransformersListExtensions.html",
+          "hash": "dSyy9A4zaiEf5gliiN9fKA=="
         }
       },
       "is_incremental": false,
@@ -126,7 +150,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.html",
-          "hash": "MOVJu2Tj76Eak1WNLb+ecg=="
+          "hash": "H052NrbCqsw/SwBt40FqAA=="
         }
       },
       "is_incremental": false,
@@ -138,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "/orbZz/49k7rt+kvdIhUQw=="
+          "hash": "0/yWRY6JLvAiaug2xwvYFQ=="
         }
       },
       "is_incremental": false,
@@ -171,10 +195,11 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ManagedReferenceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 9,
+          "total_file_count": 0,
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
@@ -183,11 +208,10 @@
           "total_file_count": 1,
           "skipped_file_count": 0
         },
-        "TocDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 11,
           "skipped_file_count": 0
         }
       }
