@@ -244,6 +244,33 @@ references:
   isSpec: "True"
   fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.MaximumRepeatCount
   nameWithType: SubstitutionRule.MaximumRepeatCount
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.op_Implicit(System.ValueTuple{System.String,System.String,System.Int32})~Platform.RegularExpressions.Transformer.SubstitutionRule
+  name: Implicit((String, String, Int32) to SubstitutionRule)
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_op_Implicit_System_ValueTuple_System_String_System_String_System_Int32___Platform_RegularExpressions_Transformer_SubstitutionRule
+  commentId: M:Platform.RegularExpressions.Transformer.SubstitutionRule.op_Implicit(System.ValueTuple{System.String,System.String,System.Int32})~Platform.RegularExpressions.Transformer.SubstitutionRule
+  name.vb: Widening((String, String, Int32) to SubstitutionRule)
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.Implicit(System.ValueTuple<System.String, System.String, System.Int32> to Platform.RegularExpressions.Transformer.SubstitutionRule)
+  fullName.vb: Platform.RegularExpressions.Transformer.SubstitutionRule.Widening(System.ValueTuple(Of System.String, System.String, System.Int32) to Platform.RegularExpressions.Transformer.SubstitutionRule)
+  nameWithType: SubstitutionRule.Implicit((String, String, Int32) to SubstitutionRule)
+  nameWithType.vb: SubstitutionRule.Widening((String, String, Int32) to SubstitutionRule)
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.op_Implicit(System.ValueTuple{System.String,System.String,System.Text.RegularExpressions.Regex,System.Int32})~Platform.RegularExpressions.Transformer.SubstitutionRule
+  name: Implicit((String, String, Regex, Int32) to SubstitutionRule)
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_op_Implicit_System_ValueTuple_System_String_System_String_System_Text_RegularExpressions_Regex_System_Int32___Platform_RegularExpressions_Transformer_SubstitutionRule
+  commentId: M:Platform.RegularExpressions.Transformer.SubstitutionRule.op_Implicit(System.ValueTuple{System.String,System.String,System.Text.RegularExpressions.Regex,System.Int32})~Platform.RegularExpressions.Transformer.SubstitutionRule
+  name.vb: Widening((String, String, Regex, Int32) to SubstitutionRule)
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.Implicit(System.ValueTuple<System.String, System.String, System.Text.RegularExpressions.Regex, System.Int32> to Platform.RegularExpressions.Transformer.SubstitutionRule)
+  fullName.vb: Platform.RegularExpressions.Transformer.SubstitutionRule.Widening(System.ValueTuple(Of System.String, System.String, System.Text.RegularExpressions.Regex, System.Int32) to Platform.RegularExpressions.Transformer.SubstitutionRule)
+  nameWithType: SubstitutionRule.Implicit((String, String, Regex, Int32) to SubstitutionRule)
+  nameWithType.vb: SubstitutionRule.Widening((String, String, Regex, Int32) to SubstitutionRule)
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.op_Implicit(System.ValueTuple{System.String,System.String})~Platform.RegularExpressions.Transformer.SubstitutionRule
+  name: Implicit((String, String) to SubstitutionRule)
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_op_Implicit_System_ValueTuple_System_String_System_String___Platform_RegularExpressions_Transformer_SubstitutionRule
+  commentId: M:Platform.RegularExpressions.Transformer.SubstitutionRule.op_Implicit(System.ValueTuple{System.String,System.String})~Platform.RegularExpressions.Transformer.SubstitutionRule
+  name.vb: Widening((String, String) to SubstitutionRule)
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.Implicit(System.ValueTuple<System.String, System.String> to Platform.RegularExpressions.Transformer.SubstitutionRule)
+  fullName.vb: Platform.RegularExpressions.Transformer.SubstitutionRule.Widening(System.ValueTuple(Of System.String, System.String) to Platform.RegularExpressions.Transformer.SubstitutionRule)
+  nameWithType: SubstitutionRule.Implicit((String, String) to SubstitutionRule)
+  nameWithType.vb: SubstitutionRule.Widening((String, String) to SubstitutionRule)
 - uid: Platform.RegularExpressions.Transformer.SubstitutionRule.op_Implicit(System.ValueTuple{System.Text.RegularExpressions.Regex,System.String,System.Int32})~Platform.RegularExpressions.Transformer.SubstitutionRule
   name: Implicit((Regex, String, Int32) to SubstitutionRule)
   href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_op_Implicit_System_ValueTuple_System_Text_RegularExpressions_Regex_System_String_System_Int32___Platform_RegularExpressions_Transformer_SubstitutionRule
@@ -333,6 +360,19 @@ references:
   isSpec: "True"
   fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.SubstitutionPattern
   nameWithType: SubstitutionRule.SubstitutionPattern
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.ToString
+  name: ToString()
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_ToString
+  commentId: M:Platform.RegularExpressions.Transformer.SubstitutionRule.ToString
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.ToString()
+  nameWithType: SubstitutionRule.ToString()
+- uid: Platform.RegularExpressions.Transformer.SubstitutionRule.ToString*
+  name: ToString
+  href: api/Platform.RegularExpressions.Transformer.SubstitutionRule.html#Platform_RegularExpressions_Transformer_SubstitutionRule_ToString_
+  commentId: Overload:Platform.RegularExpressions.Transformer.SubstitutionRule.ToString
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.ToString
+  nameWithType: SubstitutionRule.ToString
 - uid: Platform.RegularExpressions.Transformer.Transformer
   name: Transformer
   href: api/Platform.RegularExpressions.Transformer.Transformer.html
