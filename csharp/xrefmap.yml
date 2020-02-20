@@ -462,38 +462,67 @@ references:
   commentId: T:Platform.RegularExpressions.Transformer.TransformerExtensions
   fullName: Platform.RegularExpressions.Transformer.TransformerExtensions
   nameWithType: TransformerExtensions
-- uid: Platform.RegularExpressions.Transformer.TransformerExtensions.DebugOutput(Platform.RegularExpressions.Transformer.Transformer,System.String,System.String,System.String)
-  name: DebugOutput(Transformer, String, String, String)
-  href: api/Platform.RegularExpressions.Transformer.TransformerExtensions.html#Platform_RegularExpressions_Transformer_TransformerExtensions_DebugOutput_Platform_RegularExpressions_Transformer_Transformer_System_String_System_String_System_String_
-  commentId: M:Platform.RegularExpressions.Transformer.TransformerExtensions.DebugOutput(Platform.RegularExpressions.Transformer.Transformer,System.String,System.String,System.String)
-  fullName: Platform.RegularExpressions.Transformer.TransformerExtensions.DebugOutput(Platform.RegularExpressions.Transformer.Transformer, System.String, System.String, System.String)
-  nameWithType: TransformerExtensions.DebugOutput(Transformer, String, String, String)
-- uid: Platform.RegularExpressions.Transformer.TransformerExtensions.DebugOutput*
-  name: DebugOutput
-  href: api/Platform.RegularExpressions.Transformer.TransformerExtensions.html#Platform_RegularExpressions_Transformer_TransformerExtensions_DebugOutput_
-  commentId: Overload:Platform.RegularExpressions.Transformer.TransformerExtensions.DebugOutput
+- uid: Platform.RegularExpressions.Transformer.TransformerExtensions.GetSteps(Platform.RegularExpressions.Transformer.Transformer,System.String)
+  name: GetSteps(Transformer, String)
+  href: api/Platform.RegularExpressions.Transformer.TransformerExtensions.html#Platform_RegularExpressions_Transformer_TransformerExtensions_GetSteps_Platform_RegularExpressions_Transformer_Transformer_System_String_
+  commentId: M:Platform.RegularExpressions.Transformer.TransformerExtensions.GetSteps(Platform.RegularExpressions.Transformer.Transformer,System.String)
+  fullName: Platform.RegularExpressions.Transformer.TransformerExtensions.GetSteps(Platform.RegularExpressions.Transformer.Transformer, System.String)
+  nameWithType: TransformerExtensions.GetSteps(Transformer, String)
+- uid: Platform.RegularExpressions.Transformer.TransformerExtensions.GetSteps*
+  name: GetSteps
+  href: api/Platform.RegularExpressions.Transformer.TransformerExtensions.html#Platform_RegularExpressions_Transformer_TransformerExtensions_GetSteps_
+  commentId: Overload:Platform.RegularExpressions.Transformer.TransformerExtensions.GetSteps
   isSpec: "True"
-  fullName: Platform.RegularExpressions.Transformer.TransformerExtensions.DebugOutput
-  nameWithType: TransformerExtensions.DebugOutput
+  fullName: Platform.RegularExpressions.Transformer.TransformerExtensions.GetSteps
+  nameWithType: TransformerExtensions.GetSteps
+- uid: Platform.RegularExpressions.Transformer.TransformerExtensions.WriteStepsToFiles(Platform.RegularExpressions.Transformer.Transformer,System.String,System.String,System.String)
+  name: WriteStepsToFiles(Transformer, String, String, String)
+  href: api/Platform.RegularExpressions.Transformer.TransformerExtensions.html#Platform_RegularExpressions_Transformer_TransformerExtensions_WriteStepsToFiles_Platform_RegularExpressions_Transformer_Transformer_System_String_System_String_System_String_
+  commentId: M:Platform.RegularExpressions.Transformer.TransformerExtensions.WriteStepsToFiles(Platform.RegularExpressions.Transformer.Transformer,System.String,System.String,System.String)
+  fullName: Platform.RegularExpressions.Transformer.TransformerExtensions.WriteStepsToFiles(Platform.RegularExpressions.Transformer.Transformer, System.String, System.String, System.String)
+  nameWithType: TransformerExtensions.WriteStepsToFiles(Transformer, String, String, String)
+- uid: Platform.RegularExpressions.Transformer.TransformerExtensions.WriteStepsToFiles*
+  name: WriteStepsToFiles
+  href: api/Platform.RegularExpressions.Transformer.TransformerExtensions.html#Platform_RegularExpressions_Transformer_TransformerExtensions_WriteStepsToFiles_
+  commentId: Overload:Platform.RegularExpressions.Transformer.TransformerExtensions.WriteStepsToFiles
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.TransformerExtensions.WriteStepsToFiles
+  nameWithType: TransformerExtensions.WriteStepsToFiles
 - uid: Platform.RegularExpressions.Transformer.TransformersListExtensions
   name: TransformersListExtensions
   href: api/Platform.RegularExpressions.Transformer.TransformersListExtensions.html
   commentId: T:Platform.RegularExpressions.Transformer.TransformersListExtensions
   fullName: Platform.RegularExpressions.Transformer.TransformersListExtensions
   nameWithType: TransformersListExtensions
-- uid: Platform.RegularExpressions.Transformer.TransformersListExtensions.TransformAllToFiles(System.Collections.Generic.IList{Platform.RegularExpressions.Transformer.ITransformer},System.String,System.String,System.String)
-  name: TransformAllToFiles(IList<ITransformer>, String, String, String)
-  href: api/Platform.RegularExpressions.Transformer.TransformersListExtensions.html#Platform_RegularExpressions_Transformer_TransformersListExtensions_TransformAllToFiles_System_Collections_Generic_IList_Platform_RegularExpressions_Transformer_ITransformer__System_String_System_String_System_String_
-  commentId: M:Platform.RegularExpressions.Transformer.TransformersListExtensions.TransformAllToFiles(System.Collections.Generic.IList{Platform.RegularExpressions.Transformer.ITransformer},System.String,System.String,System.String)
-  name.vb: TransformAllToFiles(IList(Of ITransformer), String, String, String)
-  fullName: Platform.RegularExpressions.Transformer.TransformersListExtensions.TransformAllToFiles(System.Collections.Generic.IList<Platform.RegularExpressions.Transformer.ITransformer>, System.String, System.String, System.String)
-  fullName.vb: Platform.RegularExpressions.Transformer.TransformersListExtensions.TransformAllToFiles(System.Collections.Generic.IList(Of Platform.RegularExpressions.Transformer.ITransformer), System.String, System.String, System.String)
-  nameWithType: TransformersListExtensions.TransformAllToFiles(IList<ITransformer>, String, String, String)
-  nameWithType.vb: TransformersListExtensions.TransformAllToFiles(IList(Of ITransformer), String, String, String)
-- uid: Platform.RegularExpressions.Transformer.TransformersListExtensions.TransformAllToFiles*
-  name: TransformAllToFiles
-  href: api/Platform.RegularExpressions.Transformer.TransformersListExtensions.html#Platform_RegularExpressions_Transformer_TransformersListExtensions_TransformAllToFiles_
-  commentId: Overload:Platform.RegularExpressions.Transformer.TransformersListExtensions.TransformAllToFiles
+- uid: Platform.RegularExpressions.Transformer.TransformersListExtensions.TransformWithAll(System.Collections.Generic.IList{Platform.RegularExpressions.Transformer.ITransformer},System.String)
+  name: TransformWithAll(IList<ITransformer>, String)
+  href: api/Platform.RegularExpressions.Transformer.TransformersListExtensions.html#Platform_RegularExpressions_Transformer_TransformersListExtensions_TransformWithAll_System_Collections_Generic_IList_Platform_RegularExpressions_Transformer_ITransformer__System_String_
+  commentId: M:Platform.RegularExpressions.Transformer.TransformersListExtensions.TransformWithAll(System.Collections.Generic.IList{Platform.RegularExpressions.Transformer.ITransformer},System.String)
+  name.vb: TransformWithAll(IList(Of ITransformer), String)
+  fullName: Platform.RegularExpressions.Transformer.TransformersListExtensions.TransformWithAll(System.Collections.Generic.IList<Platform.RegularExpressions.Transformer.ITransformer>, System.String)
+  fullName.vb: Platform.RegularExpressions.Transformer.TransformersListExtensions.TransformWithAll(System.Collections.Generic.IList(Of Platform.RegularExpressions.Transformer.ITransformer), System.String)
+  nameWithType: TransformersListExtensions.TransformWithAll(IList<ITransformer>, String)
+  nameWithType.vb: TransformersListExtensions.TransformWithAll(IList(Of ITransformer), String)
+- uid: Platform.RegularExpressions.Transformer.TransformersListExtensions.TransformWithAll*
+  name: TransformWithAll
+  href: api/Platform.RegularExpressions.Transformer.TransformersListExtensions.html#Platform_RegularExpressions_Transformer_TransformersListExtensions_TransformWithAll_
+  commentId: Overload:Platform.RegularExpressions.Transformer.TransformersListExtensions.TransformWithAll
   isSpec: "True"
-  fullName: Platform.RegularExpressions.Transformer.TransformersListExtensions.TransformAllToFiles
-  nameWithType: TransformersListExtensions.TransformAllToFiles
+  fullName: Platform.RegularExpressions.Transformer.TransformersListExtensions.TransformWithAll
+  nameWithType: TransformersListExtensions.TransformWithAll
+- uid: Platform.RegularExpressions.Transformer.TransformersListExtensions.TransformWithAllToFiles(System.Collections.Generic.IList{Platform.RegularExpressions.Transformer.ITransformer},System.String,System.String,System.String)
+  name: TransformWithAllToFiles(IList<ITransformer>, String, String, String)
+  href: api/Platform.RegularExpressions.Transformer.TransformersListExtensions.html#Platform_RegularExpressions_Transformer_TransformersListExtensions_TransformWithAllToFiles_System_Collections_Generic_IList_Platform_RegularExpressions_Transformer_ITransformer__System_String_System_String_System_String_
+  commentId: M:Platform.RegularExpressions.Transformer.TransformersListExtensions.TransformWithAllToFiles(System.Collections.Generic.IList{Platform.RegularExpressions.Transformer.ITransformer},System.String,System.String,System.String)
+  name.vb: TransformWithAllToFiles(IList(Of ITransformer), String, String, String)
+  fullName: Platform.RegularExpressions.Transformer.TransformersListExtensions.TransformWithAllToFiles(System.Collections.Generic.IList<Platform.RegularExpressions.Transformer.ITransformer>, System.String, System.String, System.String)
+  fullName.vb: Platform.RegularExpressions.Transformer.TransformersListExtensions.TransformWithAllToFiles(System.Collections.Generic.IList(Of Platform.RegularExpressions.Transformer.ITransformer), System.String, System.String, System.String)
+  nameWithType: TransformersListExtensions.TransformWithAllToFiles(IList<ITransformer>, String, String, String)
+  nameWithType.vb: TransformersListExtensions.TransformWithAllToFiles(IList(Of ITransformer), String, String, String)
+- uid: Platform.RegularExpressions.Transformer.TransformersListExtensions.TransformWithAllToFiles*
+  name: TransformWithAllToFiles
+  href: api/Platform.RegularExpressions.Transformer.TransformersListExtensions.html#Platform_RegularExpressions_Transformer_TransformersListExtensions_TransformWithAllToFiles_
+  commentId: Overload:Platform.RegularExpressions.Transformer.TransformersListExtensions.TransformWithAllToFiles
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.TransformersListExtensions.TransformWithAllToFiles
+  nameWithType: TransformersListExtensions.TransformWithAllToFiles
