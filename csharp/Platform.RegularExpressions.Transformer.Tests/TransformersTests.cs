@@ -17,6 +17,25 @@ namespace Platform.RegularExpressions.Transformer.Tests
             var firstStepReferenceText = "bbbb";
             var secondStepReferenceText = "cccc";
 
+            var transformer = new Transformer(new SubstitutionRule[] { rule1, rule2 });
+
+            var steps = transformer.GetSteps(sourceText);
+
+            Assert.Equal(2, steps.Count);
+            Assert.Equal(firstStepReferenceText, steps[0]);
+            Assert.Equal(secondStepReferenceText, steps[1]);
+        }
+
+        [Fact]
+        public void DebugFilesOutputTest()
+        {
+            var rule1 = (new Regex("a"), "b");
+            var rule2 = (new Regex("b"), "c");
+
+            var sourceText = "aaaa";
+            var firstStepReferenceText = "bbbb";
+            var secondStepReferenceText = "cccc";
+
             var sourceFilename = Path.GetTempFileName();
             File.WriteAllText(sourceFilename, sourceText, Encoding.UTF8);
 
@@ -24,7 +43,7 @@ namespace Platform.RegularExpressions.Transformer.Tests
 
             var targetFilename = Path.GetTempFileName();
 
-            transformer.DebugOutput(sourceFilename, targetFilename, ".txt");
+            transformer.WriteStepsToFiles(sourceFilename, targetFilename, ".txt");
 
             var firstStepReferenceFilename = $"{targetFilename}.0.txt";
             var secondStepReferenceFilename = $"{targetFilename}.1.txt";

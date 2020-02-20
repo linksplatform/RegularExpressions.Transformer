@@ -14,7 +14,8 @@ namespace Platform.RegularExpressions.Transformer.Tests
             var rules = new SubstitutionRule[]
             {
                 ("1", "0|", int.MaxValue),     // "1" -> "0|" repeated forever
-                (@"\|0", "0||", int.MaxValue), // "\|0" -> "0||" repeated forever (| symbol should be escaped for regular expression pattern)
+                // | symbol should be escaped for regular expression pattern, but not in the substitution pattern
+                (@"\|0", "0||", int.MaxValue), // "\|0" -> "0||" repeated forever 
                 ("0", "", int.MaxValue),       // "0" -> "" repeated forever
             };
             var transformer = new Transformer(rules);

@@ -8,7 +8,20 @@ namespace Platform.RegularExpressions.Transformer
 {
     public static class TransformersListExtensions
     {
-        public static void TransformAllToFiles(this IList<ITransformer> transformers, string sourcePath, string targetFilename, string targetExtension)
+        public static List<string> TransformWithAll(this IList<ITransformer> transformers, string source)
+        {
+            var strings = new List<string>();
+            if (transformers.Count > 0)
+            {
+                for (int i = 0; i < transformers.Count; i++)
+                {
+                    strings.Add(transformers[i].Transform(source, null));
+                }
+            }
+            return strings;
+        }
+
+        public static void TransformWithAllToFiles(this IList<ITransformer> transformers, string sourcePath, string targetFilename, string targetExtension)
         {
             if (transformers.Count > 0)
             {
