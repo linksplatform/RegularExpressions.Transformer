@@ -4,7 +4,7 @@
     <Description>LinksPlatform's Platform.RegularExpressions.Transformer Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.RegularExpressions.Transformer</AssemblyTitle>
-    <VersionPrefix>0.0.6</VersionPrefix>
+    <VersionPrefix>0.0.7</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFrameworks>net472;netstandard2.0;netstandard2.1</TargetFrameworks>
     <AssemblyName>Platform.RegularExpressions.Transformer</AssemblyName>
@@ -24,8 +24,11 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <LangVersion>latest</LangVersion>
-    <PackageReleaseNotes>Using .NET Framework v4.7.2 instead of v4.7.1.
-Added a way to get detailed debug output from transformer.</PackageReleaseNotes>
+    <PackageReleaseNotes>Added move implicit conversion to allow write match pattern as a string inside the tuple.
+The rule is stringified now to support debugging.
+Context and path in the context are optional now.
+int.MaxValue as a maximum repeat count now treated as infinity.
+Added a test that shows the transformer is logic is almost the same as markov algorithm's logic.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup Condition="$(TargetFramework.StartsWith('net4')) AND '$(MSBuildRuntimeType)' == 'Core' AND '$(OS)' != 'Windows_NT'">
