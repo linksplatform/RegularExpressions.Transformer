@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Text.RegularExpressions;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
@@ -37,14 +38,53 @@ namespace Platform.RegularExpressions.Transformer
 
         public SubstitutionRule(Regex matchPattern, string substitutionPattern) : this(matchPattern, substitutionPattern, null, 0) { }
 
+        public static implicit operator SubstitutionRule(ValueTuple<string, string> tuple) => new SubstitutionRule(new Regex(tuple.Item1), tuple.Item2);
+
         public static implicit operator SubstitutionRule(ValueTuple<Regex, string> tuple) => new SubstitutionRule(tuple.Item1, tuple.Item2);
 
+        public static implicit operator SubstitutionRule(ValueTuple<string, string, int> tuple) => new SubstitutionRule(new Regex(tuple.Item1), tuple.Item2, tuple.Item3);
+
         public static implicit operator SubstitutionRule(ValueTuple<Regex, string, int> tuple) => new SubstitutionRule(tuple.Item1, tuple.Item2, tuple.Item3);
+
+        public static implicit operator SubstitutionRule(ValueTuple<string, string, Regex, int> tuple) => new SubstitutionRule(new Regex(tuple.Item1), tuple.Item2, tuple.Item3, tuple.Item4);
 
         public static implicit operator SubstitutionRule(ValueTuple<Regex, string, Regex, int> tuple) => new SubstitutionRule(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4);
 
         public void OverrideMatchPatternOptions(RegexOptions options, TimeSpan matchTimeout) => MatchPattern = MatchPattern.OverrideOptions(options, matchTimeout);
 
         public void OverridePathPatternOptions(RegexOptions options, TimeSpan matchTimeout) => PathPattern = PathPattern.OverrideOptions(options, matchTimeout);
+
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.Append('"');
+            sb.Append(MatchPattern.ToString());
+            sb.Append('"');
+            sb.Append(" -> ");
+            sb.Append('"');
+            sb.Append(SubstitutionPattern);
+            sb.Append('"');
+            if (PathPattern != null)
+            {
+                sb.Append(" on files ");
+                sb.Append('"');
+                sb.Append(PathPattern.ToString());
+                sb.Append('"');
+            }
+            if (MaximumRepeatCount > 0)
+            {
+                if (MaximumRepeatCount >= int.MaxValue)
+                {
+                    sb.Append(" repeated forever");
+                }
+                else
+                {
+                    sb.Append(" repeated up to ");
+                    sb.Append(MaximumRepeatCount);
+                    sb.Append(" times");
+                }
+            }
+            return sb.ToString();
+        }
     }
 }

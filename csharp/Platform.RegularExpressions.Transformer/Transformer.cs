@@ -14,6 +14,7 @@ namespace Platform.RegularExpressions.Transformer
         public string Transform(string source, IContext context)
         {
             var current = source;
+            var currentFilePath = context?.Path ?? "";
             for (var i = 0; i < _substitutionRules.Count; i++)
             {
                 var rule = _substitutionRules[i];
@@ -21,13 +22,14 @@ namespace Platform.RegularExpressions.Transformer
                 var substitutionPattern = rule.SubstitutionPattern;
                 var pathPattern = rule.PathPattern;
                 var maximumRepeatCount = rule.MaximumRepeatCount;
-                if (pathPattern == null || pathPattern.IsMatch(context.Path))
+                if (pathPattern == null || pathPattern.IsMatch(currentFilePath))
                 {
                     var replaceCount = 0;
                     do
                     {
                         current = matchPattern.Replace(current, substitutionPattern);
-                        if (++replaceCount > maximumRepeatCount)
+                        replaceCount++;
+                        if (maximumRepeatCount < int.MaxValue && replaceCount > maximumRepeatCount)
                         {
                             break;
                         }
