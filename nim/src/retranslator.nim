@@ -1,4 +1,5 @@
 # author: Ethosa
+import macros
 import nre
 export nre
 
@@ -16,7 +17,7 @@ type
 
 proc `$`*(t: TransformerRef): string =
   ## Converts Transformer object in string
-  result = "Transformer with rules: " & $(t.rules)
+  return "Transformer with rules: " & $t.rules
 
 proc Transformer*(code="", rules: seq[RuleObj] = @[], debug=false): TransformerRef =
   ## Creates new Transformer object.
@@ -24,13 +25,19 @@ proc Transformer*(code="", rules: seq[RuleObj] = @[], debug=false): TransformerR
   ## Keyword Arguments:
   ## -   ``code`` -- code for transform.
   ## -   ``rules`` -- rules for transform.
-  return TransformerRef(code: code, rules: rules, debug: debug)
+  TransformerRef(code: code, rules: rules, debug: debug)
 
-proc add*(t: TransformerRef, rule: RuleObj) =
-  ## Adds a new rule in transformer.
-  t.rules.add(rule)
+proc add*(t: TransformerRef, rules: varargs[RuleObj]) =
+  ## Adds a new rules in the transformer obj.
+  for rule in rules:
+    t.rules.add rule
 
-proc transform*(t: TransformerRef, code: string = ""): string =
+proc add*(t: TransformerRef, rules: seq[RuleObj]) =
+  ## Adds a new rules in the transformer obj.
+  for rule in rules:
+    t.rules.add rule
+
+proc transform*(t: TransformerRef, code=""): string =
   ## transforms text, using specific rules.
   ##
   ## Keyword Arguments:
@@ -55,3 +62,11 @@ proc transform*(t: TransformerRef, code: string = ""): string =
       tr = tr.replace(i.rule, i.replace)
 
   return tr
+
+macro rules*(t: TransformerRef, body: untyped): untyped =
+  result = newStmtList()
+  for i in body:
+    var now = newCall("Rule")
+    for elem in i:
+      now.add elem
+    result.add newCall("add", t, now)
