@@ -845,10 +845,20 @@ function main() {
     title="`$`(t: TransformerRef): string"><wbr />`$`<span class="attachedType">TransformerRef</span></a></li>
   <li><a class="reference" href="#Transformer%2Cstring%2Cseq%5BT%5D%5BRuleObj%5D"
     title="Transformer(code = &quot;&quot;; rules: seq[RuleObj] = @[]; debug = false): TransformerRef"><wbr />Transformer<span class="attachedType">TransformerRef</span></a></li>
-  <li><a class="reference" href="#add%2CTransformerRef%2CRuleObj"
-    title="add(t: TransformerRef; rule: RuleObj)"><wbr />add<span class="attachedType">TransformerRef</span></a></li>
+  <li><a class="reference" href="#add%2CTransformerRef%2Cvarargs%5BRuleObj%5D"
+    title="add(t: TransformerRef; rules: varargs[RuleObj])"><wbr />add<span class="attachedType">TransformerRef</span></a></li>
+  <li><a class="reference" href="#add%2CTransformerRef%2Cseq%5BT%5D%5BRuleObj%5D"
+    title="add(t: TransformerRef; rules: seq[RuleObj])"><wbr />add<span class="attachedType">TransformerRef</span></a></li>
   <li><a class="reference" href="#transform%2CTransformerRef%2Cstring"
-    title="transform(t: TransformerRef; code: string = &quot;&quot;): string"><wbr />transform<span class="attachedType">TransformerRef</span></a></li>
+    title="transform(t: TransformerRef; code = &quot;&quot;): string"><wbr />transform<span class="attachedType">TransformerRef</span></a></li>
+
+  </ul>
+</li>
+<li>
+  <a class="reference reference-toplevel" href="#17" id="67">Macros</a>
+  <ul class="simple simple-toc-section">
+      <li><a class="reference" href="#rules.m%2CTransformerRef%2Cuntyped"
+    title="rules(t: TransformerRef; body: untyped): untyped"><wbr />rules<span class="attachedType">TransformerRef</span></a></li>
 
   </ul>
 </li>
@@ -906,16 +916,23 @@ Converts Transformer object in string
 
 
 </dd>
-<a id="add,TransformerRef,RuleObj"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#add%2CTransformerRef%2CRuleObj"><span class="Identifier">add</span></a><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <a href="retranslator.html#TransformerRef"><span class="Identifier">TransformerRef</span></a><span class="Other">;</span> <span class="Identifier">rule</span><span class="Other">:</span> <a href="Rule.html#RuleObj"><span class="Identifier">RuleObj</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<a id="add,TransformerRef,varargs[RuleObj]"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#add%2CTransformerRef%2Cvarargs%5BRuleObj%5D"><span class="Identifier">add</span></a><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <a href="retranslator.html#TransformerRef"><span class="Identifier">TransformerRef</span></a><span class="Other">;</span> <span class="Identifier">rules</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><a href="Rule.html#RuleObj"><span class="Identifier">RuleObj</span></a><span class="Other">]</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Adds a new rule in transformer.
+Adds a new rules in the transformer obj.
+
+</dd>
+<a id="add,TransformerRef,seq[T][RuleObj]"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#add%2CTransformerRef%2Cseq%5BT%5D%5BRuleObj%5D"><span class="Identifier">add</span></a><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <a href="retranslator.html#TransformerRef"><span class="Identifier">TransformerRef</span></a><span class="Other">;</span> <span class="Identifier">rules</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="Rule.html#RuleObj"><span class="Identifier">RuleObj</span></a><span class="Other">]</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Adds a new rules in the transformer obj.
 
 </dd>
 <a id="transform,TransformerRef,string"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#transform%2CTransformerRef%2Cstring"><span class="Identifier">transform</span></a><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <a href="retranslator.html#TransformerRef"><span class="Identifier">TransformerRef</span></a><span class="Other">;</span> <span class="Identifier">code</span><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">FieldError</span><span class="Other">,</span>
-    <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">IndexError</span><span class="Other">,</span> <span class="Identifier">UnpackError</span><span class="Other">,</span> <span class="Identifier">AccessViolationError</span><span class="Other">,</span> <span class="Identifier">RegexInternalError</span><span class="Other">,</span>
+<dt><pre><span class="Keyword">proc</span> <a href="#transform%2CTransformerRef%2Cstring"><span class="Identifier">transform</span></a><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <a href="retranslator.html#TransformerRef"><span class="Identifier">TransformerRef</span></a><span class="Other">;</span> <span class="Identifier">code</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">FieldError</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span>
+    <span class="Identifier">IndexError</span><span class="Other">,</span> <span class="Identifier">UnpackError</span><span class="Other">,</span> <span class="Identifier">AccessViolationError</span><span class="Other">,</span> <span class="Identifier">RegexInternalError</span><span class="Other">,</span>
     <span class="Identifier">InvalidUnicodeError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
@@ -923,6 +940,18 @@ Adds a new rule in transformer.
 <p>Keyword Arguments:</p>
 <ul class="simple"><li><tt class="docutils literal"><span class="pre">code</span></tt> -- code for transform.</li>
 </ul>
+
+
+</dd>
+
+</dl></div>
+<div class="section" id="17">
+<h1><a class="toc-backref" href="#17">Macros</a></h1>
+<dl class="item">
+<a id="rules.m,TransformerRef,untyped"></a>
+<dt><pre><span class="Keyword">macro</span> <a href="#rules.m%2CTransformerRef%2Cuntyped"><span class="Identifier">rules</span></a><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <a href="retranslator.html#TransformerRef"><span class="Identifier">TransformerRef</span></a><span class="Other">;</span> <span class="Identifier">body</span><span class="Other">:</span> <span class="Identifier">untyped</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">untyped</span></pre></dt>
+<dd>
+
 
 
 </dd>
@@ -941,7 +970,7 @@ Adds a new rule in transformer.
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Made with Nim. Generated: 2020-02-17 10:46:32 UTC</small>
+        <small>Made with Nim. Generated: 2020-02-27 16:35:15 UTC</small>
       </div>
     </div>
   </div>
