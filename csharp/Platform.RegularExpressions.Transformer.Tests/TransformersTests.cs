@@ -10,14 +10,14 @@ namespace Platform.RegularExpressions.Transformer.Tests
         [Fact]
         public void DebugOutputTest()
         {
-            var rule1 = (new Regex("a"), "b");
-            var rule2 = (new Regex("b"), "c");
-
             var sourceText = "aaaa";
             var firstStepReferenceText = "bbbb";
             var secondStepReferenceText = "cccc";
 
-            var transformer = new Transformer(new SubstitutionRule[] { rule1, rule2 });
+            var transformer = new Transformer(new SubstitutionRule[] {
+                (new Regex("a"), "b"),
+                (new Regex("b"), "c")
+            });
 
             var steps = transformer.GetSteps(sourceText);
 
@@ -29,9 +29,6 @@ namespace Platform.RegularExpressions.Transformer.Tests
         [Fact]
         public void DebugFilesOutputTest()
         {
-            var rule1 = (new Regex("a"), "b");
-            var rule2 = (new Regex("b"), "c");
-
             var sourceText = "aaaa";
             var firstStepReferenceText = "bbbb";
             var secondStepReferenceText = "cccc";
@@ -39,11 +36,14 @@ namespace Platform.RegularExpressions.Transformer.Tests
             var sourceFilename = Path.GetTempFileName();
             File.WriteAllText(sourceFilename, sourceText, Encoding.UTF8);
 
-            var transformer = new Transformer(new SubstitutionRule[] { rule1, rule2 });
+            var transformer = new Transformer(new SubstitutionRule[] {
+                (new Regex("a"), "b"),
+                (new Regex("b"), "c")
+            });
 
             var targetFilename = Path.GetTempFileName();
 
-            transformer.WriteStepsToFiles(sourceFilename, targetFilename, ".txt");
+            transformer.WriteStepsToFiles(sourceFilename, targetFilename, ".txt", skipFilesWithNoChanges: false);
 
             var firstStepReferenceFilename = $"{targetFilename}.0.txt";
             var secondStepReferenceFilename = $"{targetFilename}.1.txt";
@@ -57,6 +57,43 @@ namespace Platform.RegularExpressions.Transformer.Tests
             File.Delete(sourceFilename);
             File.Delete(firstStepReferenceFilename);
             File.Delete(secondStepReferenceFilename);
+        }
+
+        [Fact]
+        public void FilesWithNoChangesSkipedTest()
+        {
+            var sourceText = "aaaa";
+            var firstStepReferenceText = "bbbb";
+            var thirdStepReferenceText = "cccc";
+
+            var sourceFilename = Path.GetTempFileName();
+            File.WriteAllText(sourceFilename, sourceText, Encoding.UTF8);
+
+            var transformer = new Transformer(new SubstitutionRule[] {
+                (new Regex("a"), "b"),
+                (new Regex("x"), "y"),
+                (new Regex("b"), "c")
+            });
+
+            var targetFilename = Path.GetTempFileName();
+
+            transformer.WriteStepsToFiles(sourceFilename, targetFilename, ".txt", skipFilesWithNoChanges: true);
+
+            var firstStepReferenceFilename = $"{targetFilename}.0.txt";
+            var secondStepReferenceFilename = $"{targetFilename}.1.txt";
+            var thirdStepReferenceFilename = $"{targetFilename}.2.txt";
+
+            Assert.True(File.Exists(firstStepReferenceFilename));
+            Assert.False(File.Exists(secondStepReferenceFilename));
+            Assert.True(File.Exists(thirdStepReferenceFilename));
+
+            Assert.Equal(firstStepReferenceText, File.ReadAllText(firstStepReferenceFilename, Encoding.UTF8));
+            Assert.Equal(thirdStepReferenceText, File.ReadAllText(thirdStepReferenceFilename, Encoding.UTF8));
+
+            File.Delete(sourceFilename);
+            File.Delete(firstStepReferenceFilename);
+            File.Delete(secondStepReferenceFilename);
+            File.Delete(thirdStepReferenceFilename);
         }
     }
 }

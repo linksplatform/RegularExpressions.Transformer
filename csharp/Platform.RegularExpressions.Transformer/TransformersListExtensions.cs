@@ -21,16 +21,21 @@ namespace Platform.RegularExpressions.Transformer
             return strings;
         }
 
-        public static void TransformWithAllToFiles(this IList<ITransformer> transformers, string sourcePath, string targetFilename, string targetExtension)
+        public static void TransformWithAllToFiles(this IList<ITransformer> transformers, string sourcePath, string targetFilename, string targetExtension, bool skipFilesWithNoChanges)
         {
             if (transformers.Count > 0)
             {
+                var lastText = "";
                 var sourceText = File.ReadAllText(sourcePath, Encoding.UTF8);
                 var transformerContext = new Context(sourcePath);
                 for (int i = 0; i < transformers.Count; i++)
                 {
                     var transformationOutput = transformers[i].Transform(sourceText, transformerContext);
-                    File.WriteAllText($"{targetFilename}.{i}{targetExtension}", transformationOutput, Encoding.UTF8);
+                    if (!(skipFilesWithNoChanges && string.Equals(lastText, transformationOutput)))
+                    {
+                        lastText = transformationOutput;
+                        File.WriteAllText($"{targetFilename}.{i}{targetExtension}", transformationOutput, Encoding.UTF8);
+                    }
                 }
             }
         }

@@ -8,6 +8,6 @@ namespace Platform.RegularExpressions.Transformer
     {
         public static List<string> GetSteps(this Transformer transformer, string source) => transformer.GenerateTransformersForEachRulesStep().TransformWithAll(source);
 
-        public static void WriteStepsToFiles(this Transformer transformer, string sourcePath, string targetFilename, string targetExtension) => transformer.GenerateTransformersForEachRulesStep().TransformWithAllToFiles(sourcePath, targetFilename, targetExtension);
+        public static void WriteStepsToFiles(this Transformer transformer, string sourcePath, string targetFilename, string targetExtension, bool skipFilesWithNoChanges) => transformer.GenerateTransformersForEachRulesStep().TransformWithAllToFiles(sourcePath, targetFilename, targetExtension, skipFilesWithNoChanges);
     }
 }
