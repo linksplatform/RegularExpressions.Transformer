@@ -5,7 +5,7 @@ using Xunit;
 
 namespace Platform.RegularExpressions.Transformer.Tests
 {
-    public class TransformersTests
+    public class TextTransformerTests
     {
         [Fact]
         public void DebugOutputTest()

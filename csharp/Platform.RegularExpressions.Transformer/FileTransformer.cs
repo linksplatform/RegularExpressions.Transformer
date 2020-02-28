@@ -60,21 +60,20 @@ namespace Platform.RegularExpressions.Transformer
                 {
                     return;
                 }
-                EnsureTargetDirectoryExists(targetDirectoryExists, targetPath);
                 TransformFolder(sourcePath, targetPath);
             }
             else if (!(sourceIsDirectory || targetIsDirectory))
             {
                 // File -> File
                 EnsureSourceFileExists(sourcePath);
-                EnsureTargetDirectoryExists(targetPath);
+                EnsureTargetFileDirectoryExists(targetPath);
                 TransformFile(sourcePath, targetPath);
             }
             else if (targetIsDirectory)
             {
                 // File -> Folder
                 EnsureSourceFileExists(sourcePath);
-                EnsureTargetDirectoryExists(targetDirectoryExists, targetPath);
+                EnsureTargetDirectoryExists(targetPath, targetDirectoryExists);
                 TransformFile(sourcePath, GetTargetFileName(sourcePath, targetPath));
             }
             else
@@ -87,17 +86,26 @@ namespace Platform.RegularExpressions.Transformer
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected virtual void TransformFolder(string sourcePath, string targetPath)
         {
+            var files = Directory.GetFiles(sourcePath);
             var directories = Directory.GetDirectories(sourcePath);
+            if (files.Length == 0 && directories.Length == 0)
+            {
+                return;
+            }
+            EnsureTargetDirectoryExists(targetPath);
             for (var i = 0; i < directories.Length; i++)
             {
                 var relativePath = GetRelativePath(sourcePath, directories[i]);
                 var newTargetPath = Path.Combine(targetPath, relativePath);
                 TransformFolder(directories[i], newTargetPath);
             }
-            var files = Directory.GetFiles(sourcePath);
             Parallel.For(0, files.Length, i =>
             {
-                TransformFile(files[i], GetTargetFileName(files[i], targetPath));
+                var file = files[i];
+                if (file.EndsWith(SourceFileExtension, StringComparison.OrdinalIgnoreCase))
+                {
+                    TransformFile(file, GetTargetFileName(file, targetPath));
+                }
             });
         }
 
@@ -122,7 +130,7 @@ namespace Platform.RegularExpressions.Transformer
         protected string GetTargetFileName(string sourcePath, string targetDirectory) => Path.ChangeExtension(Path.Combine(targetDirectory, Path.GetFileName(sourcePath)), TargetFileExtension);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void EnsureTargetDirectoryExists(string targetPath)
+        private static void EnsureTargetFileDirectoryExists(string targetPath)
         {
             if (!File.Exists(targetPath))
             {
@@ -131,7 +139,10 @@ namespace Platform.RegularExpressions.Transformer
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void EnsureTargetDirectoryExists(bool targetDirectoryExists, string targetPath)
+        private static void EnsureTargetDirectoryExists(string targetPath) => EnsureTargetDirectoryExists(targetPath, DirectoryExists(targetPath));
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static void EnsureTargetDirectoryExists(string targetPath, bool targetDirectoryExists)
         {
             if (!targetDirectoryExists)
             {
@@ -160,7 +171,7 @@ namespace Platform.RegularExpressions.Transformer
             {
                 throw new Exception("Could not find rootPath in fullPath when calculating relative path.");
             }
-            return fullPath.Substring(rootPath.Length);
+            return fullPath.Substring(rootPath.Length + 1);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
