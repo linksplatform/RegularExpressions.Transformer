@@ -14,7 +14,7 @@ namespace Platform.RegularExpressions.Transformer.Tests
             var firstStepReferenceText = "bbbb";
             var secondStepReferenceText = "cccc";
 
-            var transformer = new Transformer(new SubstitutionRule[] {
+            var transformer = new TextTransformer(new SubstitutionRule[] {
                 (new Regex("a"), "b"),
                 (new Regex("b"), "c")
             });
@@ -33,17 +33,14 @@ namespace Platform.RegularExpressions.Transformer.Tests
             var firstStepReferenceText = "bbbb";
             var secondStepReferenceText = "cccc";
 
-            var sourceFilename = Path.GetTempFileName();
-            File.WriteAllText(sourceFilename, sourceText, Encoding.UTF8);
-
-            var transformer = new Transformer(new SubstitutionRule[] {
+            var transformer = new TextTransformer(new SubstitutionRule[] {
                 (new Regex("a"), "b"),
                 (new Regex("b"), "c")
             });
 
             var targetFilename = Path.GetTempFileName();
 
-            transformer.WriteStepsToFiles(sourceFilename, targetFilename, ".txt", skipFilesWithNoChanges: false);
+            transformer.WriteStepsToFiles(sourceText, $"{targetFilename}.txt", skipFilesWithNoChanges: false);
 
             var firstStepReferenceFilename = $"{targetFilename}.0.txt";
             var secondStepReferenceFilename = $"{targetFilename}.1.txt";
@@ -54,7 +51,6 @@ namespace Platform.RegularExpressions.Transformer.Tests
             Assert.Equal(firstStepReferenceText, File.ReadAllText(firstStepReferenceFilename, Encoding.UTF8));
             Assert.Equal(secondStepReferenceText, File.ReadAllText(secondStepReferenceFilename, Encoding.UTF8));
 
-            File.Delete(sourceFilename);
             File.Delete(firstStepReferenceFilename);
             File.Delete(secondStepReferenceFilename);
         }
@@ -66,10 +62,7 @@ namespace Platform.RegularExpressions.Transformer.Tests
             var firstStepReferenceText = "bbbb";
             var thirdStepReferenceText = "cccc";
 
-            var sourceFilename = Path.GetTempFileName();
-            File.WriteAllText(sourceFilename, sourceText, Encoding.UTF8);
-
-            var transformer = new Transformer(new SubstitutionRule[] {
+            var transformer = new TextTransformer(new SubstitutionRule[] {
                 (new Regex("a"), "b"),
                 (new Regex("x"), "y"),
                 (new Regex("b"), "c")
@@ -77,7 +70,7 @@ namespace Platform.RegularExpressions.Transformer.Tests
 
             var targetFilename = Path.GetTempFileName();
 
-            transformer.WriteStepsToFiles(sourceFilename, targetFilename, ".txt", skipFilesWithNoChanges: true);
+            transformer.WriteStepsToFiles(sourceText, $"{targetFilename}.txt", skipFilesWithNoChanges: true);
 
             var firstStepReferenceFilename = $"{targetFilename}.0.txt";
             var secondStepReferenceFilename = $"{targetFilename}.1.txt";
@@ -90,7 +83,6 @@ namespace Platform.RegularExpressions.Transformer.Tests
             Assert.Equal(firstStepReferenceText, File.ReadAllText(firstStepReferenceFilename, Encoding.UTF8));
             Assert.Equal(thirdStepReferenceText, File.ReadAllText(thirdStepReferenceFilename, Encoding.UTF8));
 
-            File.Delete(sourceFilename);
             File.Delete(firstStepReferenceFilename);
             File.Delete(secondStepReferenceFilename);
             File.Delete(thirdStepReferenceFilename);

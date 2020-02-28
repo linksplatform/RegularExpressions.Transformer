@@ -18,10 +18,10 @@ namespace Platform.RegularExpressions.Transformer.Tests
                 (@"\|0", "0||", int.MaxValue), // "\|0" -> "0||" repeated forever 
                 ("0", "", int.MaxValue),       // "0" -> "" repeated forever
             };
-            var transformer = new Transformer(rules);
+            var transformer = new TextTransformer(rules);
             var input = "101";
             var expectedOutput = "|||||";
-            var output = transformer.Transform(input, null);
+            var output = transformer.Transform(input);
             Assert.Equal(expectedOutput, output);
         }
     }

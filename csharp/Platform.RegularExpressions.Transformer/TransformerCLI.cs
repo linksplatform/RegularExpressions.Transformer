@@ -1,6 +1,5 @@
-﻿using System.Diagnostics;
-using System.IO;
-using System.Text;
+﻿using System.Runtime.CompilerServices;
+using Platform.Collections.Arrays;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -8,53 +7,17 @@ namespace Platform.RegularExpressions.Transformer
 {
     public class TransformerCLI
     {
-        private readonly ITransformer _transformer;
+        private readonly IFileTransformer _transformer;
 
-        public TransformerCLI(ITransformer transformer) => _transformer = transformer;
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public TransformerCLI(IFileTransformer transformer) => _transformer = transformer;
 
-        public bool Run(string[] args, out string message)
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void Run(string[] args)
         {
-            message = "";
-            var sourcePath = GetArgOrDefault(args, 0);
-            if (!File.Exists(sourcePath))
-            {
-                message = $"{sourcePath} file does not exist.";
-                return false;
-            }
-            var targetPath = GetArgOrDefault(args, 1);
-            if (string.IsNullOrWhiteSpace(targetPath))
-            {
-                targetPath = ChangeToTargetExtension(sourcePath);
-            }
-            else if (Directory.Exists(targetPath) && File.GetAttributes(targetPath).HasFlag(FileAttributes.Directory))
-            {
-                targetPath = Path.Combine(targetPath, GetTargetFileName(sourcePath));
-            }
-            else if (LooksLikeDirectoryPath(targetPath))
-            {
-                Directory.CreateDirectory(targetPath);
-                targetPath = Path.Combine(targetPath, GetTargetFileName(sourcePath));
-            }
-            if (File.Exists(targetPath))
-            {
-                var applicationPath = Process.GetCurrentProcess().MainModule.FileName;
-                var targetFileLastUpdateDateTime = new FileInfo(targetPath).LastWriteTimeUtc;
-                if (new FileInfo(sourcePath).LastWriteTimeUtc < targetFileLastUpdateDateTime && new FileInfo(applicationPath).LastWriteTimeUtc < targetFileLastUpdateDateTime)
-                {
-                    return true;
-                }
-            }
-            File.WriteAllText(targetPath, _transformer.Transform(File.ReadAllText(sourcePath, Encoding.UTF8), new Context(sourcePath)), Encoding.UTF8);
-            message = $"{targetPath} file written.";
-            return true;
+            var sourcePath = args.GetElementOrDefault(0);
+            var targetPath = args.GetElementOrDefault(1);
+            _transformer.Transform(sourcePath, targetPath);
         }
-
-        private static string GetTargetFileName(string sourcePath) => ChangeToTargetExtension(Path.GetFileName(sourcePath));
-
-        private static string ChangeToTargetExtension(string path) => Path.ChangeExtension(path, ".cpp");
-
-        private static bool LooksLikeDirectoryPath(string targetPath) => targetPath.EndsWith(Path.DirectorySeparatorChar.ToString()) || targetPath.EndsWith(Path.AltDirectorySeparatorChar.ToString());
-
-        private static string GetArgOrDefault(string[] args, int index) => args.Length > index ? args[index] : null;
     }
 }

@@ -1,28 +1,24 @@
 ﻿using System.Runtime.CompilerServices;
-using System.Text.RegularExpressions;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 namespace Platform.RegularExpressions.Transformer
 {
-    public interface ISubstitutionRule
+    public interface IFileTransformer : ITransformer
     {
-        Regex MatchPattern
+        string SourceFileExtension
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get;
         }
 
-        string SubstitutionPattern
+        string TargetFileExtension
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get;
         }
 
-        int MaximumRepeatCount
-        {
-            [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            get;
-        }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        void Transform(string sourcePath, string targetPath);
     }
 }
