@@ -86,23 +86,23 @@ namespace Platform.RegularExpressions.Transformer
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected virtual void TransformFolder(string sourcePath, string targetPath)
         {
-            var files = Directory.GetFiles(sourcePath);
-            var directories = Directory.GetDirectories(sourcePath);
-            if (files.Length == 0 && directories.Length == 0)
+            if (CountFilesRecursively(sourcePath, SourceFileExtension) == 0)
             {
                 return;
             }
             EnsureTargetDirectoryExists(targetPath);
+            var directories = Directory.GetDirectories(sourcePath);
             for (var i = 0; i < directories.Length; i++)
             {
                 var relativePath = GetRelativePath(sourcePath, directories[i]);
                 var newTargetPath = Path.Combine(targetPath, relativePath);
                 TransformFolder(directories[i], newTargetPath);
             }
+            var files = Directory.GetFiles(sourcePath);
             Parallel.For(0, files.Length, i =>
             {
                 var file = files[i];
-                if (file.EndsWith(SourceFileExtension, StringComparison.OrdinalIgnoreCase))
+                if (FileExtensionMatches(file, SourceFileExtension))
                 {
                     TransformFile(file, GetTargetFileName(file, targetPath));
                 }
@@ -128,6 +128,29 @@ namespace Platform.RegularExpressions.Transformer
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected string GetTargetFileName(string sourcePath, string targetDirectory) => Path.ChangeExtension(Path.Combine(targetDirectory, Path.GetFileName(sourcePath)), TargetFileExtension);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static long CountFilesRecursively(string path, string extension)
+        {
+            var files = Directory.GetFiles(path);
+            var directories = Directory.GetDirectories(path);
+            var result = 0L;
+            for (var i = 0; i < directories.Length; i++)
+            {
+                result += CountFilesRecursively(directories[i], extension);
+            }
+            for (var i = 0; i < files.Length; i++)
+            {
+                if (FileExtensionMatches(files[i], extension))
+                {
+                    result++;
+                }
+            }
+            return result;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static bool FileExtensionMatches(string file, string extension) => file.EndsWith(extension, StringComparison.OrdinalIgnoreCase);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void EnsureTargetFileDirectoryExists(string targetPath)

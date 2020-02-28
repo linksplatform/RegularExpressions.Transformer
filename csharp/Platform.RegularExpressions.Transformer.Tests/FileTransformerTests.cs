@@ -35,6 +35,7 @@ namespace Platform.RegularExpressions.Transformer.Tests
             File.WriteAllText(Path.Combine(sourceFolderPath, "a.cs"), "a a a");
             var aFolderPath = Path.Combine(sourceFolderPath, "A");
             Directory.CreateDirectory(aFolderPath);
+            Directory.CreateDirectory(Path.Combine(sourceFolderPath, "B"));
             File.WriteAllText(Path.Combine(aFolderPath, "b.cs"), "b b b");
             File.WriteAllText(Path.Combine(sourceFolderPath, "x.txt"), "should not be translated");
 
@@ -44,6 +45,7 @@ namespace Platform.RegularExpressions.Transformer.Tests
             Assert.True(File.Exists(aCppFile));
             Assert.Equal("c c c", File.ReadAllText(aCppFile));
             Assert.True(Directory.Exists(Path.Combine(targetFolderPath, "A")));
+            Assert.False(Directory.Exists(Path.Combine(targetFolderPath, "B")));
             var bCppFile = Path.Combine(targetFolderPath, "A", "b.cpp");
             Assert.True(File.Exists(bCppFile));
             Assert.Equal("c c c", File.ReadAllText(bCppFile));
