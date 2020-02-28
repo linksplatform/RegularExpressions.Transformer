@@ -20,8 +20,14 @@ namespace Platform.RegularExpressions.Transformer.Tests
             var fileTransformer = new FileTransformer(baseTransformer, ".cs", ".cpp");
 
             // Delete before creation (if previous test failed)
-            Directory.Delete(sourceFolderPath, true);
-            Directory.Delete(targetFolderPath, true);
+            if (Directory.Exists(sourceFolderPath))
+            {
+                Directory.Delete(sourceFolderPath, true);
+            }
+            if (Directory.Exists(targetFolderPath))
+            {
+                Directory.Delete(targetFolderPath, true);
+            }
 
             Directory.CreateDirectory(sourceFolderPath);
             Directory.CreateDirectory(targetFolderPath);
