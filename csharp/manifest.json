@@ -26,11 +26,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.Context.yml",
+      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.FileTransformer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Platform.RegularExpressions.Transformer.Context.html",
-          "hash": "RLih/i9mT1FS5ZogpGL28Q=="
+          "relative_path": "api/Platform.RegularExpressions.Transformer.FileTransformer.html",
+          "hash": "hbjdEpF1ZnjeaYSZZxNWIQ=="
         }
       },
       "is_incremental": false,
@@ -38,11 +38,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.IContext.yml",
+      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.IFileTransformer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Platform.RegularExpressions.Transformer.IContext.html",
-          "hash": "kv+KoY7x41/2AaKb9F5S5Q=="
+          "relative_path": "api/Platform.RegularExpressions.Transformer.IFileTransformer.html",
+          "hash": "1yOFIOylUroDuCmd32X6qw=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,43 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html",
-          "hash": "CPZguCdBCJTWCrgA/DM1dQ=="
+          "hash": "qS29Y11FRKARMzY3U7ltCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.ITextTransformer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.RegularExpressions.Transformer.ITextTransformer.html",
+          "hash": "6yjg3SROSocB1BLYpP7A9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.ITextTransformerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.RegularExpressions.Transformer.ITextTransformerExtensions.html",
+          "hash": "a6HDginJncskXO2X4bd5xA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.ITextTransformersListExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.RegularExpressions.Transformer.ITextTransformersListExtensions.html",
+          "hash": "6rApYYoiH6h9RK2spUWLBw=="
         }
       },
       "is_incremental": false,
@@ -66,7 +102,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.ITransformer.html",
-          "hash": "ifjhLK2u1Z6xDeVReRen1Q=="
+          "hash": "5YZLi5I6g8NXit+QhHbSbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.LoggingFileTransformer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.RegularExpressions.Transformer.LoggingFileTransformer.html",
+          "hash": "fJe+KlJSb2s1MtNe43Wb+w=="
         }
       },
       "is_incremental": false,
@@ -78,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.RegexExtensions.html",
-          "hash": "DEr2MqdHctVgX/2efQZL0w=="
+          "hash": "cjfFk16gjgkTnS37eDVXrg=="
         }
       },
       "is_incremental": false,
@@ -90,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.SubstitutionRule.html",
-          "hash": "2ZIGYI2YtC/3xLuHeu/ljQ=="
+          "hash": "VYF+63SxVo3/XFj09i+beQ=="
         }
       },
       "is_incremental": false,
@@ -98,11 +146,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.Transformer.yml",
+      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.TextTransformer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Platform.RegularExpressions.Transformer.Transformer.html",
-          "hash": "lIZdUOYm8GQVIvHWcIeu+A=="
+          "relative_path": "api/Platform.RegularExpressions.Transformer.TextTransformer.html",
+          "hash": "r6TjjRhzBAFkC6KfGL6+jg=="
         }
       },
       "is_incremental": false,
@@ -114,31 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.TransformerCLI.html",
-          "hash": "upu5jUQu6cvrtJDqyOz4Gw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.TransformerExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.RegularExpressions.Transformer.TransformerExtensions.html",
-          "hash": "eP11HTgKG/lQ0Pq02o9dHQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.TransformersListExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.RegularExpressions.Transformer.TransformersListExtensions.html",
-          "hash": "idOFEmqnKhzVxupdIbpGog=="
+          "hash": "n/xmOB6ASIjFJNVkc3P6eg=="
         }
       },
       "is_incremental": false,
@@ -150,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.html",
-          "hash": "H052NrbCqsw/SwBt40FqAA=="
+          "hash": "CBQvwnutsMsP6c/X5cXPdg=="
         }
       },
       "is_incremental": false,
@@ -162,7 +186,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "0/yWRY6JLvAiaug2xwvYFQ=="
+          "hash": "aFMctLCbSrk3k30u6UTWmw=="
         }
       },
       "is_incremental": false,
@@ -205,7 +229,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 11,
+          "total_file_count": 13,
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
