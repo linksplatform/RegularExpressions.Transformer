@@ -4,7 +4,7 @@
     <Description>LinksPlatform's Platform.RegularExpressions.Transformer Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.RegularExpressions.Transformer</AssemblyTitle>
-    <VersionPrefix>0.2.2</VersionPrefix>
+    <VersionPrefix>0.3.0</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFrameworks>net472;netstandard2.0;netstandard2.1</TargetFrameworks>
     <AssemblyName>Platform.RegularExpressions.Transformer</AssemblyName>
@@ -24,7 +24,14 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <LangVersion>latest</LangVersion>
-    <PackageReleaseNotes>Create only those folder that contain files while tranlating in folder to folder mode.</PackageReleaseNotes>
+    <PackageReleaseNotes>Added TextSteppedTransformer.
+Implemented a more efficient way to generate steps from transformer.
+ITextTransformerExtensions.GetSteps methods now returns IList&lt;string&gt;.
+ITextTransformersListExtensions.TransformWithAll now returns IList&lt;string&gt;.
+Refactoring.
+
+This is release is not backward compatible with the previous 0.2.2 release.</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup Condition="$(TargetFramework.StartsWith('net4')) AND '$(MSBuildRuntimeType)' == 'Core' AND '$(OS)' != 'Windows_NT'">
