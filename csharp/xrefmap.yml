@@ -574,6 +574,150 @@ references:
   isSpec: "True"
   fullName: Platform.RegularExpressions.Transformer.SubstitutionRule.ToString
   nameWithType: SubstitutionRule.ToString
+- uid: Platform.RegularExpressions.Transformer.TextSteppedTransformer
+  name: TextSteppedTransformer
+  href: api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html
+  commentId: T:Platform.RegularExpressions.Transformer.TextSteppedTransformer
+  fullName: Platform.RegularExpressions.Transformer.TextSteppedTransformer
+  nameWithType: TextSteppedTransformer
+- uid: Platform.RegularExpressions.Transformer.TextSteppedTransformer.#ctor
+  name: TextSteppedTransformer()
+  href: api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html#Platform_RegularExpressions_Transformer_TextSteppedTransformer__ctor
+  commentId: M:Platform.RegularExpressions.Transformer.TextSteppedTransformer.#ctor
+  fullName: Platform.RegularExpressions.Transformer.TextSteppedTransformer.TextSteppedTransformer()
+  nameWithType: TextSteppedTransformer.TextSteppedTransformer()
+- uid: Platform.RegularExpressions.Transformer.TextSteppedTransformer.#ctor(System.Collections.Generic.IList{Platform.RegularExpressions.Transformer.ISubstitutionRule})
+  name: TextSteppedTransformer(IList<ISubstitutionRule>)
+  href: api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html#Platform_RegularExpressions_Transformer_TextSteppedTransformer__ctor_System_Collections_Generic_IList_Platform_RegularExpressions_Transformer_ISubstitutionRule__
+  commentId: M:Platform.RegularExpressions.Transformer.TextSteppedTransformer.#ctor(System.Collections.Generic.IList{Platform.RegularExpressions.Transformer.ISubstitutionRule})
+  name.vb: TextSteppedTransformer(IList(Of ISubstitutionRule))
+  fullName: Platform.RegularExpressions.Transformer.TextSteppedTransformer.TextSteppedTransformer(System.Collections.Generic.IList<Platform.RegularExpressions.Transformer.ISubstitutionRule>)
+  fullName.vb: Platform.RegularExpressions.Transformer.TextSteppedTransformer.TextSteppedTransformer(System.Collections.Generic.IList(Of Platform.RegularExpressions.Transformer.ISubstitutionRule))
+  nameWithType: TextSteppedTransformer.TextSteppedTransformer(IList<ISubstitutionRule>)
+  nameWithType.vb: TextSteppedTransformer.TextSteppedTransformer(IList(Of ISubstitutionRule))
+- uid: Platform.RegularExpressions.Transformer.TextSteppedTransformer.#ctor(System.Collections.Generic.IList{Platform.RegularExpressions.Transformer.ISubstitutionRule},System.String)
+  name: TextSteppedTransformer(IList<ISubstitutionRule>, String)
+  href: api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html#Platform_RegularExpressions_Transformer_TextSteppedTransformer__ctor_System_Collections_Generic_IList_Platform_RegularExpressions_Transformer_ISubstitutionRule__System_String_
+  commentId: M:Platform.RegularExpressions.Transformer.TextSteppedTransformer.#ctor(System.Collections.Generic.IList{Platform.RegularExpressions.Transformer.ISubstitutionRule},System.String)
+  name.vb: TextSteppedTransformer(IList(Of ISubstitutionRule), String)
+  fullName: Platform.RegularExpressions.Transformer.TextSteppedTransformer.TextSteppedTransformer(System.Collections.Generic.IList<Platform.RegularExpressions.Transformer.ISubstitutionRule>, System.String)
+  fullName.vb: Platform.RegularExpressions.Transformer.TextSteppedTransformer.TextSteppedTransformer(System.Collections.Generic.IList(Of Platform.RegularExpressions.Transformer.ISubstitutionRule), System.String)
+  nameWithType: TextSteppedTransformer.TextSteppedTransformer(IList<ISubstitutionRule>, String)
+  nameWithType.vb: TextSteppedTransformer.TextSteppedTransformer(IList(Of ISubstitutionRule), String)
+- uid: Platform.RegularExpressions.Transformer.TextSteppedTransformer.#ctor(System.Collections.Generic.IList{Platform.RegularExpressions.Transformer.ISubstitutionRule},System.String,System.Int32)
+  name: TextSteppedTransformer(IList<ISubstitutionRule>, String, Int32)
+  href: api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html#Platform_RegularExpressions_Transformer_TextSteppedTransformer__ctor_System_Collections_Generic_IList_Platform_RegularExpressions_Transformer_ISubstitutionRule__System_String_System_Int32_
+  commentId: M:Platform.RegularExpressions.Transformer.TextSteppedTransformer.#ctor(System.Collections.Generic.IList{Platform.RegularExpressions.Transformer.ISubstitutionRule},System.String,System.Int32)
+  name.vb: TextSteppedTransformer(IList(Of ISubstitutionRule), String, Int32)
+  fullName: Platform.RegularExpressions.Transformer.TextSteppedTransformer.TextSteppedTransformer(System.Collections.Generic.IList<Platform.RegularExpressions.Transformer.ISubstitutionRule>, System.String, System.Int32)
+  fullName.vb: Platform.RegularExpressions.Transformer.TextSteppedTransformer.TextSteppedTransformer(System.Collections.Generic.IList(Of Platform.RegularExpressions.Transformer.ISubstitutionRule), System.String, System.Int32)
+  nameWithType: TextSteppedTransformer.TextSteppedTransformer(IList<ISubstitutionRule>, String, Int32)
+  nameWithType.vb: TextSteppedTransformer.TextSteppedTransformer(IList(Of ISubstitutionRule), String, Int32)
+- uid: Platform.RegularExpressions.Transformer.TextSteppedTransformer.#ctor*
+  name: TextSteppedTransformer
+  href: api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html#Platform_RegularExpressions_Transformer_TextSteppedTransformer__ctor_
+  commentId: Overload:Platform.RegularExpressions.Transformer.TextSteppedTransformer.#ctor
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.TextSteppedTransformer.TextSteppedTransformer
+  nameWithType: TextSteppedTransformer.TextSteppedTransformer
+- uid: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Current
+  name: Current
+  href: api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html#Platform_RegularExpressions_Transformer_TextSteppedTransformer_Current
+  commentId: P:Platform.RegularExpressions.Transformer.TextSteppedTransformer.Current
+  fullName: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Current
+  nameWithType: TextSteppedTransformer.Current
+- uid: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Current*
+  name: Current
+  href: api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html#Platform_RegularExpressions_Transformer_TextSteppedTransformer_Current_
+  commentId: Overload:Platform.RegularExpressions.Transformer.TextSteppedTransformer.Current
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Current
+  nameWithType: TextSteppedTransformer.Current
+- uid: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Next
+  name: Next()
+  href: api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html#Platform_RegularExpressions_Transformer_TextSteppedTransformer_Next
+  commentId: M:Platform.RegularExpressions.Transformer.TextSteppedTransformer.Next
+  fullName: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Next()
+  nameWithType: TextSteppedTransformer.Next()
+- uid: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Next*
+  name: Next
+  href: api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html#Platform_RegularExpressions_Transformer_TextSteppedTransformer_Next_
+  commentId: Overload:Platform.RegularExpressions.Transformer.TextSteppedTransformer.Next
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Next
+  nameWithType: TextSteppedTransformer.Next
+- uid: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Reset
+  name: Reset()
+  href: api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html#Platform_RegularExpressions_Transformer_TextSteppedTransformer_Reset
+  commentId: M:Platform.RegularExpressions.Transformer.TextSteppedTransformer.Reset
+  fullName: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Reset()
+  nameWithType: TextSteppedTransformer.Reset()
+- uid: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Reset(System.Collections.Generic.IList{Platform.RegularExpressions.Transformer.ISubstitutionRule})
+  name: Reset(IList<ISubstitutionRule>)
+  href: api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html#Platform_RegularExpressions_Transformer_TextSteppedTransformer_Reset_System_Collections_Generic_IList_Platform_RegularExpressions_Transformer_ISubstitutionRule__
+  commentId: M:Platform.RegularExpressions.Transformer.TextSteppedTransformer.Reset(System.Collections.Generic.IList{Platform.RegularExpressions.Transformer.ISubstitutionRule})
+  name.vb: Reset(IList(Of ISubstitutionRule))
+  fullName: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Reset(System.Collections.Generic.IList<Platform.RegularExpressions.Transformer.ISubstitutionRule>)
+  fullName.vb: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Reset(System.Collections.Generic.IList(Of Platform.RegularExpressions.Transformer.ISubstitutionRule))
+  nameWithType: TextSteppedTransformer.Reset(IList<ISubstitutionRule>)
+  nameWithType.vb: TextSteppedTransformer.Reset(IList(Of ISubstitutionRule))
+- uid: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Reset(System.Collections.Generic.IList{Platform.RegularExpressions.Transformer.ISubstitutionRule},System.String)
+  name: Reset(IList<ISubstitutionRule>, String)
+  href: api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html#Platform_RegularExpressions_Transformer_TextSteppedTransformer_Reset_System_Collections_Generic_IList_Platform_RegularExpressions_Transformer_ISubstitutionRule__System_String_
+  commentId: M:Platform.RegularExpressions.Transformer.TextSteppedTransformer.Reset(System.Collections.Generic.IList{Platform.RegularExpressions.Transformer.ISubstitutionRule},System.String)
+  name.vb: Reset(IList(Of ISubstitutionRule), String)
+  fullName: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Reset(System.Collections.Generic.IList<Platform.RegularExpressions.Transformer.ISubstitutionRule>, System.String)
+  fullName.vb: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Reset(System.Collections.Generic.IList(Of Platform.RegularExpressions.Transformer.ISubstitutionRule), System.String)
+  nameWithType: TextSteppedTransformer.Reset(IList<ISubstitutionRule>, String)
+  nameWithType.vb: TextSteppedTransformer.Reset(IList(Of ISubstitutionRule), String)
+- uid: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Reset(System.Collections.Generic.IList{Platform.RegularExpressions.Transformer.ISubstitutionRule},System.String,System.Int32)
+  name: Reset(IList<ISubstitutionRule>, String, Int32)
+  href: api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html#Platform_RegularExpressions_Transformer_TextSteppedTransformer_Reset_System_Collections_Generic_IList_Platform_RegularExpressions_Transformer_ISubstitutionRule__System_String_System_Int32_
+  commentId: M:Platform.RegularExpressions.Transformer.TextSteppedTransformer.Reset(System.Collections.Generic.IList{Platform.RegularExpressions.Transformer.ISubstitutionRule},System.String,System.Int32)
+  name.vb: Reset(IList(Of ISubstitutionRule), String, Int32)
+  fullName: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Reset(System.Collections.Generic.IList<Platform.RegularExpressions.Transformer.ISubstitutionRule>, System.String, System.Int32)
+  fullName.vb: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Reset(System.Collections.Generic.IList(Of Platform.RegularExpressions.Transformer.ISubstitutionRule), System.String, System.Int32)
+  nameWithType: TextSteppedTransformer.Reset(IList<ISubstitutionRule>, String, Int32)
+  nameWithType.vb: TextSteppedTransformer.Reset(IList(Of ISubstitutionRule), String, Int32)
+- uid: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Reset(System.String)
+  name: Reset(String)
+  href: api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html#Platform_RegularExpressions_Transformer_TextSteppedTransformer_Reset_System_String_
+  commentId: M:Platform.RegularExpressions.Transformer.TextSteppedTransformer.Reset(System.String)
+  fullName: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Reset(System.String)
+  nameWithType: TextSteppedTransformer.Reset(String)
+- uid: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Reset*
+  name: Reset
+  href: api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html#Platform_RegularExpressions_Transformer_TextSteppedTransformer_Reset_
+  commentId: Overload:Platform.RegularExpressions.Transformer.TextSteppedTransformer.Reset
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Reset
+  nameWithType: TextSteppedTransformer.Reset
+- uid: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Rules
+  name: Rules
+  href: api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html#Platform_RegularExpressions_Transformer_TextSteppedTransformer_Rules
+  commentId: P:Platform.RegularExpressions.Transformer.TextSteppedTransformer.Rules
+  fullName: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Rules
+  nameWithType: TextSteppedTransformer.Rules
+- uid: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Rules*
+  name: Rules
+  href: api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html#Platform_RegularExpressions_Transformer_TextSteppedTransformer_Rules_
+  commentId: Overload:Platform.RegularExpressions.Transformer.TextSteppedTransformer.Rules
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Rules
+  nameWithType: TextSteppedTransformer.Rules
+- uid: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Text
+  name: Text
+  href: api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html#Platform_RegularExpressions_Transformer_TextSteppedTransformer_Text
+  commentId: P:Platform.RegularExpressions.Transformer.TextSteppedTransformer.Text
+  fullName: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Text
+  nameWithType: TextSteppedTransformer.Text
+- uid: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Text*
+  name: Text
+  href: api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html#Platform_RegularExpressions_Transformer_TextSteppedTransformer_Text_
+  commentId: Overload:Platform.RegularExpressions.Transformer.TextSteppedTransformer.Text
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.TextSteppedTransformer.Text
+  nameWithType: TextSteppedTransformer.Text
 - uid: Platform.RegularExpressions.Transformer.TextTransformer
   name: TextTransformer
   href: api/Platform.RegularExpressions.Transformer.TextTransformer.html
