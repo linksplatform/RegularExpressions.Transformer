@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using Platform.Collections;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -20,9 +22,42 @@ namespace Platform.RegularExpressions.Transformer
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static List<string> GetSteps(this ITextTransformer transformer, string sourceText) => transformer.GenerateTransformersForEachRule().TransformWithAll(sourceText);
+        public static IList<string> GetSteps(this ITextTransformer transformer, string sourceText)
+        {
+            if (transformer != null && !transformer.Rules.IsNullOrEmpty())
+            {
+                var steps = new List<string>();
+                var steppedTransformer = new TextSteppedTransformer(transformer.Rules, sourceText);
+                while (steppedTransformer.Next())
+                {
+                    steps.Add(steppedTransformer.Text);
+                }
+                return steps;
+            }
+            else
+            {
+                return Array.Empty<string>();
+            }
+        }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void WriteStepsToFiles(this ITextTransformer transformer, string sourceText, string targetPath, bool skipFilesWithNoChanges) => transformer.GenerateTransformersForEachRule().TransformWithAllToFiles(sourceText, targetPath, skipFilesWithNoChanges);
+        public static void WriteStepsToFiles(this ITextTransformer transformer, string sourceText, string targetPath, bool skipFilesWithNoChanges)
+        {
+            if(transformer != null && !transformer.Rules.IsNullOrEmpty())
+            {
+                targetPath.GetPathParts(out var directoryName, out var targetFilename, out var targetExtension);
+                var lastText = "";
+                var steppedTransformer = new TextSteppedTransformer(transformer.Rules, sourceText);
+                while (steppedTransformer.Next())
+                {
+                    var newText = steppedTransformer.Text;
+                    if (!(skipFilesWithNoChanges && string.Equals(lastText, newText)))
+                    {
+                        lastText = newText;
+                        newText.WriteStepToFile(directoryName, targetFilename, targetExtension, steppedTransformer.Current);
+                    }
+                }
+            }
+        }
     }
 }

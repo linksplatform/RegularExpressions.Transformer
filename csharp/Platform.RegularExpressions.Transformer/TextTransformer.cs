@@ -7,6 +7,8 @@ namespace Platform.RegularExpressions.Transformer
 {
     public class TextTransformer : ITextTransformer
     {
+        private readonly TextSteppedTransformer _baseTransformer;
+
         public IList<ISubstitutionRule> Rules
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -16,31 +18,18 @@ namespace Platform.RegularExpressions.Transformer
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public TextTransformer(IList<ISubstitutionRule> substitutionRules) => Rules = substitutionRules;
+        public TextTransformer(IList<ISubstitutionRule> substitutionRules)
+        {
+            Rules = substitutionRules;
+            _baseTransformer = new TextSteppedTransformer(substitutionRules);
+        }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public string Transform(string source)
         {
-            var current = source;
-            for (var i = 0; i < Rules.Count; i++)
-            {
-                var rule = Rules[i];
-                var matchPattern = rule.MatchPattern;
-                var substitutionPattern = rule.SubstitutionPattern;
-                var maximumRepeatCount = rule.MaximumRepeatCount;
-                var replaceCount = 0;
-                do
-                {
-                    current = matchPattern.Replace(current, substitutionPattern);
-                    replaceCount++;
-                    if (maximumRepeatCount < int.MaxValue && replaceCount > maximumRepeatCount)
-                    {
-                        break;
-                    }
-                }
-                while (matchPattern.IsMatch(current));
-            }
-            return current;
+            _baseTransformer.Reset(source);
+            while (_baseTransformer.Next());
+            return _baseTransformer.Text;
         }
     }
 }

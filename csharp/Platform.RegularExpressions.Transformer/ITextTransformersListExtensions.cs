@@ -1,7 +1,7 @@
-﻿using System.IO;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Runtime.CompilerServices;
+using Platform.Collections;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -10,27 +10,29 @@ namespace Platform.RegularExpressions.Transformer
     public static class ITextTransformersListExtensions
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static List<string> TransformWithAll(this IList<ITextTransformer> transformers, string source)
+        public static IList<string> TransformWithAll(this IList<ITextTransformer> transformers, string source)
         {
-            var strings = new List<string>();
-            if (transformers.Count > 0)
+            if (!transformers.IsNullOrEmpty())
             {
+                var steps = new List<string>();
                 for (int i = 0; i < transformers.Count; i++)
                 {
-                    strings.Add(transformers[i].Transform(source));
+                    steps.Add(transformers[i].Transform(source));
                 }
+                return steps;
             }
-            return strings;
+            else
+            {
+                return Array.Empty<string>();
+            }
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void TransformWithAllToFiles(this IList<ITextTransformer> transformers, string sourceText, string targetPath, bool skipFilesWithNoChanges)
         {
-            if (transformers.Count > 0)
+            if (!transformers.IsNullOrEmpty())
             {
-                var directoryName = Path.GetDirectoryName(targetPath);
-                var targetFilename = Path.GetFileNameWithoutExtension(targetPath);
-                var targetExtension = Path.GetExtension(targetPath);
+                targetPath.GetPathParts(out var directoryName, out var targetFilename, out var targetExtension);
                 var lastText = "";
                 for (int i = 0; i < transformers.Count; i++)
                 {
@@ -38,7 +40,7 @@ namespace Platform.RegularExpressions.Transformer
                     if (!(skipFilesWithNoChanges && string.Equals(lastText, transformationOutput)))
                     {
                         lastText = transformationOutput;
-                        File.WriteAllText(Path.Combine(directoryName, $"{targetFilename}.{i}{targetExtension}"), transformationOutput, Encoding.UTF8);
+                        transformationOutput.WriteStepToFile(directoryName, targetFilename, targetExtension, i);
                     }
                 }
             }
