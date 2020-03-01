@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.FileTransformer.html",
-          "hash": "66so11tKk3pknXaVHCRPJg=="
+          "hash": "Zx8pkA7QafboIT3iR8tOeg=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.IFileTransformer.html",
-          "hash": "ixZ8E4omTojx2ygHo+K9fw=="
+          "hash": "X40uQZ2KeLJaRSEkopauwA=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html",
-          "hash": "ZgfTnFWr0vNsutnNBYbt/Q=="
+          "hash": "PP6YFwMesSVuOF5on+8GGA=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.ITextTransformer.html",
-          "hash": "2LWO1fYWtNpU+gBqwLwJ7w=="
+          "hash": "yb3tFxbZmcvrpPb10UF2wg=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.ITextTransformerExtensions.html",
-          "hash": "pRkqnUI67Anz6ufMECFHAA=="
+          "hash": "P0ciGu2KEQ2z/pZUDzm5EQ=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.ITextTransformersListExtensions.html",
-          "hash": "+JH7jLnzAjk6HVhF6XyV8A=="
+          "hash": "zVvchwYI3imOxX03oLqCuA=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.ITransformer.html",
-          "hash": "yZkMVr/LDr1BMuXobDoEPA=="
+          "hash": "pdPnIM0yJ+UhwTAG3qUJSA=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.LoggingFileTransformer.html",
-          "hash": "fXm42lblrNMeMsGDtQxkGg=="
+          "hash": "kRdrNxxl5TpsAbXezTop+A=="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.RegexExtensions.html",
-          "hash": "iVETE5q1B4nGM2vn5W6BBw=="
+          "hash": "4P1FuQHduhEW5xCHpr19Aw=="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.SubstitutionRule.html",
-          "hash": "vh5T/nBOjzO+vKfow1FKvw=="
+          "hash": "vWITkDMIDBWfni7BmPNDnA=="
         }
       },
       "is_incremental": false,
@@ -150,7 +150,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html",
-          "hash": "ecRAt5X2Tc7NUuOy1afS+w=="
+          "hash": "sMXG8WDZQQQi9V+UlHamMg=="
         }
       },
       "is_incremental": false,
@@ -162,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.TextTransformer.html",
-          "hash": "fxRNwntoMaEnNmVNZp/M3A=="
+          "hash": "Wnxc3Zi0xORMjHLxzgPm9A=="
         }
       },
       "is_incremental": false,
@@ -174,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.TransformerCLI.html",
-          "hash": "6HX3sm/eTPpDg8plUmuoaA=="
+          "hash": "FgdtqAkmF2wNiVoALCznOg=="
         }
       },
       "is_incremental": false,
@@ -231,10 +231,11 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ConceptualDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 1,
+          "total_file_count": 0,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
@@ -243,11 +244,10 @@
           "total_file_count": 14,
           "skipped_file_count": 0
         },
-        "TocDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 1,
           "skipped_file_count": 0
         }
       }
