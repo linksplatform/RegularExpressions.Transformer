@@ -7,8 +7,6 @@ namespace Platform.RegularExpressions.Transformer
 {
     public class TextTransformer : ITextTransformer
     {
-        private readonly TextSteppedTransformer _baseTransformer;
-
         public IList<ISubstitutionRule> Rules
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -21,15 +19,15 @@ namespace Platform.RegularExpressions.Transformer
         public TextTransformer(IList<ISubstitutionRule> substitutionRules)
         {
             Rules = substitutionRules;
-            _baseTransformer = new TextSteppedTransformer(substitutionRules);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public string Transform(string source)
         {
-            _baseTransformer.Reset(source);
-            while (_baseTransformer.Next());
-            return _baseTransformer.Text;
+            var baseTrasformer = new TextSteppedTransformer(Rules);
+            baseTrasformer.Reset(source);
+            while (baseTrasformer.Next());
+            return baseTrasformer.Text;
         }
     }
 }
