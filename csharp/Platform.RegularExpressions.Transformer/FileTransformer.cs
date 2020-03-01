@@ -94,7 +94,11 @@ namespace Platform.RegularExpressions.Transformer
             var directories = Directory.GetDirectories(sourcePath);
             for (var i = 0; i < directories.Length; i++)
             {
-                var relativePath = GetRelativePath(sourcePath, directories[i]);
+#if NETSTANDARD2_1
+                var relativePath = Path.GetRelativePath(sourcePath, directories[i]);
+#else
+                var relativePath = directories[i].Replace(sourcePath.TrimEnd('\\') + "\\", "");
+#endif
                 var newTargetPath = Path.Combine(targetPath, relativePath);
                 TransformFolder(directories[i], newTargetPath);
             }
@@ -180,21 +184,6 @@ namespace Platform.RegularExpressions.Transformer
             {
                 throw new FileNotFoundException("Source file does not exists.", sourcePath);
             }
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static string NormalizePath(string path) => Path.GetFullPath(path).TrimEnd(new[] { Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar });
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static string GetRelativePath(string rootPath, string fullPath)
-        {
-            rootPath = NormalizePath(rootPath);
-            fullPath = NormalizePath(fullPath);
-            if (!fullPath.StartsWith(rootPath))
-            {
-                throw new Exception("Could not find rootPath in fullPath when calculating relative path.");
-            }
-            return fullPath.Substring(rootPath.Length + 1);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
