@@ -12,16 +12,16 @@ env:
   SCRIPTS_BASE_URL: https://raw.githubusercontent.com/linksplatform/Scripts/master/MultiProjectRepository
 
 jobs:
-  testAndDeploy:
+  buildTestAndDeploy:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
       with:
         submodules: true
-    - name: BuildAndTest
-      run: |
-        dotnet build -c Release
-        dotnet test -c Release -f netcoreapp3.1
+    - name: Build
+      run: dotnet build -c Release 
+    - name: Test
+      run: dotnet test -c Release -f netcoreapp3.1
     - name: Generate PDF with CSharp code
       if: github.event_name == 'push'
       run: |
@@ -59,7 +59,7 @@ jobs:
         bash ./publish-release.sh
 
   pushCSharpNuGetToGitHubPackageRegistry:
-    needs: testAndDeploy
+    needs: buildTestAndDeploy
     if: github.event_name == 'push'
     runs-on: windows-latest
     steps:
@@ -67,9 +67,11 @@ jobs:
         with:
           submodules: true
       - uses: warrenbuckley/Setup-Nuget@v1
+      - name: Build
+        run: dotnet build -c Release
+      - name: Pack
+        run: dotnet pack -c Release
       - name: Publish CSharp NuGet to GitHub Package Registry
         run: |
-          dotnet build -c Release
-          dotnet pack -c Release
           nuget source Add -Name "GitHub" -Source "https://nuget.pkg.github.com/linksplatform/index.json" -UserName linksplatform -Password ${{ secrets.GITHUB_TOKEN }}
           nuget push **/*.nupkg -Source "GitHub" -SkipDuplicate
