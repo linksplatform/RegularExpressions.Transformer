@@ -11,6 +11,12 @@
 
 LinksPlatform's Platform.RegularExpressions.Transformer Class Library.
 
+Another way to transform text is to use chain of regular expression in the `sed` command.
+
+```Shell
+sed -e 's/first match/first substution/g' -e 's/second match/second substution/g'
+```
+
 Namespace: [Platform.RegularExpressions.Transformer](https://linksplatform.github.io/RegularExpressions.Transformer/api/Platform.RegularExpressions.Transformer.html)
 
 Forked from: [LinksPlatform/Collections.Methods/CSharpToCppTranslator](https://github.com/linksplatform/Collections.Methods/tree/20ac8963cdeb8f68013139f4083abd98be03ff43/CSharpToCppTranslator)
