@@ -334,6 +334,28 @@ references:
   isSpec: "True"
   fullName: Platform.RegularExpressions.Transformer.ITransformer.Rules
   nameWithType: ITransformer.Rules
+- uid: Platform.RegularExpressions.Transformer.ITransformerExtensions
+  name: ITransformerExtensions
+  href: api/Platform.RegularExpressions.Transformer.ITransformerExtensions.html
+  commentId: T:Platform.RegularExpressions.Transformer.ITransformerExtensions
+  fullName: Platform.RegularExpressions.Transformer.ITransformerExtensions
+  nameWithType: ITransformerExtensions
+- uid: Platform.RegularExpressions.Transformer.ITransformerExtensions.WriteStep(Platform.RegularExpressions.Transformer.ITransformer,System.String,System.String,System.String,System.Int32,System.String@,System.String,System.Boolean)
+  name: WriteStep(ITransformer, String, String, String, Int32, ref String, String, Boolean)
+  href: api/Platform.RegularExpressions.Transformer.ITransformerExtensions.html#Platform_RegularExpressions_Transformer_ITransformerExtensions_WriteStep_Platform_RegularExpressions_Transformer_ITransformer_System_String_System_String_System_String_System_Int32_System_String__System_String_System_Boolean_
+  commentId: M:Platform.RegularExpressions.Transformer.ITransformerExtensions.WriteStep(Platform.RegularExpressions.Transformer.ITransformer,System.String,System.String,System.String,System.Int32,System.String@,System.String,System.Boolean)
+  name.vb: WriteStep(ITransformer, String, String, String, Int32, ByRef String, String, Boolean)
+  fullName: Platform.RegularExpressions.Transformer.ITransformerExtensions.WriteStep(Platform.RegularExpressions.Transformer.ITransformer, System.String, System.String, System.String, System.Int32, ref System.String, System.String, System.Boolean)
+  fullName.vb: Platform.RegularExpressions.Transformer.ITransformerExtensions.WriteStep(Platform.RegularExpressions.Transformer.ITransformer, System.String, System.String, System.String, System.Int32, ByRef System.String, System.String, System.Boolean)
+  nameWithType: ITransformerExtensions.WriteStep(ITransformer, String, String, String, Int32, ref String, String, Boolean)
+  nameWithType.vb: ITransformerExtensions.WriteStep(ITransformer, String, String, String, Int32, ByRef String, String, Boolean)
+- uid: Platform.RegularExpressions.Transformer.ITransformerExtensions.WriteStep*
+  name: WriteStep
+  href: api/Platform.RegularExpressions.Transformer.ITransformerExtensions.html#Platform_RegularExpressions_Transformer_ITransformerExtensions_WriteStep_
+  commentId: Overload:Platform.RegularExpressions.Transformer.ITransformerExtensions.WriteStep
+  isSpec: "True"
+  fullName: Platform.RegularExpressions.Transformer.ITransformerExtensions.WriteStep
+  nameWithType: ITransformerExtensions.WriteStep
 - uid: Platform.RegularExpressions.Transformer.LoggingFileTransformer
   name: LoggingFileTransformer
   href: api/Platform.RegularExpressions.Transformer.LoggingFileTransformer.html
