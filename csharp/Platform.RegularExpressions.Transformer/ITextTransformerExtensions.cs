@@ -51,11 +51,7 @@ namespace Platform.RegularExpressions.Transformer
                 while (steppedTransformer.Next())
                 {
                     var newText = steppedTransformer.Text;
-                    if (!(skipFilesWithNoChanges && string.Equals(lastText, newText)))
-                    {
-                        lastText = newText;
-                        newText.WriteStepToFile(directoryName, targetFilename, targetExtension, steppedTransformer.Current);
-                    }
+                    steppedTransformer.WriteStep(directoryName, targetFilename, targetExtension, steppedTransformer.Current, ref lastText, newText, skipFilesWithNoChanges);
                 }
             }
         }

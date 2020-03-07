@@ -12,6 +12,6 @@ namespace Platform.RegularExpressions.Transformer
         public static void GetPathParts(this string path, out string directoryName, out string targetFilename, out string targetExtension) => (directoryName, targetFilename, targetExtension) = (Path.GetDirectoryName(path), Path.GetFileNameWithoutExtension(path), Path.GetExtension(path));
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void WriteStepToFile(this string text, string directoryName, string targetFilename, string targetExtension, int currentStep) => File.WriteAllText(Path.Combine(directoryName, $"{targetFilename}.{currentStep}{targetExtension}"), text, Encoding.UTF8);
+        public static void WriteToFile(this string text, string directoryName, string targetFilename) => File.WriteAllText(Path.Combine(directoryName, targetFilename), text, Encoding.UTF8);
     }
 }

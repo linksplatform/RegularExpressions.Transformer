@@ -36,12 +36,9 @@ namespace Platform.RegularExpressions.Transformer
                 var lastText = "";
                 for (int i = 0; i < transformers.Count; i++)
                 {
-                    var transformationOutput = transformers[i].Transform(sourceText);
-                    if (!(skipFilesWithNoChanges && string.Equals(lastText, transformationOutput)))
-                    {
-                        lastText = transformationOutput;
-                        transformationOutput.WriteStepToFile(directoryName, targetFilename, targetExtension, i);
-                    }
+                    var transformer = transformers[i];
+                    var newText = transformer.Transform(sourceText);
+                    transformer.WriteStep(directoryName, targetFilename, targetExtension, i, ref lastText, newText, skipFilesWithNoChanges);
                 }
             }
         }
