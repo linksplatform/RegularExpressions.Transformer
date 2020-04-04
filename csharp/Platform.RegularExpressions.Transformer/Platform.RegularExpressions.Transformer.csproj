@@ -36,7 +36,7 @@ Refactoring.</PackageReleaseNotes>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
-    <PackageReference Include="Platform.Collections" Version="0.2.1" />
+    <PackageReference Include="Platform.IO" Version="0.2.1" />
   </ItemGroup>
 
 </Project>

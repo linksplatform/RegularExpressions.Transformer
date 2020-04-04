@@ -43,15 +43,16 @@ namespace Platform.RegularExpressions.Transformer
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void WriteStepsToFiles(this ITextTransformer transformer, string sourceText, string targetPath, bool skipFilesWithNoChanges)
         {
-            if(transformer != null && !transformer.Rules.IsNullOrEmpty())
+            if (transformer != null && !transformer.Rules.IsNullOrEmpty())
             {
                 targetPath.GetPathParts(out var directoryName, out var targetFilename, out var targetExtension);
+                Steps.DeleteAllSteps(directoryName, targetFilename, targetExtension);
                 var lastText = "";
                 var steppedTransformer = new TextSteppedTransformer(transformer.Rules, sourceText);
                 while (steppedTransformer.Next())
                 {
                     var newText = steppedTransformer.Text;
-                    steppedTransformer.WriteStep(directoryName, targetFilename, targetExtension, steppedTransformer.Current, ref lastText, newText, skipFilesWithNoChanges);
+                    Steps.WriteStep(transformer, directoryName, targetFilename, targetExtension, steppedTransformer.Current, ref lastText, newText, skipFilesWithNoChanges);
                 }
             }
         }
