@@ -18,199 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "Ot/XbF9RcvYcjOwrPwpzCg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.FileTransformer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.RegularExpressions.Transformer.FileTransformer.html",
-          "hash": "zXTQp2Y1M5axIio1tRLMlQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.IFileTransformer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.RegularExpressions.Transformer.IFileTransformer.html",
-          "hash": "9Ckl4SYGtp40U81DS67Bkw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.ISubstitutionRule.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html",
-          "hash": "K+l77QNWOIKaWWUYqSsNuA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.ITextTransformer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.RegularExpressions.Transformer.ITextTransformer.html",
-          "hash": "FAiCxxLag4lECruqn5h/oQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.ITextTransformerExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.RegularExpressions.Transformer.ITextTransformerExtensions.html",
-          "hash": "Zdt23PuXoxKSrT2AnfE7jQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.ITextTransformersListExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.RegularExpressions.Transformer.ITextTransformersListExtensions.html",
-          "hash": "dG+EDNPqqWhLhpKeY3SUfg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.ITransformer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.RegularExpressions.Transformer.ITransformer.html",
-          "hash": "dcP3yu9/1ZmpcYRggPLm+w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.LoggingFileTransformer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.RegularExpressions.Transformer.LoggingFileTransformer.html",
-          "hash": "MeCJXxuQbK0F4uK7w4GakQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.RegexExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.RegularExpressions.Transformer.RegexExtensions.html",
-          "hash": "icQABAlL4sVx7tAVoQMLhg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.Steps.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.RegularExpressions.Transformer.Steps.html",
-          "hash": "hVS9L5cu0AwDCyDPoPxI/Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.SubstitutionRule.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.RegularExpressions.Transformer.SubstitutionRule.html",
-          "hash": "At63Xn5wsjWp9ez18yuQdA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html",
-          "hash": "Ds774RfTcOI8rWCOTKgKpQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.TextTransformer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.RegularExpressions.Transformer.TextTransformer.html",
-          "hash": "pclKIc8Svdo4PJ/WCizoQg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.TransformerCLI.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.RegularExpressions.Transformer.TransformerCLI.html",
-          "hash": "s4PXyozewPJXrBBykAIwKg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.RegularExpressions.Transformer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.RegularExpressions.Transformer.html",
-          "hash": "M/T6rolUsnaqAROiX5kyuQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "obj/api/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/toc.html",
-          "hash": "e0z50D/JWcuHrvUSLw6KCQ=="
+          "hash": "3xrF9sfpw89t7WhWgousoA=="
         }
       },
       "is_incremental": false,
@@ -225,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "BlZL1Nxjh3eQp7nx8v6FYw=="
+          "hash": "LcbDECT9C01P0f65b8SIxQ=="
         }
       },
       "is_incremental": false,
@@ -247,12 +55,6 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 1,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 15,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
