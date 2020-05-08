@@ -17,7 +17,7 @@ Another way to transform text is to use chain of regular expression in the `sed`
 sed -e 's/first match/first substution/g' -e 's/second match/second substution/g'
 ```
 
-Namespace: [Platform.RegularExpressions.Transformer](https://linksplatform.github.io/RegularExpressions.Transformer/api/Platform.RegularExpressions.Transformer.html)
+Namespace: [Platform.RegularExpressions.Transformer](https://linksplatform.github.io/RegularExpressions.Transformer/csharp/api/Platform.RegularExpressions.Transformer.html)
 
 Forked from: [LinksPlatform/Collections.Methods/CSharpToCppTranslator](https://github.com/linksplatform/Collections.Methods/tree/20ac8963cdeb8f68013139f4083abd98be03ff43/CSharpToCppTranslator)
 
