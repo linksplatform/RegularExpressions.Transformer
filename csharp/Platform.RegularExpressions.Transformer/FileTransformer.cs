@@ -47,6 +47,15 @@ namespace Platform.RegularExpressions.Transformer
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void Transform(string sourcePath, string targetPath)
         {
+            var defaultPath = Path.GetFullPath(".");
+            if (string.IsNullOrEmpty(sourcePath))
+            {
+                sourcePath = defaultPath;
+            }
+            if (string.IsNullOrEmpty(targetPath))
+            {
+                targetPath = defaultPath;
+            }
             var sourceDirectoryExists = DirectoryExists(sourcePath);
             var sourceDirectoryPath = LooksLikeDirectoryPath(sourcePath);
             var sourceIsDirectory = sourceDirectoryExists || sourceDirectoryPath;
