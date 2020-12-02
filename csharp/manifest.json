@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.FileTransformer.html",
-          "hash": "hBZlib9FZIvezPsyfdHmmA=="
+          "hash": "SrwUfIKSzZbccct5Hy3sIg=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.IFileTransformer.html",
-          "hash": "OCulBMpL0zpnnhxHvSHDjA=="
+          "hash": "YZCB/H7pnp6iDwhu/HL1+g=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.ISubstitutionRule.html",
-          "hash": "zE6BsBSopIrDakDrGxHzCw=="
+          "hash": "z4rv5m9yt88tk64axScN4w=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.ITextTransformer.html",
-          "hash": "kEQpSq9UYVppHsRU6WsMWQ=="
+          "hash": "YlzKbRJm5i28RrtnOBuf4A=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.ITextTransformerExtensions.html",
-          "hash": "SVQpsNsSYvCQ68f7jOsg+w=="
+          "hash": "tONCbqlvvQKWD5lg2mJzAQ=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.ITextTransformersListExtensions.html",
-          "hash": "xwHxRKyPFsDySyyZ+iuDSQ=="
+          "hash": "gtHHvTpK8YDkcZbDHYteIg=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.ITransformer.html",
-          "hash": "o/9omqeDqHSSd/6vVbmUZQ=="
+          "hash": "ykkFpHtQIaSMxLUqriK5FQ=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.LoggingFileTransformer.html",
-          "hash": "F9EzVKHCCkL2cyOH4LkcrA=="
+          "hash": "g9LxqfEFv9BRuw3BnMBk3w=="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.RegexExtensions.html",
-          "hash": "s31s9g+4dyaIyZAIOhKwEA=="
+          "hash": "ED8ziXcq2dyujnbarXSqRQ=="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.Steps.html",
-          "hash": "s5OPVQXMLNxJIyg9A8+xvA=="
+          "hash": "ucH1F+EAGzCqhiMhFVfxmQ=="
         }
       },
       "is_incremental": false,
@@ -150,7 +150,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.SubstitutionRule.html",
-          "hash": "vgufzSdAU9vsmOl13BJgjw=="
+          "hash": "nkWcGlZuGPlo8Vf59p4N9A=="
         }
       },
       "is_incremental": false,
@@ -162,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.TextSteppedTransformer.html",
-          "hash": "iwuT3+WQCzZrRBajia54xQ=="
+          "hash": "/9x3zU+P6bAly2Xl3D4KPA=="
         }
       },
       "is_incremental": false,
@@ -174,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.TextTransformer.html",
-          "hash": "x7/z9loYUPr+EWXrSSCuSA=="
+          "hash": "Ylwtn0cCQyZJFmL+Betl6w=="
         }
       },
       "is_incremental": false,
@@ -186,7 +186,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.RegularExpressions.Transformer.TransformerCLI.html",
-          "hash": "XntQdIABJXVrAQq6woj9wg=="
+          "hash": "On5J1JCqgvvP9sdUXdVs1w=="
         }
       },
       "is_incremental": false,
