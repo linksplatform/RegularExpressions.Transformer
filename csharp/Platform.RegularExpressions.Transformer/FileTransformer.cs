@@ -106,7 +106,7 @@ namespace Platform.RegularExpressions.Transformer
 #if NETSTANDARD2_1
                 var relativePath = Path.GetRelativePath(sourcePath, directories[i]);
 #else
-                var relativePath = directories[i].Replace(sourcePath.TrimEnd('\\') + "\\", "");
+                var relativePath = directories[i].Replace(sourcePath.TrimEnd(Path.DirectorySeparatorChar) + Path.DirectorySeparatorChar, "");
 #endif
                 var newTargetPath = Path.Combine(targetPath, relativePath);
                 TransformFolder(directories[i], newTargetPath);
