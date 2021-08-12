@@ -34,7 +34,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
-    <PackageReference Include="Platform.IO" Version="0.2.2" />
+    <PackageReference Include="Platform.IO" Version="0.3.0" />
   </ItemGroup>
 
 </Project>
