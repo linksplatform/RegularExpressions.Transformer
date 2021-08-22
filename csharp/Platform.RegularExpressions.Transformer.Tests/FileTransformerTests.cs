@@ -1,10 +1,22 @@
-﻿using System.IO;
+using System.IO;
 using Xunit;
 
 namespace Platform.RegularExpressions.Transformer.Tests
 {
+    /// <summary>
+    /// <para>
+    /// Represents the file transformer tests.
+    /// </para>
+    /// <para></para>
+    /// </summary>
     public class FileTransformerTests
     {
+        /// <summary>
+        /// <para>
+        /// Tests that folder to folder transfomation test.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         [Fact]
         public void FolderToFolderTransfomationTest()
         {

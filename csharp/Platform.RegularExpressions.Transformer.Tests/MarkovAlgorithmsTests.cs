@@ -1,8 +1,14 @@
-﻿using System.Text.RegularExpressions;
+using System.Text.RegularExpressions;
 using Xunit;
 
 namespace Platform.RegularExpressions.Transformer.Tests
 {
+    /// <summary>
+    /// <para>
+    /// Represents the markov algorithms tests.
+    /// </para>
+    /// <para></para>
+    /// </summary>
     public class MarkovAlgorithmsTests
     {
         /// <remarks>

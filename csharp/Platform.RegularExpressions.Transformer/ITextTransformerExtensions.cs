@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -8,8 +8,28 @@ using Platform.Collections;
 
 namespace Platform.RegularExpressions.Transformer
 {
+    /// <summary>
+    /// <para>
+    /// Represents the text transformer extensions.
+    /// </para>
+    /// <para></para>
+    /// </summary>
     public static class ITextTransformerExtensions
     {
+        /// <summary>
+        /// <para>
+        /// Generates the transformers for each rule using the specified transformer.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="transformer">
+        /// <para>The transformer.</para>
+        /// <para></para>
+        /// </param>
+        /// <returns>
+        /// <para>The transformers.</para>
+        /// <para></para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static IList<ITextTransformer> GenerateTransformersForEachRule(this ITextTransformer transformer)
         {
@@ -21,6 +41,24 @@ namespace Platform.RegularExpressions.Transformer
             return transformers;
         }
 
+        /// <summary>
+        /// <para>
+        /// Gets the steps using the specified transformer.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="transformer">
+        /// <para>The transformer.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="sourceText">
+        /// <para>The source text.</para>
+        /// <para></para>
+        /// </param>
+        /// <returns>
+        /// <para>A list of string</para>
+        /// <para></para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static IList<string> GetSteps(this ITextTransformer transformer, string sourceText)
         {
@@ -40,6 +78,28 @@ namespace Platform.RegularExpressions.Transformer
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Writes the steps to files using the specified transformer.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="transformer">
+        /// <para>The transformer.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="sourceText">
+        /// <para>The source text.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="targetPath">
+        /// <para>The target path.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="skipFilesWithNoChanges">
+        /// <para>The skip files with no changes.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void WriteStepsToFiles(this ITextTransformer transformer, string sourceText, string targetPath, bool skipFilesWithNoChanges)
         {

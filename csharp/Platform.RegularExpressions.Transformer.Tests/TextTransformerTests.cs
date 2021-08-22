@@ -1,12 +1,24 @@
-﻿using System.IO;
+using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using Xunit;
 
 namespace Platform.RegularExpressions.Transformer.Tests
 {
+    /// <summary>
+    /// <para>
+    /// Represents the text transformer tests.
+    /// </para>
+    /// <para></para>
+    /// </summary>
     public class TextTransformerTests
     {
+        /// <summary>
+        /// <para>
+        /// Tests that debug output test.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         [Fact]
         public void DebugOutputTest()
         {
@@ -26,6 +38,12 @@ namespace Platform.RegularExpressions.Transformer.Tests
             Assert.Equal(secondStepReferenceText, steps[1]);
         }
 
+        /// <summary>
+        /// <para>
+        /// Tests that debug files output test.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         [Fact]
         public void DebugFilesOutputTest()
         {
@@ -45,6 +63,28 @@ namespace Platform.RegularExpressions.Transformer.Tests
             CheckAndCleanUpTwoRulesFiles(firstStepReferenceText, secondStepReferenceText, transformer, targetFilename);
         }
 
+        /// <summary>
+        /// <para>
+        /// Checks the and clean up two rules files using the specified first step reference text.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="firstStepReferenceText">
+        /// <para>The first step reference text.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="secondStepReferenceText">
+        /// <para>The second step reference text.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="transformer">
+        /// <para>The transformer.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="targetFilename">
+        /// <para>The target filename.</para>
+        /// <para></para>
+        /// </param>
         private static void CheckAndCleanUpTwoRulesFiles(string firstStepReferenceText, string secondStepReferenceText, TextTransformer transformer, string targetFilename)
         {
             var firstStepReferenceFilename = $"{targetFilename}.0.txt";
@@ -68,6 +108,12 @@ namespace Platform.RegularExpressions.Transformer.Tests
             File.Delete(secondStepRuleFilename);
         }
 
+        /// <summary>
+        /// <para>
+        /// Tests that files with no changes skiped test.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         [Fact]
         public void FilesWithNoChangesSkipedTest()
         {
@@ -88,6 +134,28 @@ namespace Platform.RegularExpressions.Transformer.Tests
             CheckAndCleanUpThreeRulesFiles(firstStepReferenceText, thirdStepReferenceText, transformer, targetFilename);
         }
 
+        /// <summary>
+        /// <para>
+        /// Checks the and clean up three rules files using the specified first step reference text.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="firstStepReferenceText">
+        /// <para>The first step reference text.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="thirdStepReferenceText">
+        /// <para>The third step reference text.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="transformer">
+        /// <para>The transformer.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="targetFilename">
+        /// <para>The target filename.</para>
+        /// <para></para>
+        /// </param>
         private static void CheckAndCleanUpThreeRulesFiles(string firstStepReferenceText, string thirdStepReferenceText, TextTransformer transformer, string targetFilename)
         {
             var firstStepReferenceFilename = $"{targetFilename}.0.txt";
@@ -117,6 +185,12 @@ namespace Platform.RegularExpressions.Transformer.Tests
             File.Delete(thirdStepRuleFilename);
         }
 
+        /// <summary>
+        /// <para>
+        /// Tests that debug output using transformers generation test.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         [Fact]
         public void DebugOutputUsingTransformersGenerationTest()
         {
@@ -136,6 +210,12 @@ namespace Platform.RegularExpressions.Transformer.Tests
             Assert.Equal(secondStepReferenceText, steps[1]);
         }
 
+        /// <summary>
+        /// <para>
+        /// Tests that debug files output using transformers generation test.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         [Fact]
         public void DebugFilesOutputUsingTransformersGenerationTest()
         {
@@ -155,6 +235,12 @@ namespace Platform.RegularExpressions.Transformer.Tests
             CheckAndCleanUpTwoRulesFiles(firstStepReferenceText, secondStepReferenceText, transformer, targetFilename);
         }
 
+        /// <summary>
+        /// <para>
+        /// Tests that files with no changes skiped when using transformers generation test.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         [Fact]
         public void FilesWithNoChangesSkipedWhenUsingTransformersGenerationTest()
         {

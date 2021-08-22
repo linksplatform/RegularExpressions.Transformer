@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -10,10 +10,29 @@ using System.Threading.Tasks;
 
 namespace Platform.RegularExpressions.Transformer
 {
+    /// <summary>
+    /// <para>
+    /// Represents the file transformer.
+    /// </para>
+    /// <para></para>
+    /// </summary>
+    /// <seealso cref="IFileTransformer"/>
     public class FileTransformer : IFileTransformer
     {
+        /// <summary>
+        /// <para>
+        /// The text transformer.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         protected readonly ITextTransformer _textTransformer;
 
+        /// <summary>
+        /// <para>
+        /// Gets or sets the source file extension value.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         public string SourceFileExtension
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -22,6 +41,12 @@ namespace Platform.RegularExpressions.Transformer
             private set;
         }
 
+        /// <summary>
+        /// <para>
+        /// Gets or sets the target file extension value.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         public string TargetFileExtension
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -30,12 +55,36 @@ namespace Platform.RegularExpressions.Transformer
             private set;
         }
 
+        /// <summary>
+        /// <para>
+        /// Gets the rules value.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         public IList<ISubstitutionRule> Rules
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get => _textTransformer.Rules;
         }
 
+        /// <summary>
+        /// <para>
+        /// Initializes a new <see cref="FileTransformer"/> instance.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="textTransformer">
+        /// <para>A text transformer.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="sourceFileExtension">
+        /// <para>A source file extension.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="targetFileExtension">
+        /// <para>A target file extension.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public FileTransformer(ITextTransformer textTransformer, string sourceFileExtension, string targetFileExtension)
         {
@@ -44,6 +93,24 @@ namespace Platform.RegularExpressions.Transformer
             TargetFileExtension = targetFileExtension;
         }
 
+        /// <summary>
+        /// <para>
+        /// Transforms the source path.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="sourcePath">
+        /// <para>The source path.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="targetPath">
+        /// <para>The target path.</para>
+        /// <para></para>
+        /// </param>
+        /// <exception cref="NotSupportedException">
+        /// <para></para>
+        /// <para></para>
+        /// </exception>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void Transform(string sourcePath, string targetPath)
         {
@@ -92,6 +159,20 @@ namespace Platform.RegularExpressions.Transformer
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Transforms the folder using the specified source path.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="sourcePath">
+        /// <para>The source path.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="targetPath">
+        /// <para>The target path.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected virtual void TransformFolder(string sourcePath, string targetPath)
         {
@@ -122,6 +203,20 @@ namespace Platform.RegularExpressions.Transformer
             });
         }
 
+        /// <summary>
+        /// <para>
+        /// Transforms the file using the specified source path.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="sourcePath">
+        /// <para>The source path.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="targetPath">
+        /// <para>The target path.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected virtual void TransformFile(string sourcePath, string targetPath)
         {
@@ -139,9 +234,45 @@ namespace Platform.RegularExpressions.Transformer
             File.WriteAllText(targetPath, targetText, Encoding.UTF8);
         }
 
+        /// <summary>
+        /// <para>
+        /// Gets the target file name using the specified source path.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="sourcePath">
+        /// <para>The source path.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="targetDirectory">
+        /// <para>The target directory.</para>
+        /// <para></para>
+        /// </param>
+        /// <returns>
+        /// <para>The string</para>
+        /// <para></para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected string GetTargetFileName(string sourcePath, string targetDirectory) => Path.ChangeExtension(Path.Combine(targetDirectory, Path.GetFileName(sourcePath)), TargetFileExtension);
 
+        /// <summary>
+        /// <para>
+        /// Counts the files recursively using the specified path.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="path">
+        /// <para>The path.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="extension">
+        /// <para>The extension.</para>
+        /// <para></para>
+        /// </param>
+        /// <returns>
+        /// <para>The result.</para>
+        /// <para></para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static long CountFilesRecursively(string path, string extension)
         {
@@ -162,9 +293,37 @@ namespace Platform.RegularExpressions.Transformer
             return result;
         }
 
+        /// <summary>
+        /// <para>
+        /// Determines whether file extension matches.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="file">
+        /// <para>The file.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="extension">
+        /// <para>The extension.</para>
+        /// <para></para>
+        /// </param>
+        /// <returns>
+        /// <para>The bool</para>
+        /// <para></para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static bool FileExtensionMatches(string file, string extension) => file.EndsWith(extension, StringComparison.OrdinalIgnoreCase);
 
+        /// <summary>
+        /// <para>
+        /// Ensures the target file directory exists using the specified target path.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="targetPath">
+        /// <para>The target path.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void EnsureTargetFileDirectoryExists(string targetPath)
         {
@@ -174,9 +333,33 @@ namespace Platform.RegularExpressions.Transformer
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Ensures the target directory exists using the specified target path.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="targetPath">
+        /// <para>The target path.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void EnsureTargetDirectoryExists(string targetPath) => EnsureTargetDirectoryExists(targetPath, DirectoryExists(targetPath));
 
+        /// <summary>
+        /// <para>
+        /// Ensures the target directory exists using the specified target path.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="targetPath">
+        /// <para>The target path.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="targetDirectoryExists">
+        /// <para>The target directory exists.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void EnsureTargetDirectoryExists(string targetPath, bool targetDirectoryExists)
         {
@@ -186,6 +369,20 @@ namespace Platform.RegularExpressions.Transformer
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Ensures the source file exists using the specified source path.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="sourcePath">
+        /// <para>The source path.</para>
+        /// <para></para>
+        /// </param>
+        /// <exception cref="FileNotFoundException">
+        /// <para>Source file does not exists. </para>
+        /// <para></para>
+        /// </exception>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void EnsureSourceFileExists(string sourcePath)
         {
@@ -195,12 +392,50 @@ namespace Platform.RegularExpressions.Transformer
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Ensures the directory is created using the specified target path.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="targetPath">
+        /// <para>The target path.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void EnsureDirectoryIsCreated(string targetPath) => Directory.CreateDirectory(Path.GetDirectoryName(targetPath));
 
+        /// <summary>
+        /// <para>
+        /// Determines whether directory exists.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="path">
+        /// <para>The path.</para>
+        /// <para></para>
+        /// </param>
+        /// <returns>
+        /// <para>The bool</para>
+        /// <para></para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static bool DirectoryExists(string path) => Directory.Exists(path) && File.GetAttributes(path).HasFlag(FileAttributes.Directory);
 
+        /// <summary>
+        /// <para>
+        /// Determines whether looks like directory path.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="path">
+        /// <para>The path.</para>
+        /// <para></para>
+        /// </param>
+        /// <returns>
+        /// <para>The bool</para>
+        /// <para></para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static bool LooksLikeDirectoryPath(string path) => path.EndsWith(Path.DirectorySeparatorChar.ToString()) || path.EndsWith(Path.AltDirectorySeparatorChar.ToString());
     }
