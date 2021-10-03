@@ -63,28 +63,6 @@ namespace Platform.RegularExpressions.Transformer.Tests
             CheckAndCleanUpTwoRulesFiles(firstStepReferenceText, secondStepReferenceText, transformer, targetFilename);
         }
 
-        /// <summary>
-        /// <para>
-        /// Checks the and clean up two rules files using the specified first step reference text.
-        /// </para>
-        /// <para></para>
-        /// </summary>
-        /// <param name="firstStepReferenceText">
-        /// <para>The first step reference text.</para>
-        /// <para></para>
-        /// </param>
-        /// <param name="secondStepReferenceText">
-        /// <para>The second step reference text.</para>
-        /// <para></para>
-        /// </param>
-        /// <param name="transformer">
-        /// <para>The transformer.</para>
-        /// <para></para>
-        /// </param>
-        /// <param name="targetFilename">
-        /// <para>The target filename.</para>
-        /// <para></para>
-        /// </param>
         private static void CheckAndCleanUpTwoRulesFiles(string firstStepReferenceText, string secondStepReferenceText, TextTransformer transformer, string targetFilename)
         {
             var firstStepReferenceFilename = $"{targetFilename}.0.txt";
@@ -134,28 +112,6 @@ namespace Platform.RegularExpressions.Transformer.Tests
             CheckAndCleanUpThreeRulesFiles(firstStepReferenceText, thirdStepReferenceText, transformer, targetFilename);
         }
 
-        /// <summary>
-        /// <para>
-        /// Checks the and clean up three rules files using the specified first step reference text.
-        /// </para>
-        /// <para></para>
-        /// </summary>
-        /// <param name="firstStepReferenceText">
-        /// <para>The first step reference text.</para>
-        /// <para></para>
-        /// </param>
-        /// <param name="thirdStepReferenceText">
-        /// <para>The third step reference text.</para>
-        /// <para></para>
-        /// </param>
-        /// <param name="transformer">
-        /// <para>The transformer.</para>
-        /// <para></para>
-        /// </param>
-        /// <param name="targetFilename">
-        /// <para>The target filename.</para>
-        /// <para></para>
-        /// </param>
         private static void CheckAndCleanUpThreeRulesFiles(string firstStepReferenceText, string thirdStepReferenceText, TextTransformer transformer, string targetFilename)
         {
             var firstStepReferenceFilename = $"{targetFilename}.0.txt";
