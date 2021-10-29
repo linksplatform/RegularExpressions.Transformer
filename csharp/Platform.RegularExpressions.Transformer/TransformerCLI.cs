@@ -13,6 +13,12 @@ namespace Platform.RegularExpressions.Transformer
     /// </summary>
     public class TransformerCLI
     {
+        /// <summary>
+        /// <para>
+        /// The transformer.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         private readonly IFileTransformer _transformer;
 
         /// <summary>
