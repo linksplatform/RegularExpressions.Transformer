@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from typing import NoReturn, List
 
-from regex import match
+from regex import match, sub
 
 from .sub_rule import SubRule
 
@@ -36,17 +36,15 @@ class SteppedTranslator:
     def next(
         self
     ) -> bool:
-        current = self.current + 1
-        if len(rules) <= current:
+        if len(self.rules) <= self.current:
             return False
 
-        rule = self.rules[current]
+        rule = self.rules[self.current]
         replace = -1
-        text = self.text
 
-        while match(rule.pattern, text) and (rule.max_repeat > replace):
-            text = sub(rule.pattern, rule.sub, text)
+        while match(rule.match, self.text) and rule.max_repeat > replace:
+            self.text = sub(rule.match, rule.sub, self.text)
             replace += 1
 
-        self.current = current
+        self.current += 1
         return True

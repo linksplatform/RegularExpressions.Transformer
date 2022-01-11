@@ -14,8 +14,7 @@ class Translator:
 
     def __init__(
         self,
-        rules: List[SubRule],
-        debug: Union[bool, int] = False
+        rules: List[SubRule] = []
     ) -> NoReturn:
         """Initializes class.
 
@@ -24,17 +23,6 @@ class Translator:
         :param debug: enables debug output
         """
         self.rules = rules
-
-        # Debug settings
-        self.debug = 50
-        if debug:
-            if isinstance(debug, int):
-                self.debug = debug
-            else:
-                self.debug = 10
-
-        # Initialize logging
-        logging.basicConfig(level=self.debug)
 
     def translate(
         self,
@@ -45,8 +33,7 @@ class Translator:
         :param src: original text
         :return: transformed text.
         """
-        stpd_translator = SteppedTranslator(self.rules)
-        stpd_translator.reset(text=src)
+        stpd_translator = SteppedTranslator(self.rules, src, 0)
         while stpd_translator.next():
             pass
         return stpd_translator.text

@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
-# author: Ethosa
+from .sub_rule import SubRule
+from .stepped_translator import SteppedTranslator
+from .translator import Translator
+from .file_translator import FileTranslator
+from .translator_cli import TranslatorCLI
 
-from .Translator import Translator
-from .TranslatorCLI import TranslatorCLI
-
-__version__ = "0.1.2"
-__copyright__ = "2020"
+__version__ = "0.2.0"
+__copyright__ = "2022"
 __authors__ = ["Ethosa", "Konard"]
-
-if __name__ == '__main__':
-    print(Translator, TranslatorCLI)
+__all__ = [
+    'SubRule', 'SteppedTranslator', 'Translator',
+    'FileTranslator', 'TranslatorCLI'
+]
