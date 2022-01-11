@@ -59,7 +59,9 @@ class Test4TranslatorFile(TestCase):
 
 
 class Test5TranslatorCLI(TestCase):
-    pass
+    def test_init_translator_cli(self):
+        f = TranslatorCLI(FileTranslator(Translator(), '.txt', '.translator_cli'))
+        f.run(['test_folder', 'out_folder_cli'])
 
 
 if __name__ == '__main__':

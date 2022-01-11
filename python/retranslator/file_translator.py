@@ -5,7 +5,7 @@ from os import listdir, path, getcwd, mkdir
 from .translator import Translator
 
 
-class FileTranslator:
+class FileTranslator(Translator):
     _translator: Optional[Translator] = None
     src_ext: str = ''  # source file extension
     target_ext: str = ''  # target file extension
