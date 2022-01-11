@@ -1,30 +1,29 @@
 # -*- coding utf-8 -*-
 # authors: Ethosa, Konard
-import re
-import logging
+from typing import NoReturn, Union, List, Optional
+from logging import debug, basicConfig
 
-import regex
+from regex import Pattern, sub, search
+
+from .sub_rule import SubRule
+from .stepped_translator import SteppedTranslator
 
 
 class Translator:
-    def __init__(self, codeString="", rules=[], useRegex=False,
-                 debug=False):
+    rules: List[SubRule] = []
+
+    def __init__(
+        self,
+        rules: List[SubRule],
+        debug: Union[bool, int] = False
+    ) -> NoReturn:
         """Initializes class.
 
-        Keyword Arguments:
-            codeString {str} -- original text. (default: {""})
-            rules {list} -- include your own rules. (default: {[]})
-            useRegex {bool} -- this parameter tells you to use regex. (default: {False})
-            debug {bool} -- debug output. (default: {False})
+        :param src: original text.
+        :param rules: include your own rules.
+        :param debug: enables debug output
         """
-        self.originalText = codeString
-        self.rules = rules  # callable objects
-
-        # Regex settings
-        if useRegex:
-            self.r = regex
-        else:
-            self.r = re
+        self.rules = rules
 
         # Debug settings
         self.debug = 50
@@ -33,56 +32,21 @@ class Translator:
                 self.debug = debug
             else:
                 self.debug = 10
+
         # Initialize logging
         logging.basicConfig(level=self.debug)
 
-    async def atranslate(self, src=None):
-        """
-        Async variant of translate method.
-        """
-        return self.translate(src)
-
-    def translate(self, src=None):
+    def translate(
+        self,
+        src: str
+    ) -> str:
         """Transforms original text, using specific rules.
 
-        Keyword Arguments:
-            src {str} -- original text (default: {self.originalText})
-
-        Returns:
-            str -- Transformed text.
+        :param src: original text
+        :return: transformed text.
         """
-        if src:  # check src argument
-            current = src[:]  # copy string
-        else:
-            current = self.originalText[:]
-
-        for i in self.rules:
-            matchPattern = i[0]
-            substitutionPattern = i[1]
-            pathPattern = i[2]
-            maximumRepeatCount = i[3]
-
-            logging.debug("Rule \"%s\", \"%s\", \"%s\", \"%s\"" % (
-                matchPattern, substitutionPattern,
-                pathPattern, maximumRepeatCount)
-            )
-
-            if pathPattern is None:  # or pathPattern.IsMatch(context.Path)
-                replaceCount = 0
-                current = self.r.sub(matchPattern, substitutionPattern, current)
-                while self.r.search(matchPattern, current):
-                    if replaceCount+1 > maximumRepeatCount:
-                        break
-                    replaceCount += 1
-                    current = self.r.sub(matchPattern, substitutionPattern, current)
-        return current
-
-    Transform = translate
-
-    def addLine(self, string=""):
-        """Adds a new line in originalText variable.
-
-        Keyword Arguments:
-            string {str} -- line without "\n" (default: {""})
-        """
-        self.originalText += "\n%s" % (string)
+        stpd_translator = SteppedTranslator(self.rules)
+        stpd_translator.reset(text=src)
+        while stpd_translator.next():
+            pass
+        return stpd_translator.text
