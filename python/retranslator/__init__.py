@@ -5,7 +5,7 @@ from .translator import Translator
 from .file_translator import FileTranslator
 from .translator_cli import TranslatorCLI
 
-__version__ = "0.2.0"
+__version__ = "0.2.2"
 __copyright__ = "2022"
 __authors__ = ["Ethosa", "Konard"]
 __all__ = [

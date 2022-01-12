@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from typing import NoReturn, List
 
-from regex import match, sub
+from regex import search, sub
 
 from .sub_rule import SubRule
 
@@ -42,7 +42,7 @@ class SteppedTranslator:
         rule = self.rules[self.current]
         replace = -1
 
-        while match(rule.match, self.text) and rule.max_repeat > replace:
+        while search(rule.match, self.text) and rule.max_repeat > replace:
             self.text = sub(rule.match, rule.sub, self.text)
             replace += 1
 
