@@ -26,6 +26,7 @@
     <LangVersion>latest</LangVersion>
     <PackageReleaseNotes>Default path for source and target locations in FileTransformer is current directory now.</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup Condition="$(TargetFramework.StartsWith('net4')) AND '$(MSBuildRuntimeType)' == 'Core' AND '$(OS)' != 'Windows_NT'">
