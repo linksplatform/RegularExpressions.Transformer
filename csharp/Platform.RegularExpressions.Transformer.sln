@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.RegularExpressions.Transformer", "csharp\Platform.RegularExpressions.Transformer\Platform.RegularExpressions.Transformer.csproj", "{CC1A4CBE-BBE7-4B39-B70C-491B2CA731CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.RegularExpressions.Transformer", "Platform.RegularExpressions.Transformer\Platform.RegularExpressions.Transformer.csproj", "{CC1A4CBE-BBE7-4B39-B70C-491B2CA731CF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.RegularExpressions.Transformer.Tests", "csharp\Platform.RegularExpressions.Transformer.Tests\Platform.RegularExpressions.Transformer.Tests.csproj", "{1A8B957B-EFE1-4D56-A208-84A8F94404AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.RegularExpressions.Transformer.Tests", "Platform.RegularExpressions.Transformer.Tests\Platform.RegularExpressions.Transformer.Tests.csproj", "{1A8B957B-EFE1-4D56-A208-84A8F94404AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
