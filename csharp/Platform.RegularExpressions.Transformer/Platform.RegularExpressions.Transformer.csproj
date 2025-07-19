@@ -6,7 +6,7 @@
     <AssemblyTitle>Platform.RegularExpressions.Transformer</AssemblyTitle>
     <VersionPrefix>0.3.4</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
-    <TargetFramework>net7</TargetFramework>
+    <TargetFramework>net8</TargetFramework>
     <AssemblyName>Platform.RegularExpressions.Transformer</AssemblyName>
     <PackageId>Platform.RegularExpressions.Transformer</PackageId>
     <PackageTags>LinksPlatform;RegularExpressions.Transformer;IContext;ISubstitutionRule;ITransformer;Context;RegexExtensions;SubstitutionRule;Transformer;TransformerCLI</PackageTags>
@@ -23,7 +23,7 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <LangVersion>latest</LangVersion>
-    <PackageReleaseNotes>Default path for source and target locations in FileTransformer is current directory now.</PackageReleaseNotes>
+    <PackageReleaseNotes>Update target framework from net7 to net8.</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Nullable>enable</Nullable>
   </PropertyGroup>
