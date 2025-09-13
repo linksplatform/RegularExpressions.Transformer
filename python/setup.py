@@ -11,7 +11,7 @@ setuptools.setup(
     description="retranslator",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/linksplatform/RegularExpressions.Transformer/tree/master/python",
+    url="https://github.com/linksplatform/Regexes.Transformer/tree/master/python",
     packages=setuptools.find_packages(),
     license="LGPLv3",
     keywords="csharp cpp cs2cpp platform ethosa konard retranslator",
@@ -28,8 +28,8 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     project_urls={
-        "Github": "https://github.com/linksplatform/RegularExpressions.Transformer/tree/master/python",
-        "Documentation": "https://github.com/linksplatform/RegularExpressions.Transformer/tree/master/python",
+        "Github": "https://github.com/linksplatform/Regexes.Transformer/tree/master/python",
+        "Documentation": "https://github.com/linksplatform/Regexes.Transformer/tree/master/python",
     },
     python_requires=">=3",
     install_requires=["regex"]

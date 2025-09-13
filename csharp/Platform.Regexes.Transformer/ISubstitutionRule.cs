@@ -1,25 +1,25 @@
 using System.Runtime.CompilerServices;
+using System.Text.RegularExpressions;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-namespace Platform.RegularExpressions.Transformer
+namespace Platform.Regexes.Transformer
 {
     /// <summary>
     /// <para>
-    /// Defines the file transformer.
+    /// Defines the substitution rule.
     /// </para>
     /// <para></para>
     /// </summary>
-    /// <seealso cref="ITransformer"/>
-    public interface IFileTransformer : ITransformer
+    public interface ISubstitutionRule
     {
         /// <summary>
         /// <para>
-        /// Gets the source file extension value.
+        /// Gets the match pattern value.
         /// </para>
         /// <para></para>
         /// </summary>
-        string SourceFileExtension
+        Regex MatchPattern
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get;
@@ -27,11 +27,11 @@ namespace Platform.RegularExpressions.Transformer
 
         /// <summary>
         /// <para>
-        /// Gets the target file extension value.
+        /// Gets the substitution pattern value.
         /// </para>
         /// <para></para>
         /// </summary>
-        string TargetFileExtension
+        string SubstitutionPattern
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get;
@@ -39,19 +39,14 @@ namespace Platform.RegularExpressions.Transformer
 
         /// <summary>
         /// <para>
-        /// Transforms the source path.
+        /// Gets the maximum repeat count value.
         /// </para>
         /// <para></para>
         /// </summary>
-        /// <param name="sourcePath">
-        /// <para>The source path.</para>
-        /// <para></para>
-        /// </param>
-        /// <param name="targetPath">
-        /// <para>The target path.</para>
-        /// <para></para>
-        /// </param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        void Transform(string sourcePath, string targetPath);
+        int MaximumRepeatCount
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get;
+        }
     }
 }

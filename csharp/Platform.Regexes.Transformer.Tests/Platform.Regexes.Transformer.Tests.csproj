@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Platform.RegularExpressions.Transformer\Platform.RegularExpressions.Transformer.csproj" />
+    <ProjectReference Include="..\Platform.Regexes.Transformer\Platform.Regexes.Transformer.csproj" />
   </ItemGroup>
 
 </Project>

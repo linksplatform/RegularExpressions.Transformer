@@ -3,7 +3,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Xunit;
 
-namespace Platform.RegularExpressions.Transformer.Tests
+namespace Platform.Regexes.Transformer.Tests
 {
     /// <summary>
     /// <para>
