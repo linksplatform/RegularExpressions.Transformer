@@ -37,12 +37,34 @@ namespace Platform.RegularExpressions.Transformer
         /// </para>
         /// <para></para>
         /// </summary>
-        public Regex MatchPattern
+        public IRegexPattern MatchPattern
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get;
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             set;
+        }
+
+        /// <summary>
+        /// <para>
+        /// Gets the legacy System.Text.RegularExpressions.Regex pattern for backward compatibility.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        public Regex LegacyMatchPattern
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get
+            {
+                if (MatchPattern is SystemRegexPattern systemPattern)
+                {
+                    return systemPattern.UnderlyingRegex;
+                }
+                
+                // For PCRE patterns, create a fallback System.Text.RegularExpressions.Regex
+                // This maintains backward compatibility but may not have exact feature parity
+                return new Regex(MatchPattern.Pattern, SubstitutionRule.DefaultMatchPatternRegexOptions, MatchPattern.MatchTimeout);
+            }
         }
 
         /// <summary>
@@ -65,12 +87,36 @@ namespace Platform.RegularExpressions.Transformer
         /// </para>
         /// <para></para>
         /// </summary>
-        public Regex PathPattern
+        public IRegexPattern? PathPattern
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get;
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             set;
+        }
+
+        /// <summary>
+        /// <para>
+        /// Gets the legacy System.Text.RegularExpressions.Regex path pattern for backward compatibility.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        public Regex? LegacyPathPattern
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get
+            {
+                if (PathPattern == null)
+                    return null;
+                    
+                if (PathPattern is SystemRegexPattern systemPattern)
+                {
+                    return systemPattern.UnderlyingRegex;
+                }
+                
+                // For PCRE patterns, create a fallback System.Text.RegularExpressions.Regex
+                return new Regex(PathPattern.Pattern, SubstitutionRule.DefaultMatchPatternRegexOptions, PathPattern.MatchTimeout);
+            }
         }
 
         /// <summary>
@@ -105,6 +151,49 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>A maximum repeat count.</para>
         /// <para></para>
         /// </param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public SubstitutionRule(IRegexPattern matchPattern, string substitutionPattern, int maximumRepeatCount)
+        {
+            MatchPattern = matchPattern;
+            SubstitutionPattern = substitutionPattern;
+            MaximumRepeatCount = maximumRepeatCount;
+        }
+
+        /// <summary>
+        /// <para>
+        /// Initializes a new <see cref="SubstitutionRule"/> instance.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="matchPattern">
+        /// <para>A match pattern.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="substitutionPattern">
+        /// <para>A substitution pattern.</para>
+        /// <para></para>
+        /// </param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public SubstitutionRule(IRegexPattern matchPattern, string substitutionPattern) : this(matchPattern, substitutionPattern, 0) { }
+
+        /// <summary>
+        /// <para>
+        /// Initializes a new <see cref="SubstitutionRule"/> instance with legacy System.Text.RegularExpressions.Regex.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="matchPattern">
+        /// <para>A match pattern.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="substitutionPattern">
+        /// <para>A substitution pattern.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="maximumRepeatCount">
+        /// <para>A maximum repeat count.</para>
+        /// <para></para>
+        /// </param>
         /// <param name="matchPatternOptions">
         /// <para>A match pattern options.</para>
         /// <para></para>
@@ -116,7 +205,9 @@ namespace Platform.RegularExpressions.Transformer
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public SubstitutionRule(Regex matchPattern, string substitutionPattern, int maximumRepeatCount, RegexOptions? matchPatternOptions, TimeSpan? matchTimeout)
         {
-            MatchPattern = matchPattern;
+            var engine = RegexEngineFactory.DefaultEngine;
+            var pattern = engine.CreatePattern(matchPattern.ToString(), matchTimeout ?? matchPattern.MatchTimeout);
+            MatchPattern = pattern;
             SubstitutionPattern = substitutionPattern;
             MaximumRepeatCount = maximumRepeatCount;
             OverrideMatchPatternOptions(matchPatternOptions ?? matchPattern.Options, matchTimeout ?? matchPattern.MatchTimeout);
@@ -124,7 +215,7 @@ namespace Platform.RegularExpressions.Transformer
 
         /// <summary>
         /// <para>
-        /// Initializes a new <see cref="SubstitutionRule"/> instance.
+        /// Initializes a new <see cref="SubstitutionRule"/> instance with legacy System.Text.RegularExpressions.Regex.
         /// </para>
         /// <para></para>
         /// </summary>
@@ -149,7 +240,7 @@ namespace Platform.RegularExpressions.Transformer
 
         /// <summary>
         /// <para>
-        /// Initializes a new <see cref="SubstitutionRule"/> instance.
+        /// Initializes a new <see cref="SubstitutionRule"/> instance with legacy System.Text.RegularExpressions.Regex.
         /// </para>
         /// <para></para>
         /// </summary>
@@ -170,7 +261,7 @@ namespace Platform.RegularExpressions.Transformer
 
         /// <summary>
         /// <para>
-        /// Initializes a new <see cref="SubstitutionRule"/> instance.
+        /// Initializes a new <see cref="SubstitutionRule"/> instance with legacy System.Text.RegularExpressions.Regex.
         /// </para>
         /// <para></para>
         /// </summary>
@@ -186,16 +277,22 @@ namespace Platform.RegularExpressions.Transformer
         public SubstitutionRule(Regex matchPattern, string substitutionPattern) : this(matchPattern, substitutionPattern, 0) { }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static implicit operator SubstitutionRule(ValueTuple<string, string> tuple) => new SubstitutionRule(new Regex(tuple.Item1), tuple.Item2);
+        public static implicit operator SubstitutionRule(ValueTuple<string, string> tuple) => new SubstitutionRule(RegexEngineFactory.DefaultEngine.CreatePattern(tuple.Item1), tuple.Item2);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static implicit operator SubstitutionRule(ValueTuple<Regex, string> tuple) => new SubstitutionRule(tuple.Item1, tuple.Item2);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static implicit operator SubstitutionRule(ValueTuple<string, string, int> tuple) => new SubstitutionRule(new Regex(tuple.Item1), tuple.Item2, tuple.Item3);
+        public static implicit operator SubstitutionRule(ValueTuple<string, string, int> tuple) => new SubstitutionRule(RegexEngineFactory.DefaultEngine.CreatePattern(tuple.Item1), tuple.Item2, tuple.Item3);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static implicit operator SubstitutionRule(ValueTuple<Regex, string, int> tuple) => new SubstitutionRule(tuple.Item1, tuple.Item2, tuple.Item3);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static implicit operator SubstitutionRule(ValueTuple<IRegexPattern, string> tuple) => new SubstitutionRule(tuple.Item1, tuple.Item2);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static implicit operator SubstitutionRule(ValueTuple<IRegexPattern, string, int> tuple) => new SubstitutionRule(tuple.Item1, tuple.Item2, tuple.Item3);
 
         /// <summary>
         /// <para>
@@ -212,7 +309,17 @@ namespace Platform.RegularExpressions.Transformer
         /// <para></para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void OverrideMatchPatternOptions(RegexOptions options, TimeSpan matchTimeout) => MatchPattern = MatchPattern.OverrideOptions(options, matchTimeout);
+        public void OverrideMatchPatternOptions(RegexOptions options, TimeSpan matchTimeout) 
+        {
+            if (MatchPattern is SystemRegexPattern systemPattern)
+            {
+                MatchPattern = new SystemRegexPattern(systemPattern.UnderlyingRegex.OverrideOptions(options, matchTimeout));
+            }
+            else
+            {
+                MatchPattern = MatchPattern.WithTimeout(matchTimeout);
+            }
+        }
 
         /// <summary>
         /// <para>
@@ -229,7 +336,20 @@ namespace Platform.RegularExpressions.Transformer
         /// <para></para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void OverridePathPatternOptions(RegexOptions options, TimeSpan matchTimeout) => PathPattern = PathPattern.OverrideOptions(options, matchTimeout);
+        public void OverridePathPatternOptions(RegexOptions options, TimeSpan matchTimeout) 
+        {
+            if (PathPattern == null) 
+                return;
+                
+            if (PathPattern is SystemRegexPattern systemPattern)
+            {
+                PathPattern = new SystemRegexPattern(systemPattern.UnderlyingRegex.OverrideOptions(options, matchTimeout));
+            }
+            else
+            {
+                PathPattern = PathPattern.WithTimeout(matchTimeout);
+            }
+        }
 
         /// <summary>
         /// <para>
@@ -246,7 +366,7 @@ namespace Platform.RegularExpressions.Transformer
         {
             var sb = new StringBuilder();
             sb.Append('"');
-            sb.Append(MatchPattern.ToString());
+            sb.Append(MatchPattern?.ToString() ?? "");
             sb.Append('"');
             sb.Append(" -> ");
             sb.Append('"');
