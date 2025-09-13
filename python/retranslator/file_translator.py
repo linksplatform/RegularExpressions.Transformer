@@ -2,7 +2,7 @@
 from typing import NoReturn, Optional, List
 from os import listdir, path, getcwd, mkdir
 
-from .translator import Translator
+from .Translator import Translator
 
 
 class FileTranslator(Translator):

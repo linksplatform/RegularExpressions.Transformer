@@ -40,11 +40,11 @@ class SteppedTranslator:
             return False
 
         rule = self.rules[self.current]
-        replace = -1
+        replace_count = 0
 
-        while search(rule.match, self.text) and rule.max_repeat > replace:
-            self.text = sub(rule.match, rule.sub, self.text)
-            replace += 1
+        while rule.match.search(self.text) and (rule.max_repeat == 0 or replace_count < rule.max_repeat):
+            self.text = rule.match.sub(rule.sub, self.text)
+            replace_count += 1
 
         self.current += 1
         return True
