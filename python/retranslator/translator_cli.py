@@ -6,7 +6,7 @@ import os
 
 from regex import Pattern
 
-from .translator import Translator
+from .Translator import Translator
 
 
 class TranslatorCLI:
