@@ -6,6 +6,7 @@
 |-|-|
 | [![PyPI version](https://badge.fury.io/py/retranslator.svg)](https://badge.fury.io/py/retranslator)  | __Python__  |
 | [![nimble](https://raw.githubusercontent.com/yglukhov/nimble-tag/master/nimble.png)](https://nimble.directory/pkg/retranslator)  | __Nim__  |
+| [![CMake](https://img.shields.io/badge/CMake-3.16+-blue.svg)](https://cmake.org/) | __C++__ |
 
 # [RegularExpressions.Transformer](https://github.com/linksplatform/RegularExpressions.Transformer)
 
@@ -24,6 +25,8 @@ Forked from: [LinksPlatform/Collections.Methods/CSharpToCppTranslator](https://g
 NuGet package: [Platform.RegularExpressions.Transformer](https://www.nuget.org/packages/Platform.RegularExpressions.Transformer)
 
 Python version: [retranslator](https://github.com/linksplatform/RegularExpressions.Transformer/tree/master/python)
+
+C++ version: [cpp](https://github.com/linksplatform/RegularExpressions.Transformer/tree/master/cpp)
 
 ## [Documentation](https://linksplatform.github.io/RegularExpressions.Transformer)
 [PDF file](https://linksplatform.github.io/RegularExpressions.Transformer/csharp/Platform.RegularExpressions.Transformer.pdf) with code for e-readers.
