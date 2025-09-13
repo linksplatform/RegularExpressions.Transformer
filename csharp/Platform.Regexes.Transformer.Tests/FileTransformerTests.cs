@@ -1,7 +1,7 @@
 using System.IO;
 using Xunit;
 
-namespace Platform.RegularExpressions.Transformer.Tests
+namespace Platform.Regexes.Transformer.Tests
 {
     /// <summary>
     /// <para>
