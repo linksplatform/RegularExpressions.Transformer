@@ -19,7 +19,7 @@ namespace Platform.RegularExpressions.Transformer
         /// </para>
         /// <para></para>
         /// </summary>
-        Regex MatchPattern
+        IRegexPattern MatchPattern
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get;
@@ -44,6 +44,18 @@ namespace Platform.RegularExpressions.Transformer
         /// <para></para>
         /// </summary>
         int MaximumRepeatCount
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get;
+        }
+
+        /// <summary>
+        /// <para>
+        /// Gets the legacy System.Text.RegularExpressions.Regex pattern for backward compatibility.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        Regex LegacyMatchPattern
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get;

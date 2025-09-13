@@ -45,5 +45,21 @@ namespace Platform.RegularExpressions.Transformer
             }
             return new Regex(regex.ToString(), options, matchTimeout);
         }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static IRegexPattern OverrideOptions(this IRegexPattern pattern, RegexOptions options, TimeSpan matchTimeout)
+        {
+            if (pattern == null)
+            {
+                return null;
+            }
+            
+            if (pattern is SystemRegexPattern systemPattern)
+            {
+                return new SystemRegexPattern(systemPattern.UnderlyingRegex.OverrideOptions(options, matchTimeout));
+            }
+            
+            return pattern.WithTimeout(matchTimeout);
+        }
     }
 }
