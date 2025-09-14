@@ -50,6 +50,21 @@ proc transform*(t: TransformerRef, code=""): string =
 
   for i in t.rules:
     count = i.count
+    
+    # If this is a terminating rule, apply it only once and then stop
+    if i.isTerminating:
+      if tr.find(i.rule).isSome:
+        tr = tr.replace(i.rule, i.replace, 1)  # Apply only once
+        if t.debug:
+          echo i, " (terminated)"
+        return tr  # Stop processing further rules
+      else:
+        # Terminating rule doesn't match, continue to next rule
+        if t.debug:
+          echo i, " (no match)"
+        continue
+    
+    # Non-terminating rule: apply according to repeat count
     tr = tr.replace(i.rule, i.replace)
     if t.debug:
       echo i

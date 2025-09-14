@@ -48,5 +48,18 @@ namespace Platform.RegularExpressions.Transformer
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get;
         }
+
+        /// <summary>
+        /// <para>
+        /// Gets a value indicating whether this rule is terminating.
+        /// When a terminating rule is applied, the Markov algorithm stops execution.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        bool IsTerminating
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get;
+        }
     }
 }
