@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Chromium Bug: SVG Alignment in Image Elements</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-container { 
+            margin: 20px 0; 
+            border: 1px solid #ccc; 
+            padding: 10px; 
+            display: inline-block; 
+        }
+        h2 { color: #333; }
+        .description { color: #666; margin-bottom: 10px; }
+        .comparison { display: flex; gap: 20px; align-items: flex-start; }
+        .test-box { 
+            border: 2px solid #333; 
+            padding: 10px;
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Case: SVG Alignment in Image Elements</h1>
+    
+    <div class="comparison">
+        <div>
+            <h2>Inline SVG (Reference)</h2>
+            <div class="description">This is how the SVG should look</div>
+            <div class="test-container">
+                <svg width="120" height="120" viewBox="0 0 10 10">
+                    <rect x="0" y="0" width="10" height="10" fill="none" stroke="red" stroke-width="0.1"/>
+                    <svg x="2" y="2" width="6" height="6" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="40" fill="#4CAF50" stroke="#2E7D32" stroke-width="4"/>
+                        <text x="50" y="55" text-anchor="middle" font-size="20" fill="white" font-family="Arial">SVG</text>
+                    </svg>
+                </svg>
+            </div>
+        </div>
+        
+        <div>
+            <h2>External SVG via Image Element</h2>
+            <div class="description">This may be misaligned in Chromium</div>
+            <div class="test-container">
+                <svg width="120" height="120" viewBox="0 0 10 10">
+                    <rect x="0" y="0" width="10" height="10" fill="none" stroke="red" stroke-width="0.1"/>
+                    <image x="2" y="2" width="6" height="6" href="test-logo.svg"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    
+    <h2>Test with Different Positioning</h2>
+    <div class="comparison">
+        <div>
+            <h3>Position: x="1" y="1"</h3>
+            <div class="test-box">
+                <svg width="100" height="100" viewBox="0 0 10 10">
+                    <rect x="0" y="0" width="10" height="10" fill="none" stroke="blue" stroke-width="0.1"/>
+                    <image x="1" y="1" width="3" height="3" href="test-logo.svg"/>
+                </svg>
+            </div>
+        </div>
+        
+        <div>
+            <h3>Position: x="5" y="1"</h3>
+            <div class="test-box">
+                <svg width="100" height="100" viewBox="0 0 10 10">
+                    <rect x="0" y="0" width="10" height="10" fill="none" stroke="blue" stroke-width="0.1"/>
+                    <image x="5" y="1" width="3" height="3" href="test-logo.svg"/>
+                </svg>
+            </div>
+        </div>
+        
+        <div>
+            <h3>Position: x="1" y="5"</h3>
+            <div class="test-box">
+                <svg width="100" height="100" viewBox="0 0 10 10">
+                    <rect x="0" y="0" width="10" height="10" fill="none" stroke="blue" stroke-width="0.1"/>
+                    <image x="1" y="5" width="3" height="3" href="test-logo.svg"/>
+                </svg>
+            </div>
+        </div>
+        
+        <div>
+            <h3>Position: x="5" y="5"</h3>
+            <div class="test-box">
+                <svg width="100" height="100" viewBox="0 0 10 10">
+                    <rect x="0" y="0" width="10" height="10" fill="none" stroke="blue" stroke-width="0.1"/>
+                    <image x="5" y="5" width="3" height="3" href="test-logo.svg"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    
+    <div style="margin-top: 40px;">
+        <h2>Expected Results:</h2>
+        <ul>
+            <li><strong>Firefox/Safari:</strong> External SVG images should be positioned exactly like inline SVG content</li>
+            <li><strong>Chromium browsers:</strong> External SVG images may appear shifted or misaligned relative to their expected positions</li>
+        </ul>
+        
+        <h2>Bug Description:</h2>
+        <p>In Chromium browsers, SVG files referenced via <code>&lt;image&gt;</code> elements are not positioned 
+        correctly according to their <code>x</code>, <code>y</code>, <code>width</code>, and <code>height</code> attributes.</p>
+        
+        <p>This forces developers to avoid external SVG files and embed all SVG content inline, 
+        losing the benefits of modularity, caching, and maintainability.</p>
+        
+        <h2>Testing Instructions:</h2>
+        <ol>
+            <li>Open this file in Firefox or Safari - note the alignment</li>
+            <li>Open this file in Chrome or Edge - compare the positioning</li>
+            <li>Look for differences in where the green circles appear relative to the red/blue container boxes</li>
+        </ol>
+    </div>
+</body>
+</html>

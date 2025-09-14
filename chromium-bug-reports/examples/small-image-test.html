@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Chromium Bug: Small SVG Image Elements Don't Render</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-container { 
+            margin: 20px 0; 
+            border: 1px solid #ccc; 
+            padding: 10px; 
+            display: inline-block; 
+        }
+        .scaled-container { 
+            transform: scale(10); 
+            transform-origin: top left; 
+            margin: 50px; 
+        }
+        h2 { color: #333; }
+        .description { color: #666; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Test Case: SVG Image Elements with Small Dimensions</h1>
+    
+    <h2>Test 1: Direct Small Image (Should NOT render in Chromium)</h2>
+    <div class="description">Circle with radius 0.25 - too small for Chromium</div>
+    <div class="test-container">
+        <svg width="200" height="200" viewBox="0 0 10 10">
+            <circle cx="5" cy="5" r="0.25" fill="red" stroke="black" stroke-width="0.02"/>
+            <text x="5" y="8" text-anchor="middle" font-size="0.5" fill="black">Small Circle</text>
+        </svg>
+    </div>
+    
+    <h2>Test 2: Large Image (Should render in all browsers)</h2>
+    <div class="description">Circle with radius 2.5 - large enough for all browsers</div>
+    <div class="test-container">
+        <svg width="200" height="200" viewBox="0 0 10 10">
+            <circle cx="5" cy="5" r="2.5" fill="red" stroke="black" stroke-width="0.2"/>
+            <text x="5" y="8" text-anchor="middle" font-size="0.5" fill="black">Large Circle</text>
+        </svg>
+    </div>
+    
+    <h2>Test 3: Small Image Scaled Up (Should render in Firefox/Safari, NOT in Chromium)</h2>
+    <div class="description">Small circle (r=0.25) scaled up 10x - should be visible but isn't in Chromium</div>
+    <div class="test-container">
+        <div class="scaled-container">
+            <svg width="20" height="20" viewBox="0 0 10 10">
+                <circle cx="5" cy="5" r="0.25" fill="blue" stroke="black" stroke-width="0.02"/>
+                <text x="5" y="8" text-anchor="middle" font-size="0.5" fill="black">Scaled Small</text>
+            </svg>
+        </div>
+    </div>
+    
+    <div style="margin-top: 100px;">
+        <h2>Expected Results:</h2>
+        <ul>
+            <li><strong>Firefox/Safari:</strong> All three circles should be visible</li>
+            <li><strong>Chromium browsers:</strong> Only Test 2 (large circle) should be visible</li>
+        </ul>
+        
+        <h2>Bug Description:</h2>
+        <p>Chromium browsers fail to render SVG elements with dimensions smaller than 0.5 pixels, 
+        even when those elements are scaled up via CSS transforms and should be visually larger 
+        than 0.5 pixels in the final rendered output.</p>
+        
+        <p>This inconsistency with other browsers and the SVG specification forces developers 
+        to implement workarounds like pre-scaling all coordinates by a factor of 10 or more.</p>
+    </div>
+</body>
+</html>
