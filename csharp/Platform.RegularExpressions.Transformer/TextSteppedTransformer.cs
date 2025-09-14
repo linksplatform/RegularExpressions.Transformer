@@ -10,7 +10,6 @@ namespace Platform.RegularExpressions.Transformer
     /// <para>
     /// Represents the text stepped transformer.
     /// </para>
-    /// <para></para>
     /// </summary>
     /// <seealso cref="ITransformer"/>
     public class TextSteppedTransformer : ITransformer
@@ -19,7 +18,6 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Gets or sets the rules value.
         /// </para>
-        /// <para></para>
         /// </summary>
         public IList<ISubstitutionRule> Rules
         {
@@ -33,7 +31,6 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Gets or sets the text value.
         /// </para>
-        /// <para></para>
         /// </summary>
         public string Text
         {
@@ -47,7 +44,6 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Gets or sets the current value.
         /// </para>
-        /// <para></para>
         /// </summary>
         public int Current
         {
@@ -61,19 +57,15 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Initializes a new <see cref="TextSteppedTransformer"/> instance.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <param name="rules">
         /// <para>A rules.</para>
-        /// <para></para>
         /// </param>
         /// <param name="text">
         /// <para>A text.</para>
-        /// <para></para>
         /// </param>
         /// <param name="current">
         /// <para>A current.</para>
-        /// <para></para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TextSteppedTransformer(IList<ISubstitutionRule> rules, string text, int current) => Reset(rules, text, current);
@@ -82,15 +74,12 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Initializes a new <see cref="TextSteppedTransformer"/> instance.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <param name="rules">
         /// <para>A rules.</para>
-        /// <para></para>
         /// </param>
         /// <param name="text">
         /// <para>A text.</para>
-        /// <para></para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TextSteppedTransformer(IList<ISubstitutionRule> rules, string text) => Reset(rules, text);
@@ -99,11 +88,9 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Initializes a new <see cref="TextSteppedTransformer"/> instance.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <param name="rules">
         /// <para>A rules.</para>
-        /// <para></para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TextSteppedTransformer(IList<ISubstitutionRule> rules) => Reset(rules);
@@ -112,7 +99,6 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Initializes a new <see cref="TextSteppedTransformer"/> instance.
         /// </para>
-        /// <para></para>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TextSteppedTransformer() => Reset();
@@ -121,19 +107,15 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Resets the rules.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <param name="rules">
         /// <para>The rules.</para>
-        /// <para></para>
         /// </param>
         /// <param name="text">
         /// <para>The text.</para>
-        /// <para></para>
         /// </param>
         /// <param name="current">
         /// <para>The current.</para>
-        /// <para></para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void Reset(IList<ISubstitutionRule> rules, string text, int current)
@@ -147,15 +129,12 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Resets the rules.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <param name="rules">
         /// <para>The rules.</para>
-        /// <para></para>
         /// </param>
         /// <param name="text">
         /// <para>The text.</para>
-        /// <para></para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void Reset(IList<ISubstitutionRule> rules, string text) => Reset(rules, text, -1);
@@ -164,11 +143,9 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Resets the rules.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <param name="rules">
         /// <para>The rules.</para>
-        /// <para></para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void Reset(IList<ISubstitutionRule> rules) => Reset(rules, "", -1);
@@ -177,11 +154,9 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Resets the text.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <param name="text">
         /// <para>The text.</para>
-        /// <para></para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void Reset(string text) => Reset(Rules, text, -1);
@@ -190,7 +165,6 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Resets this instance.
         /// </para>
-        /// <para></para>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void Reset() => Reset(Array.Empty<ISubstitutionRule>(), "", -1);
@@ -199,11 +173,9 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Determines whether this instance next.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <returns>
         /// <para>The bool</para>
-        /// <para></para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public bool Next()

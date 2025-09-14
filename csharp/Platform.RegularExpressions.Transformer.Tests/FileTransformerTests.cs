@@ -7,7 +7,6 @@ namespace Platform.RegularExpressions.Transformer.Tests
     /// <para>
     /// Represents the file transformer tests.
     /// </para>
-    /// <para></para>
     /// </summary>
     public class FileTransformerTests
     {
@@ -15,7 +14,6 @@ namespace Platform.RegularExpressions.Transformer.Tests
         /// <para>
         /// Tests that folder to folder transfomation test.
         /// </para>
-        /// <para></para>
         /// </summary>
         [Fact]
         public void FolderToFolderTransfomationTest()

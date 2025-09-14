@@ -9,7 +9,6 @@ namespace Platform.RegularExpressions.Transformer
     /// <para>
     /// Defines the substitution rule.
     /// </para>
-    /// <para></para>
     /// </summary>
     public interface ISubstitutionRule
     {
@@ -17,7 +16,6 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Gets the match pattern value.
         /// </para>
-        /// <para></para>
         /// </summary>
         Regex MatchPattern
         {
@@ -29,7 +27,6 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Gets the substitution pattern value.
         /// </para>
-        /// <para></para>
         /// </summary>
         string SubstitutionPattern
         {
@@ -41,7 +38,6 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Gets the maximum repeat count value.
         /// </para>
-        /// <para></para>
         /// </summary>
         int MaximumRepeatCount
         {

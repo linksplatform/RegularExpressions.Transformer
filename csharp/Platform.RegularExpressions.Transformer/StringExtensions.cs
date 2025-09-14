@@ -10,7 +10,6 @@ namespace Platform.RegularExpressions.Transformer
     /// <para>
     /// Represents the string extensions.
     /// </para>
-    /// <para></para>
     /// </summary>
     internal static class StringExtensions
     {
@@ -18,23 +17,18 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Gets the path parts using the specified path.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <param name="path">
         /// <para>The path.</para>
-        /// <para></para>
         /// </param>
         /// <param name="directoryName">
         /// <para>The directory name.</para>
-        /// <para></para>
         /// </param>
         /// <param name="targetFilename">
         /// <para>The target filename.</para>
-        /// <para></para>
         /// </param>
         /// <param name="targetExtension">
         /// <para>The target extension.</para>
-        /// <para></para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void GetPathParts(this string path, out string directoryName, out string targetFilename, out string targetExtension) => (directoryName, targetFilename, targetExtension) = (Path.GetDirectoryName(path), Path.GetFileNameWithoutExtension(path), Path.GetExtension(path));
@@ -43,19 +37,15 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Writes the to file using the specified text.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <param name="text">
         /// <para>The text.</para>
-        /// <para></para>
         /// </param>
         /// <param name="directoryName">
         /// <para>The directory name.</para>
-        /// <para></para>
         /// </param>
         /// <param name="targetFilename">
         /// <para>The target filename.</para>
-        /// <para></para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void WriteToFile(this string text, string directoryName, string targetFilename) => File.WriteAllText(Path.Combine(directoryName, targetFilename), text, Encoding.UTF8);

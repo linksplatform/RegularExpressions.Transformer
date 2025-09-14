@@ -9,7 +9,6 @@ namespace Platform.RegularExpressions.Transformer
     /// <para>
     /// Defines the transformer.
     /// </para>
-    /// <para></para>
     /// </summary>
     public interface ITransformer
     {
@@ -17,7 +16,6 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Gets the rules value.
         /// </para>
-        /// <para></para>
         /// </summary>
         IList<ISubstitutionRule> Rules
         {

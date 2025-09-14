@@ -8,7 +8,6 @@ namespace Platform.RegularExpressions.Transformer
     /// <para>
     /// Defines the file transformer.
     /// </para>
-    /// <para></para>
     /// </summary>
     /// <seealso cref="ITransformer"/>
     public interface IFileTransformer : ITransformer
@@ -17,7 +16,6 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Gets the source file extension value.
         /// </para>
-        /// <para></para>
         /// </summary>
         string SourceFileExtension
         {
@@ -29,7 +27,6 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Gets the target file extension value.
         /// </para>
-        /// <para></para>
         /// </summary>
         string TargetFileExtension
         {
@@ -41,15 +38,12 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Transforms the source path.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <param name="sourcePath">
         /// <para>The source path.</para>
-        /// <para></para>
         /// </param>
         /// <param name="targetPath">
         /// <para>The target path.</para>
-        /// <para></para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         void Transform(string sourcePath, string targetPath);
