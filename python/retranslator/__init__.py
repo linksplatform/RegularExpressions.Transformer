@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from .sub_rule import SubRule
 from .stepped_translator import SteppedTranslator
-from .translator import Translator
+from .Translator import Translator
 from .file_translator import FileTranslator
 from .translator_cli import TranslatorCLI
 

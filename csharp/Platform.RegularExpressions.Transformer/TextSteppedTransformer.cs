@@ -217,14 +217,37 @@ namespace Platform.RegularExpressions.Transformer
             var matchPattern = rule.MatchPattern;
             var substitutionPattern = rule.SubstitutionPattern;
             var maximumRepeatCount = rule.MaximumRepeatCount;
+            var isTerminating = rule.IsTerminating;
             var replaceCount = 0;
             var text = Text;
+            
+            // If this is a terminating rule, apply it only once and then stop
+            if (isTerminating)
+            {
+                if (matchPattern.IsMatch(text))
+                {
+                    text = matchPattern.Replace(text, substitutionPattern, 1); // Apply only once
+                    Text = text;
+                    Current = current;
+                    return false; // Stop processing further rules
+                }
+                else
+                {
+                    // Terminating rule doesn't match, continue to next rule
+                    Text = text;
+                    Current = current;
+                    return true;
+                }
+            }
+            
+            // Non-terminating rule: apply according to repeat count
             do
             {
                 text = matchPattern.Replace(text, substitutionPattern);
                 replaceCount++;
             }
             while ((maximumRepeatCount == int.MaxValue || replaceCount <= maximumRepeatCount) && matchPattern.IsMatch(text));
+            
             Text = text;
             Current = current;
             return true;

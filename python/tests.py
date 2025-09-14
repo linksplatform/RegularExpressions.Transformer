@@ -31,6 +31,31 @@ class Test2SteppedTranslator(TestCase):
             pass
         assert obj.text == '909asd'
 
+    def test_terminating_rule_stops_algorithm(self):
+        """Test that terminating rules stop the algorithm immediately when applied."""
+        rules = [
+            SubRule(r'a', 'b', max_repeat=0, is_terminating=False),         # Regular rule: a -> b
+            SubRule(r'b', 'STOP', max_repeat=0, is_terminating=True),       # Terminating rule: b -> STOP
+            SubRule(r'STOP', 'c', max_repeat=0, is_terminating=False),      # This rule should never be applied
+        ]
+        obj = SteppedTranslator(rules, 'a')
+        while obj.next():
+            pass
+        assert obj.text == 'STOP'
+
+    def test_terminating_rule_with_multiple_matches(self):
+        """Test that terminating rules work with multiple matches in text."""
+        rules = [
+            SubRule(r'x', 'X', max_repeat=0, is_terminating=False),         # Regular rule: x -> X
+            SubRule(r'X', 'TERMINATED', max_repeat=0, is_terminating=True), # Terminating rule: X -> TERMINATED
+            SubRule(r'y', 'Y', max_repeat=0, is_terminating=False),         # This rule should not be applied
+        ]
+        obj = SteppedTranslator(rules, 'xyx')
+        while obj.next():
+            pass
+        # Both x converted to X, then first X terminated
+        assert obj.text == 'TERMINATEDyX'
+
 
 class Test3Translator(TestCase):
     def test_init(self):

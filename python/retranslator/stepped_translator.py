@@ -41,7 +41,19 @@ class SteppedTranslator:
 
         rule = self.rules[self.current]
         replace = -1
+        
+        # If this is a terminating rule, apply it only once and then stop
+        if rule.is_terminating:
+            if search(rule.match, self.text):
+                self.text = sub(rule.match, rule.sub, self.text, count=1)  # Apply only once
+                self.current += 1
+                return False  # Stop processing further rules
+            else:
+                # Terminating rule doesn't match, continue to next rule
+                self.current += 1
+                return True
 
+        # Non-terminating rule: apply according to repeat count
         while search(rule.match, self.text) and rule.max_repeat > replace:
             self.text = sub(rule.match, rule.sub, self.text)
             replace += 1

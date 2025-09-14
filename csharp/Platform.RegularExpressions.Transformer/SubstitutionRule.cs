@@ -89,6 +89,21 @@ namespace Platform.RegularExpressions.Transformer
 
         /// <summary>
         /// <para>
+        /// Gets or sets a value indicating whether this rule is terminating.
+        /// When a terminating rule is applied, the Markov algorithm stops execution.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        public bool IsTerminating
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get;
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            set;
+        }
+
+        /// <summary>
+        /// <para>
         /// Initializes a new <see cref="SubstitutionRule"/> instance.
         /// </para>
         /// <para></para>
@@ -113,12 +128,17 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>A match timeout.</para>
         /// <para></para>
         /// </param>
+        /// <param name="isTerminating">
+        /// <para>A value indicating whether this rule is terminating.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public SubstitutionRule(Regex matchPattern, string substitutionPattern, int maximumRepeatCount, RegexOptions? matchPatternOptions, TimeSpan? matchTimeout)
+        public SubstitutionRule(Regex matchPattern, string substitutionPattern, int maximumRepeatCount, RegexOptions? matchPatternOptions, TimeSpan? matchTimeout, bool isTerminating = false)
         {
             MatchPattern = matchPattern;
             SubstitutionPattern = substitutionPattern;
             MaximumRepeatCount = maximumRepeatCount;
+            IsTerminating = isTerminating;
             OverrideMatchPatternOptions(matchPatternOptions ?? matchPattern.Options, matchTimeout ?? matchPattern.MatchTimeout);
         }
 
@@ -144,8 +164,12 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>A use default options.</para>
         /// <para></para>
         /// </param>
+        /// <param name="isTerminating">
+        /// <para>A value indicating whether this rule is terminating.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public SubstitutionRule(Regex matchPattern, string substitutionPattern, int maximumRepeatCount, bool useDefaultOptions) : this(matchPattern, substitutionPattern, maximumRepeatCount, useDefaultOptions ? DefaultMatchPatternRegexOptions : (RegexOptions?)null, useDefaultOptions ? DefaultMatchTimeout : (TimeSpan?)null) { }
+        public SubstitutionRule(Regex matchPattern, string substitutionPattern, int maximumRepeatCount, bool useDefaultOptions, bool isTerminating = false) : this(matchPattern, substitutionPattern, maximumRepeatCount, useDefaultOptions ? DefaultMatchPatternRegexOptions : (RegexOptions?)null, useDefaultOptions ? DefaultMatchTimeout : (TimeSpan?)null, isTerminating) { }
 
         /// <summary>
         /// <para>
@@ -165,8 +189,12 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>A maximum repeat count.</para>
         /// <para></para>
         /// </param>
+        /// <param name="isTerminating">
+        /// <para>A value indicating whether this rule is terminating.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public SubstitutionRule(Regex matchPattern, string substitutionPattern, int maximumRepeatCount) : this(matchPattern, substitutionPattern, maximumRepeatCount, true) { }
+        public SubstitutionRule(Regex matchPattern, string substitutionPattern, int maximumRepeatCount, bool isTerminating = false) : this(matchPattern, substitutionPattern, maximumRepeatCount, true, isTerminating) { }
 
         /// <summary>
         /// <para>
@@ -182,8 +210,12 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>A substitution pattern.</para>
         /// <para></para>
         /// </param>
+        /// <param name="isTerminating">
+        /// <para>A value indicating whether this rule is terminating.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public SubstitutionRule(Regex matchPattern, string substitutionPattern) : this(matchPattern, substitutionPattern, 0) { }
+        public SubstitutionRule(Regex matchPattern, string substitutionPattern, bool isTerminating = false) : this(matchPattern, substitutionPattern, 0, isTerminating) { }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static implicit operator SubstitutionRule(ValueTuple<string, string> tuple) => new SubstitutionRule(new Regex(tuple.Item1), tuple.Item2);
@@ -196,6 +228,18 @@ namespace Platform.RegularExpressions.Transformer
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static implicit operator SubstitutionRule(ValueTuple<Regex, string, int> tuple) => new SubstitutionRule(tuple.Item1, tuple.Item2, tuple.Item3);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static implicit operator SubstitutionRule(ValueTuple<string, string, bool> tuple) => new SubstitutionRule(new Regex(tuple.Item1), tuple.Item2, tuple.Item3);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static implicit operator SubstitutionRule(ValueTuple<Regex, string, bool> tuple) => new SubstitutionRule(tuple.Item1, tuple.Item2, tuple.Item3);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static implicit operator SubstitutionRule(ValueTuple<string, string, int, bool> tuple) => new SubstitutionRule(new Regex(tuple.Item1), tuple.Item2, tuple.Item3, tuple.Item4);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static implicit operator SubstitutionRule(ValueTuple<Regex, string, int, bool> tuple) => new SubstitutionRule(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4);
 
         /// <summary>
         /// <para>
@@ -271,6 +315,10 @@ namespace Platform.RegularExpressions.Transformer
                     sb.Append(MaximumRepeatCount);
                     sb.Append(" times");
                 }
+            }
+            if (IsTerminating)
+            {
+                sb.Append(" (terminating)");
             }
             return sb.ToString();
         }
