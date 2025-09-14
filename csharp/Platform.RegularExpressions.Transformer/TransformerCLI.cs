@@ -9,7 +9,6 @@ namespace Platform.RegularExpressions.Transformer
     /// <para>
     /// Represents the transformer cli.
     /// </para>
-    /// <para></para>
     /// </summary>
     public class TransformerCLI
     {
@@ -17,7 +16,6 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// The transformer.
         /// </para>
-        /// <para></para>
         /// </summary>
         private readonly IFileTransformer _transformer;
 
@@ -25,11 +23,9 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Initializes a new <see cref="TransformerCLI"/> instance.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <param name="transformer">
         /// <para>A transformer.</para>
-        /// <para></para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TransformerCLI(IFileTransformer transformer) => _transformer = transformer;
@@ -38,11 +34,9 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Runs the args.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <param name="args">
         /// <para>The args.</para>
-        /// <para></para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void Run(string[] args)

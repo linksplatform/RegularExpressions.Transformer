@@ -11,7 +11,6 @@ namespace Platform.RegularExpressions.Transformer
     /// <para>
     /// Represents the substitution rule.
     /// </para>
-    /// <para></para>
     /// </summary>
     /// <seealso cref="ISubstitutionRule"/>
     public class SubstitutionRule : ISubstitutionRule
@@ -20,14 +19,12 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// The from minutes.
         /// </para>
-        /// <para></para>
         /// </summary>
         public static readonly TimeSpan DefaultMatchTimeout = TimeSpan.FromMinutes(5);
         /// <summary>
         /// <para>
         /// The multiline.
         /// </para>
-        /// <para></para>
         /// </summary>
         public static readonly RegexOptions DefaultMatchPatternRegexOptions = RegexOptions.Compiled | RegexOptions.Multiline;
 
@@ -35,7 +32,6 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Gets or sets the match pattern value.
         /// </para>
-        /// <para></para>
         /// </summary>
         public Regex MatchPattern
         {
@@ -49,7 +45,6 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Gets or sets the substitution pattern value.
         /// </para>
-        /// <para></para>
         /// </summary>
         public string SubstitutionPattern
         {
@@ -63,7 +58,6 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Gets or sets the path pattern value.
         /// </para>
-        /// <para></para>
         /// </summary>
         public Regex PathPattern
         {
@@ -77,7 +71,6 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Gets or sets the maximum repeat count value.
         /// </para>
-        /// <para></para>
         /// </summary>
         public int MaximumRepeatCount
         {
@@ -91,27 +84,21 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Initializes a new <see cref="SubstitutionRule"/> instance.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <param name="matchPattern">
         /// <para>A match pattern.</para>
-        /// <para></para>
         /// </param>
         /// <param name="substitutionPattern">
         /// <para>A substitution pattern.</para>
-        /// <para></para>
         /// </param>
         /// <param name="maximumRepeatCount">
         /// <para>A maximum repeat count.</para>
-        /// <para></para>
         /// </param>
         /// <param name="matchPatternOptions">
         /// <para>A match pattern options.</para>
-        /// <para></para>
         /// </param>
         /// <param name="matchTimeout">
         /// <para>A match timeout.</para>
-        /// <para></para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public SubstitutionRule(Regex matchPattern, string substitutionPattern, int maximumRepeatCount, RegexOptions? matchPatternOptions, TimeSpan? matchTimeout)
@@ -126,23 +113,18 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Initializes a new <see cref="SubstitutionRule"/> instance.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <param name="matchPattern">
         /// <para>A match pattern.</para>
-        /// <para></para>
         /// </param>
         /// <param name="substitutionPattern">
         /// <para>A substitution pattern.</para>
-        /// <para></para>
         /// </param>
         /// <param name="maximumRepeatCount">
         /// <para>A maximum repeat count.</para>
-        /// <para></para>
         /// </param>
         /// <param name="useDefaultOptions">
         /// <para>A use default options.</para>
-        /// <para></para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public SubstitutionRule(Regex matchPattern, string substitutionPattern, int maximumRepeatCount, bool useDefaultOptions) : this(matchPattern, substitutionPattern, maximumRepeatCount, useDefaultOptions ? DefaultMatchPatternRegexOptions : (RegexOptions?)null, useDefaultOptions ? DefaultMatchTimeout : (TimeSpan?)null) { }
@@ -151,19 +133,15 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Initializes a new <see cref="SubstitutionRule"/> instance.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <param name="matchPattern">
         /// <para>A match pattern.</para>
-        /// <para></para>
         /// </param>
         /// <param name="substitutionPattern">
         /// <para>A substitution pattern.</para>
-        /// <para></para>
         /// </param>
         /// <param name="maximumRepeatCount">
         /// <para>A maximum repeat count.</para>
-        /// <para></para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public SubstitutionRule(Regex matchPattern, string substitutionPattern, int maximumRepeatCount) : this(matchPattern, substitutionPattern, maximumRepeatCount, true) { }
@@ -172,15 +150,12 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Initializes a new <see cref="SubstitutionRule"/> instance.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <param name="matchPattern">
         /// <para>A match pattern.</para>
-        /// <para></para>
         /// </param>
         /// <param name="substitutionPattern">
         /// <para>A substitution pattern.</para>
-        /// <para></para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public SubstitutionRule(Regex matchPattern, string substitutionPattern) : this(matchPattern, substitutionPattern, 0) { }
@@ -201,15 +176,12 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Overrides the match pattern options using the specified options.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <param name="options">
         /// <para>The options.</para>
-        /// <para></para>
         /// </param>
         /// <param name="matchTimeout">
         /// <para>The match timeout.</para>
-        /// <para></para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void OverrideMatchPatternOptions(RegexOptions options, TimeSpan matchTimeout) => MatchPattern = MatchPattern.OverrideOptions(options, matchTimeout);
@@ -218,15 +190,12 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Overrides the path pattern options using the specified options.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <param name="options">
         /// <para>The options.</para>
-        /// <para></para>
         /// </param>
         /// <param name="matchTimeout">
         /// <para>The match timeout.</para>
-        /// <para></para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void OverridePathPatternOptions(RegexOptions options, TimeSpan matchTimeout) => PathPattern = PathPattern.OverrideOptions(options, matchTimeout);
@@ -235,11 +204,9 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Returns the string.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <returns>
         /// <para>The string</para>
-        /// <para></para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public override string ToString()

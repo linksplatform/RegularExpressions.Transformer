@@ -9,7 +9,6 @@ namespace Platform.RegularExpressions.Transformer
     /// <para>
     /// Represents the steps.
     /// </para>
-    /// <para></para>
     /// </summary>
     public static class Steps
     {
@@ -17,19 +16,15 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Deletes the all steps using the specified directory name.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <param name="directoryName">
         /// <para>The directory name.</para>
-        /// <para></para>
         /// </param>
         /// <param name="targetFilename">
         /// <para>The target filename.</para>
-        /// <para></para>
         /// </param>
         /// <param name="targetExtension">
         /// <para>The target extension.</para>
-        /// <para></para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void DeleteAllSteps(string directoryName, string targetFilename, string targetExtension)
@@ -42,39 +37,30 @@ namespace Platform.RegularExpressions.Transformer
         /// <para>
         /// Writes the step using the specified transformer.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <param name="transformer">
         /// <para>The transformer.</para>
-        /// <para></para>
         /// </param>
         /// <param name="directoryName">
         /// <para>The directory name.</para>
-        /// <para></para>
         /// </param>
         /// <param name="targetFilename">
         /// <para>The target filename.</para>
-        /// <para></para>
         /// </param>
         /// <param name="targetExtension">
         /// <para>The target extension.</para>
-        /// <para></para>
         /// </param>
         /// <param name="currentStep">
         /// <para>The current step.</para>
-        /// <para></para>
         /// </param>
         /// <param name="lastText">
         /// <para>The last text.</para>
-        /// <para></para>
         /// </param>
         /// <param name="newText">
         /// <para>The new text.</para>
-        /// <para></para>
         /// </param>
         /// <param name="skipFilesWithNoChanges">
         /// <para>The skip files with no changes.</para>
-        /// <para></para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void WriteStep(ITransformer transformer, string directoryName, string targetFilename, string targetExtension, int currentStep, ref string lastText, string newText, bool skipFilesWithNoChanges)

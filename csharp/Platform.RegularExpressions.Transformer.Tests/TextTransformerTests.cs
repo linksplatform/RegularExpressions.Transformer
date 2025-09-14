@@ -9,7 +9,6 @@ namespace Platform.RegularExpressions.Transformer.Tests
     /// <para>
     /// Represents the text transformer tests.
     /// </para>
-    /// <para></para>
     /// </summary>
     public class TextTransformerTests
     {
@@ -17,7 +16,6 @@ namespace Platform.RegularExpressions.Transformer.Tests
         /// <para>
         /// Tests that debug output test.
         /// </para>
-        /// <para></para>
         /// </summary>
         [Fact]
         public void DebugOutputTest()
@@ -42,7 +40,6 @@ namespace Platform.RegularExpressions.Transformer.Tests
         /// <para>
         /// Tests that debug files output test.
         /// </para>
-        /// <para></para>
         /// </summary>
         [Fact]
         public void DebugFilesOutputTest()
@@ -67,23 +64,18 @@ namespace Platform.RegularExpressions.Transformer.Tests
         /// <para>
         /// Checks the and clean up two rules files using the specified first step reference text.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <param name="firstStepReferenceText">
         /// <para>The first step reference text.</para>
-        /// <para></para>
         /// </param>
         /// <param name="secondStepReferenceText">
         /// <para>The second step reference text.</para>
-        /// <para></para>
         /// </param>
         /// <param name="transformer">
         /// <para>The transformer.</para>
-        /// <para></para>
         /// </param>
         /// <param name="targetFilename">
         /// <para>The target filename.</para>
-        /// <para></para>
         /// </param>
         private static void CheckAndCleanUpTwoRulesFiles(string firstStepReferenceText, string secondStepReferenceText, TextTransformer transformer, string targetFilename)
         {
@@ -112,7 +104,6 @@ namespace Platform.RegularExpressions.Transformer.Tests
         /// <para>
         /// Tests that files with no changes skiped test.
         /// </para>
-        /// <para></para>
         /// </summary>
         [Fact]
         public void FilesWithNoChangesSkipedTest()
@@ -138,23 +129,18 @@ namespace Platform.RegularExpressions.Transformer.Tests
         /// <para>
         /// Checks the and clean up three rules files using the specified first step reference text.
         /// </para>
-        /// <para></para>
         /// </summary>
         /// <param name="firstStepReferenceText">
         /// <para>The first step reference text.</para>
-        /// <para></para>
         /// </param>
         /// <param name="thirdStepReferenceText">
         /// <para>The third step reference text.</para>
-        /// <para></para>
         /// </param>
         /// <param name="transformer">
         /// <para>The transformer.</para>
-        /// <para></para>
         /// </param>
         /// <param name="targetFilename">
         /// <para>The target filename.</para>
-        /// <para></para>
         /// </param>
         private static void CheckAndCleanUpThreeRulesFiles(string firstStepReferenceText, string thirdStepReferenceText, TextTransformer transformer, string targetFilename)
         {
@@ -189,7 +175,6 @@ namespace Platform.RegularExpressions.Transformer.Tests
         /// <para>
         /// Tests that debug output using transformers generation test.
         /// </para>
-        /// <para></para>
         /// </summary>
         [Fact]
         public void DebugOutputUsingTransformersGenerationTest()
@@ -214,7 +199,6 @@ namespace Platform.RegularExpressions.Transformer.Tests
         /// <para>
         /// Tests that debug files output using transformers generation test.
         /// </para>
-        /// <para></para>
         /// </summary>
         [Fact]
         public void DebugFilesOutputUsingTransformersGenerationTest()
@@ -239,7 +223,6 @@ namespace Platform.RegularExpressions.Transformer.Tests
         /// <para>
         /// Tests that files with no changes skiped when using transformers generation test.
         /// </para>
-        /// <para></para>
         /// </summary>
         [Fact]
         public void FilesWithNoChangesSkipedWhenUsingTransformersGenerationTest()
